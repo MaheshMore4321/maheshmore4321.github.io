@@ -1,0 +1,15 @@
+{
+	"title" : "Services",
+	"services" : [
+		{
+			"icon" : "pencil-ruler",
+			"title" : "Development & Support",
+			"description" : "Understanding client requirements and how they translate to new application features. Collaborating with development team and other IT staff to set specifications for new applications."
+		},
+		{
+			"icon" : "pen-nib",
+			"title" : "Application Consultant",
+			"description" : "Advice and expertise to organisations to help them improve their business performance in terms of operations, profitability, management, structure and strategy."
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+	"title" : "Skills",
+	"skills" : {
+		"Core Java" : "80",
+		"Advanced Java" : "75",
+		"Spring Core + MVC + Boot Framework" : "85",
+		"Hibernate" : "80"
+	}
+}
