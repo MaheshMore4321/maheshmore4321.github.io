@@ -1,6 +1,6 @@
 {{ $config := .Site.Data.config }}
 
-<section id="contact" class="bg d-flex align-items-center" style="height: 100vh;background-color: #1a1c1d;">
+<section id="contact" class="bg-light d-flex align-items-center" style="height: 100vh;">
   <div class="container">
       <h2 class="heading mb-3">Contact</h2>
 
@@ -11,20 +11,20 @@
       <form action="https://formspree.io/{{ $config.email }}" method="post">
         <div class="form-row">
           <div class="col-12 col-xl-6 col-lg-6 col-md-6">
-            <label class="c_label">Name</label>
+            <label>Name</label>
             <input type="text" class="form-control" name="name" placeholder="Name">
           </div>
           <div class="col-12 col-xl-6 col-lg-6 col-md-6">
-            <label class="c_label">Email</label>
+            <label>Email</label>
             <input type="email" class="form-control" name="_replyto" placeholder="Email">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="c_label">Message</label>
+          <label>Message</label>
           <textarea placeholder="Message" name="message" class="form-control" rows="4"></textarea>
         </div>
-        <button type="submit" class="btn btn-dark" style="border: 1px rgb(255, 255, 255);">Submit</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
       </form>
   </div>
 </section>

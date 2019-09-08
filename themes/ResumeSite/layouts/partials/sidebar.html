@@ -2,7 +2,7 @@
 {{ $social := .Site.Data.social }}
 {{ $socialfas := .Site.Data.socialfas}}
 
-<section id="sidebar" class="sidebar d-flex align-items-center p-5">
+<section id="sidebar" class="sidebar d-flex align-items-center p-5" style="background-image: url({{.Site.BaseURL}}images/{{ $sidebar.bkPicture }}");>
   <div class="main-info">
 
     <img src="{{.Site.BaseURL}}images/{{ $sidebar.displayPicture }}" class="rounded-circle mb-3" width="160px">
@@ -13,20 +13,20 @@
     <div class="social my-4">
 
       {{ range $key, $value := $social }}
-        <a class="" target="_blank" href="{{ $value }}" rel="me">
-          <i class="fab fa-{{ $key }}" style="color:white;"></i>
+        <a target="_blank" href="{{ $value }}" rel="me">
+          <i class="fab fa-{{ $key }}"></i>
         </a>
       {{ end }}
 
       {{ range $key, $value := $socialfas }}
-        <a class="" target="_blank" href="{{ $value }}">
-          <i class="fas fa-{{ $key }}" style="color:white;"></i>
+        <a target="_blank" href="{{ $value }}">
+          <i class="fas fa-{{ $key }}"></i>
         </a>
       {{ end }}
 
     </div>
 
-    <a href="#contact" class="btn btn-dark btn-lg" style="border: 1px rgb(255, 255, 255);">Contact</a>
+    <a href="#contact" class="btn btn-dark btn-lg">Contact</a>
 
 
   </div>
