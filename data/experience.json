@@ -2,7 +2,15 @@
 	"title" : "Experience",
 	"experience" : [
 		{
-			"timeperiod" : "February 2017 – Present",
+			"timeperiod" : "August 2019 – Present",
+			"company" : "VirtusaPolarise",
+			"role" : "Consultant Technology",
+			"place" : "Thane, India",
+			"website": "https://www.virtusa.com/",
+			"description" : "Working on Citi bank project which provides the software solution for BFSI domain projects involved in the development & support of and new/existing application to find & fix the bug as well as migrating system to alternative technology, design the system as per the new requirements & technologies. "
+		},
+		{
+			"timeperiod" : "February 2017 – August 2019",
 			"company" : "FluidAI",
 			"role" : "Software Developer",
 			"place" : "Mumbai, India",

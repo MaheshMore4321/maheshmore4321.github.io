@@ -1,6 +1,7 @@
 html {
   overflow-x: hidden;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 a:hover {
   text-decoration: none;
@@ -27,7 +28,7 @@ a:hover {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
-}
+} 
 
 .main-content {
   position: relative;
@@ -39,7 +40,7 @@ a:hover {
   clear: none;
 }
 
-.main-content:after {
+.main-content:after  {
   position: absolute;
   content: '';
   top: 0;
@@ -51,7 +52,7 @@ a:hover {
   background-color: #fff;
 }
 
-.main-content.active:after {
+.main-content.active:after  {
   position: absolute;
   content: '';
   top: 0;
@@ -198,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-  padding: 10%;
+  padding: 5%;
 }
 
 section .heading {
@@ -443,4 +444,11 @@ section.pink {
  color: #000!important;
 }
 
+.my-2 {
+  text-transform: unset;
+}
+
+.justifyText {
+  text-align: justify;
+}
 /*# sourceMappingURL=styles.css.map */

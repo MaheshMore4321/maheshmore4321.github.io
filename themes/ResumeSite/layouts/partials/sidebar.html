@@ -2,6 +2,7 @@
 {{ $social := .Site.Data.social }}
 {{ $socialfas := .Site.Data.socialfas}}
 
+
 <section id="sidebar" class="sidebar d-flex align-items-center p-5" style="background-image: url({{.Site.BaseURL}}images/{{ $sidebar.bkPicture }}");>
   <div class="main-info">
 
@@ -9,8 +10,10 @@
 
     <h1 class="heading">{{ $sidebar.title }} <span class="highlight">{{ $sidebar.highlightedText }}</span></h1>
     <p class="text-muted">{{ $sidebar.description }}</p>
-
-    <div class="social my-4">
+    
+    {{ partial "menu.html" . }}
+    
+    <div class="social my-2">
 
       {{ range $key, $value := $social }}
         <a target="_blank" href="{{ $value }}" rel="me">
