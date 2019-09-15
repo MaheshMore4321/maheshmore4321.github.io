@@ -14,37 +14,37 @@
 */
 
 
-let menuBtn = $("#menuBar");
+// let menuBtn = $("#menuBar");
 
-menuBtn.click(function() {
+// menuBtn.click(function() {
 
-  $('.hamburger-menu').toggleClass('animate');
+//   $('.hamburger-menu').toggleClass('animate');
 
-  if ($(".secondaryMenu").hasClass("active")) {
+//   if ($(".secondaryMenu").hasClass("active")) {
 
-    $(".secondaryMenu").removeClass("active");
-    setTimeout(function() {
-      $(".primaryMenu").addClass("active");
-    }, 400);
+//     $(".secondaryMenu").removeClass("active");
+//     setTimeout(function() {
+//       $(".primaryMenu").addClass("active");
+//     }, 400);
 
 
-  } else {
-    $(".primaryMenu").removeClass("active");
+//   } else {
+//     $(".primaryMenu").removeClass("active");
 
-    setTimeout(function() {
-      $(".secondaryMenu").addClass("active");
-    }, 350);
-  }
-});
+//     setTimeout(function() {
+//       $(".secondaryMenu").addClass("active");
+//     }, 350);
+//   }
+// });
 
-function scrollTo(target) {
-  const top = $(target).offset().top;
-  const duration = 500;
-  const changeHash = function() {
-    location.hash = target
-  };
-  $("html, body").animate({ scrollTop: top }, duration, changeHash);
-}
+// function scrollTo(target) {
+//   const top = $(target).offset().top;
+//   const duration = 500;
+//   const changeHash = function() {
+//     location.hash = target
+//   };
+//   $("html, body").animate({ scrollTop: top }, duration, changeHash);
+// }
 
 $(document).ready(function() {
   var elements = $(".sidebar > .main-info *");
@@ -61,9 +61,9 @@ $(document).ready(function() {
     $(".main-content").addClass("active");
   }, 1900);
 
-  $("#sidebar a.btn[href='#contact']").on("click", function (event) {
-    event.preventDefault();
+  // $("#sidebar a.btn[href='#contact']").on("click", function (event) {
+  //   event.preventDefault();
 
-    scrollTo($.attr(this, "href"));
-  });
+  //   scrollTo($.attr(this, "href"));
+  // });
 });
