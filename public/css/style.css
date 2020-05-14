@@ -49,6 +49,11 @@ small, .small {
   font-size: 85%;
   font-weight: 600;
 }
+
+.no-margin {
+  margin:0px;
+}
+
   /* =======================================================
 *
 * 	Template Style 
