@@ -5,19 +5,19 @@ class Sidebar extends Component {
   render() {
     return (
     	<div>
-      		<aside id="sym-aside" className="border js-fullheight" style={{backgroundImage:'url('+CONST.SIDEBAR_BACKGROUND_IMAGE_PATH+')'}}>
+      		<aside id="sym-aside" className="border js-fullheight" style={{backgroundImage:`url(${CONST.SIDEBAR_BACKGROUND_IMAGE_PATH})`, backgroundSize: 'cover'}}>
 				<div className="text-center">
 					<div className="author-img" style={{backgroundImage:'url('+CONST.SIDEBAR_PROFILE_PICTURE_PATH+')'}}></div>
 					<h1 id="sym-logo" style={{fontsize:'30px',margin:'0'}}><a href="index.html" style={{fontsize: '40px'}}>Mahesh More</a></h1>
 					<span className="position" style={{marginbottom: '0',fontweight:'600',fontsize:'15px'}}>Technology-Consultant @Virtusa</span>
 					<div className="sym-footer" style={{margintop:'0.6em',marginbottom:'0.6em'}}>
 						<ul>
-							<li><a href="https://www.facebook.com/Maheshmore4321" target="_blank" rel="noopener noreferrer"><i className="icon-facebook2"></i></a></li>
-							<li><a href="https://twitter.com/maheshmore4321" target="_blank" rel="noopener noreferrer"><i className="icon-twitter2"></i></a></li>
-							<li><a href="https://www.instagram.com/maheshmore4321/" target="_blank" rel="noopener noreferrer"><i className="icon-instagram"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/maheshmore4321/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin2"></i></a></li>
-							<li><a href="https://www.github.com/MaheshMore4321" target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>
-							<li><a href="https://www.coderstea.com" target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>
+							<li><a href={CONST.FACEBOOK_LINK} target="_blank" rel="noopener noreferrer"><i className="icon-facebook2"></i></a></li>
+							<li><a href={CONST.TWITTER_LINK} target="_blank" rel="noopener noreferrer"><i className="icon-twitter2"></i></a></li>
+							<li><a href={CONST.INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer"><i className="icon-instagram"></i></a></li>
+							<li><a href={CONST.LINKEDIN_LINK} target="_blank" rel="noopener noreferrer"><i className="icon-linkedin2"></i></a></li>
+							<li><a href={CONST.GITHUB_LINK} target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>
+							<li><a href={CONST.WEBSITE_LINK} target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>
 						</ul>
 					</div>
 				</div>
