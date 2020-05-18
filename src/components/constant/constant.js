@@ -1,10 +1,13 @@
 //API
 //const api_baseLink = "https://symapi.free.beeceptor.com/api/";
 //const api_baseLink = "http://localhost:8080/sym-api/me/";
-const api_baseLink = "https://sym-api-dev.herokuapp.com/sym-api/me/";
+const api_rootLink = "https://sym-api-dev.herokuapp.com/sym-api/";
+const api_baseLink = api_rootLink + "me/";
 
 //SIDEBAR
 export const sidebar_api = api_baseLink + "sidebar";
+export const contactme_api = api_baseLink + "contactme";
+export const contactme_feedback_api = api_rootLink + "emailservice/send-feedback-email";
 
 export const SIDEBAR_BACKGROUND_IMAGE_PATH='images/bk_img.jpg';
 export const SIDEBAR_PROFILE_PICTURE_PATH='images/maheshmore_pic.jpg';
