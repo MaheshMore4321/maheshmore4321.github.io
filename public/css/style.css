@@ -31,7 +31,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #sym-aside .position {
   display: block;
-  font-size: 12px;}  
+  margin-bottom:0px;
+  font-weight:600;
+  font-size:15px;}  
 #sym-aside #sym-logo a {
   display: block;
   text-align: center;
@@ -54,6 +56,32 @@ small, .small {
   margin:0px;
 }
 
+.position {
+  margin-bottom:0px;
+  font-weight:600;
+  font-size:15px;
+}
+
+.margin-top-bottom {
+  margin-top:0.6em;
+  margin-bottom:0.6em;
+}
+
+.no_margin_padding {
+  margin:0px;
+  padding:0px;
+}
+
+.fontSize15 {
+  font-size: 15px;
+} 
+
+.footerLine {
+  margin-top:0.6em;
+  margin-bottom:0.6em;
+  position:absolute;
+  bottom:0px;
+}
   /* =======================================================
 *
 * 	Template Style 
@@ -129,8 +157,8 @@ figure {
   #sym-aside #sym-logo {
     text-align: right;
     font-weight: 700;
-    font-size: 22px;
-    margin-bottom: .5em;
+    font-size:30px;
+    margin:0px;
     display: block;
     width: 100%; }
 
@@ -147,7 +175,6 @@ figure {
         #sym-aside #sym-main-menu ul {
           margin: 0 0 2em 0; } }
       #sym-aside #sym-main-menu ul li {
-        margin: 0 0 10px 0;
         padding: 0;
         list-style: none;
         font-size: 12px;
@@ -225,10 +252,44 @@ figure {
         #sym-aside .sym-footer ul li a {
           color: rgba(255, 255, 255, 0.3);
           padding: 4px; }
-          #sym-aside .sym-footer ul li a:hover, #sym-aside .sym-footer ul li a:active, #sym-aside .sym-footer ul li a:focus {
+          #sym-aside .sym-footer ul li a:hover, 
+          #sym-aside .sym-footer ul li a:active, 
+          #sym-aside .sym-footer ul li a:focus {
             text-decoration: none;
             outline: none;
             color: #2c98f0; }
+
+
+  #sym-aside .sym-footer {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      #sym-aside .sym-footer {
+        position: relative;
+        bottom: 0; } }
+    #sym-aside .sym-footer span {
+      display: block; }
+    #sym-aside .sym-footer ul {
+      padding: 0;
+      margin: 0; }
+      #sym-aside .sym-footer ul li {
+        padding: 0;
+        margin: 0;
+        display: inline;
+        list-style: none; }
+        #sym-aside .sym-footer ul li a {
+          color: rgba(255, 255, 255, 0.3);
+          padding: 4px; }
+          #sym-aside .sym-footer ul li a:hover, 
+          #sym-aside .sym-footer ul li a:active, 
+          #sym-aside .sym-footer ul li a:focus {
+            text-decoration: none;
+            outline: none;
+            color: #2c98f0; }            
 
 .container-wrap {
   max-width: 1170px;
