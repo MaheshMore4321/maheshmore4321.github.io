@@ -54,9 +54,14 @@ class Sidebar extends Component {
 						</div>
 					</nav>
 					<div className="sym-footer margin-top-bottom">
-						<div><small className="fontSize15">Made with <i className="icon-heart" aria-hidden="true"></i> and <i className="icon-beer" aria-hidden="true"></i></small></div>
-						<div><small>Copyright ©2020 All rights reserved</small></div>
+						<small className="fontSize15">Made with <i className="icon-heart" aria-hidden="true"></i> and <i className="icon-beer" aria-hidden="true"></i></small>
+						<br/>
+						<small>Copyright ©2020 All rights reserved</small>
 					</div>
+					<div className="sym-footer margin-top-bottom">
+						<small>Thanks <a href="https://colorlib.com/wp/template/jackson/" target="_blank" rel="noopener noreferrer">Colorlib</a> for inspiration 
+						</small>
+					</div>	
 				</aside>
 			</div>
     	);
