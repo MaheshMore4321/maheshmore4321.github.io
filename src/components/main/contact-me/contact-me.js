@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
 import axios from 'axios';
+import MyModal from '../../utility/mymodal';
  
 class ContactMe extends Component {
 	constructor(props){
@@ -15,7 +16,8 @@ class ContactMe extends Component {
       loading: false, 
       contactme_: [],
       sendMailOperationStatus: 0,
-    }    
+      addModalShow : false
+    }
   }
 
 	componentDidMount(){
@@ -30,6 +32,7 @@ class ContactMe extends Component {
 
   changeHandler = e => {
     this.setState({[e.target.name]: e.target.value});
+    this.setState({addModalShow:true});
   }  
   
   submtHandler = e => {
@@ -48,13 +51,15 @@ class ContactMe extends Component {
 
   render() {
     const {contactme_, name, email, subject, message, loading} = this.state;
+    let addModalClose =()=> this.setState({addModalShow:false});
+    
     return (
       <div>
         <div className="row">
 					<div className="col-md-12 animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
 						<div className="hire">
 							<h2>Something coming soon !!!</h2>
-							{/* <a href="#" className="btn-hire">Hire me</a> */}
+							{/* <a href="#" className="btn-hire">Lets Have a Fun</a> */}
 						</div>
 					</div>
 				</div>
@@ -97,17 +102,20 @@ class ContactMe extends Component {
                         <input type="text"  name="subject" value={subject} onChange={this.changeHandler}className="form-control" placeholder="Subject" required/>
                       </div>
                       <div  className="form-group">
-                        <textarea name="message" value={message} onChange={this.changeHandler}id="message" cols="30" rows="7"  className="form-control" placeholder="Message" required></textarea>
+                        <textarea name="message" value={message} onChange={this.changeHandler}id="message" cols="30" rows="7" className="form-control" placeholder="Message" required></textarea>
                       </div>
                       <div  className="form-group">
                         <button type="submit"  className="btn btn-primary btn-send-message">
-                          {loading && (<i className="fa fa-refresh fa-spin" style={{ marginRight: "5px" }}/>
-                          )}
+                          {loading && (<i className="fa fa-refresh fa-spin" style={{ marginRight: "5px" }}/>)}
                           {loading && <span>Sending Message</span>}
                           {!loading && <span>Send Message</span>}
                         </button>
                       </div>
                     </form>
+                    <MyModal 
+                      show={this.state.addModalShow}
+                      onHide={addModalClose}
+                    />
                   </div>
                 </div>
               </div>
@@ -118,4 +126,4 @@ class ContactMe extends Component {
     )
   }
 }
-export default ContactMe;
+export default ContactMe; 

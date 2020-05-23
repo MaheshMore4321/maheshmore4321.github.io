@@ -59,8 +59,7 @@ class Sidebar extends Component {
 						<small>Copyright ©2020 All rights reserved</small>
 					</div>
 					<div className="sym-footer margin-top-bottom">
-						<small>Thanks <a href="https://colorlib.com/wp/template/jackson/" target="_blank" rel="noopener noreferrer">Colorlib</a> for inspiration 
-						</small>
+						<small>Thanks <a href="https://colorlib.com/wp/template/jackson/" target="_blank" rel="noopener noreferrer">Colorlib</a> for inspiration</small>
 					</div>	
 				</aside>
 			</div>
