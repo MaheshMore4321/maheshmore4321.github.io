@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
-import axios from 'axios';
-import MyModal from '../../utility/mymodal';
+import axios from 'axios'; 
  
 class ContactMe extends Component {
 	constructor(props){
@@ -14,9 +13,7 @@ class ContactMe extends Component {
       message: "",
       feedback: "my-portfolio",
       loading: false, 
-      contactme_: [],
-      sendMailOperationStatus: 0,
-      addModalShow : false
+      contactme_: []
     }
   }
 
@@ -32,7 +29,6 @@ class ContactMe extends Component {
 
   changeHandler = e => {
     this.setState({[e.target.name]: e.target.value});
-    this.setState({addModalShow:true});
   }  
   
   submtHandler = e => {
@@ -42,17 +38,17 @@ class ContactMe extends Component {
       .then(response =>{ 
         this.setState({loading:false});
         console.log(response);
+        alert("Message Succesfully sent, i will get back you soon");
     })
       .catch(error =>{
         this.setState({loading:false});
         console.log(error);
+        alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
     })
   }
 
   render() {
     const {contactme_, name, email, subject, message, loading} = this.state;
-    let addModalClose =()=> this.setState({addModalShow:false});
-    
     return (
       <div>
         <div className="row">
@@ -112,10 +108,6 @@ class ContactMe extends Component {
                         </button>
                       </div>
                     </form>
-                    <MyModal 
-                      show={this.state.addModalShow}
-                      onHide={addModalClose}
-                    />
                   </div>
                 </div>
               </div>
