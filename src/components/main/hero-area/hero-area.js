@@ -27,12 +27,23 @@ class HeroArea extends Component {
 
   render() {
     let {heroarea_} = this.state; 
+    console.log("heroarea_1 :: "+heroarea_);
+
+    const numbers = [1, 2, 3];
+    const doubled = numbers.map((number) => number * 2);
     return (
       <>
         <section id="sym-hero" className="js-fullheight" data-section="home">
           <div className="flexslider js-fullheight">
             <ul className="slides">
-              { getData(heroarea_) }
+            {console.log("heroarea_2 :: "+heroarea_)}
+            {!heroarea_.length && this.setState({heroarea_:doubled})}
+            {console.log("heroarea_3 :: "+heroarea_)}
+            {
+              heroarea_.map(heroarea_inner => 
+                <HeroAreaSlid data = {heroarea_inner}/>
+              )
+            }
             </ul>
           </div>
         </section>
