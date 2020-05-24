@@ -32,7 +32,7 @@ class HeroArea extends Component {
           <div className="flexslider js-fullheight">
             <ul className="slides">
               <HeroAreaSlid
-                data = {heroarea_[0]}
+                 data = {heroarea_[0]}
               />
               <HeroAreaSlid
                 data = {heroarea_[1]}
