@@ -3,7 +3,6 @@ import parse from 'html-react-parser';
 
 class HeroAreaSlid extends Component {
   render() {
-    console.log("this.props.data :: "+this.props.data);
     return (
       <>
         <li style={{backgroundImage:`url(${this.props.data && this.props.data.backgroundImg !== undefined && this.props.data.backgroundImg})`}}>
