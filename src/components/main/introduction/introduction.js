@@ -1,7 +1,36 @@
 import React, { Component } from 'react';
+import * as api from '../../constant/constant';
+import parse from 'html-react-parser';
+import axios from 'axios'; 
+
+import IntroductionExpertise from './introduction_experties';
 
 class Introduction extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      intro_Str:"",
+      intro_ExpertieList:[]
+    }
+  }
+
+  componentDidMount(){
+    axios.get(api.intro_api)
+    .then(response => {
+      console.log(response)
+      this.setState({intro_Str: response.data.introduction});
+      this.setState({intro_ExpertieList: response.data.introExpertieList});
+    })
+    .catch(error =>{
+      console.log("error :: " + error);
+    })
+  }
+
   render() {
+    const {intro_Str, intro_ExpertieList} = this.state;
+    const numbers = [false, false, false];
+    const doubled = numbers.map((number) => number);
     return (
       <div>
         <section className="sym-about" data-section="aboutme">
@@ -13,9 +42,9 @@ class Introduction extends Component {
                   <div className="about-desc">
                     <span className="heading-meta">About Me</span>
                     <h2 className="sym-heading">Who Am I?</h2>
-                    <p><strong>Hi I'm Mahesh More</strong>, Working as Senior Software Developer &amp; i have more than 5 years of experience in the IT industry. Currently working for Citi bank project @Virtusa as Senior Software Developer, Where provides the software solution for CRM &amp; various applications</p>
-                    <p>I have Working on BFSI domain projects involved in the development &amp; support of and new/existing application where i use technologies like Java Core, Advanced (J2EE), Spring and Databases like MySQL, MsSQL, Oracle and Web Applications.</p>
-                    <p>Hands-on experience of testing at all the levels to build an enterprise application &amp; I'm Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues. Willing to take initiative and responsibility for core component and development.</p>
+                      {
+                        intro_Str && parse(intro_Str)
+                      }
                     </div>
                 </div>
               </div>
@@ -33,36 +62,14 @@ class Introduction extends Component {
           </div>
         </div>
         <div className="row row-pt-md">
-          <div className="col-md-4 text-center animate-box">
-            <div className="services color-1">
-              <span className="icon">
-                <i className="icon-bulb"></i>
-              </span>
-              <div className="desc">
-                <h3>Innovative Ideas</h3>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 text-center animate-box">
-            <div className="services color-2">
-              <span className="icon">
-                <i className="icon-data"></i>
-              </span>
-              <div className="desc">
-                <h3>Software</h3>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 text-center animate-box">
-            <div className="services color-3">
-              <span className="icon">
-                <i className="icon-phone3"></i>
-              </span>
-              <div className="desc">
-                <h3>Application</h3>
-              </div>
-            </div>
-          </div>
+        {!intro_ExpertieList.length && this.setState({intro_ExpertieList:doubled})}
+        {
+          intro_ExpertieList.map(introExpertieList_inner => 
+            <IntroductionExpertise
+                data = {introExpertieList_inner}
+            />
+          )
+        }
         </div>
       </div>
     </section>
@@ -71,4 +78,3 @@ class Introduction extends Component {
   }
 }
 export default Introduction;
-

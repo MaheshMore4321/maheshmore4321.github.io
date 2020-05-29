@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
 import axios from 'axios'; 
-import parse from 'html-react-parser';
 import HeroAreaSlid from './hero-area_slide'
 
 class HeroArea extends Component {
@@ -19,6 +18,7 @@ class HeroArea extends Component {
       this.setState({heroarea_: response.data});
     })
     .catch(error =>{
+      console.log("error :: " + error);
     })
   } 
 

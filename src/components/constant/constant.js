@@ -12,3 +12,6 @@ export const contactme_feedback_api = api_rootLink + "emailservice/send-feedback
 
 //HEROAREA
 export const heroarea_api = api_baseLink + "heroarea";
+
+//INTRODUCTION
+export const intro_api = api_baseLink + "introduction";
