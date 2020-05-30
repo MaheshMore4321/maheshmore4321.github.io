@@ -22,13 +22,10 @@ class HeroArea extends Component {
     })
   } 
   componentDidMount() {
-    const script = document.createElement("script");
-    script.src = "https://maheshmore4321.github.io/js/main.js";
-    //when the script loads, we're ready to go, so change state
-    script.onload = (function(){ 
-         this.setState({loaded: true}) 
-    }).bind(this);
-    document.getElementsByTagName('head')[0].appendChild(script);
+    toLoadJavascriptFunction();
+  }
+  componentDidUpdate() {
+    toLoadJavascriptFunction();
   }
 
   render() {
@@ -41,6 +38,7 @@ class HeroArea extends Component {
             {
               heroarea_.map(heroarea_inner => 
                 <HeroAreaSlid  
+                  key={heroarea_inner.icon}
                   data={heroarea_inner}
                 />
               )
@@ -53,3 +51,13 @@ class HeroArea extends Component {
   }
 }
 export default HeroArea;
+
+function toLoadJavascriptFunction(){
+  const script = document.createElement("script");
+  script.src = "/js/main.js";
+  //when the script loads, we're ready to go, so change state
+  script.onload = (function(){ 
+    this.setState({loaded: true}) 
+  }).bind(this);
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
