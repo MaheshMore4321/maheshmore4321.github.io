@@ -11,11 +11,12 @@ class Introduction extends Component {
 
     this.state = {
       intro_Str:"",
-      intro_ExpertieList:[]
+      intro_ExpertieList:[],
+      loaded: false
     }
   }
 
-  componentDidMount(){
+  componentWillMount(){
     axios.get(api.intro_api)
     .then(response => {
       console.log(response)
@@ -27,10 +28,15 @@ class Introduction extends Component {
     })
   }
 
+  componentDidMount() {
+    toLoadJavascriptFunction();
+  }
+  componentDidUpdate() {
+    toLoadJavascriptFunction();
+  }
+
   render() {
     const {intro_Str, intro_ExpertieList} = this.state;
-    const numbers = [false, false, false];
-    const doubled = numbers.map((number) => number);
     return (
       <div>
         <section className="sym-about" data-section="aboutme">
@@ -62,10 +68,10 @@ class Introduction extends Component {
           </div>
         </div>
         <div className="row row-pt-md">
-        {!intro_ExpertieList.length && this.setState({intro_ExpertieList:doubled})}
         {
           intro_ExpertieList.map(introExpertieList_inner => 
             <IntroductionExpertise
+                key={introExpertieList_inner.icon}
                 data = {introExpertieList_inner}
             />
           )
@@ -78,3 +84,14 @@ class Introduction extends Component {
   }
 }
 export default Introduction;
+
+
+function toLoadJavascriptFunction(){
+  const script = document.createElement("script");
+  script.src = "/js/main.js";
+  //when the script loads, we're ready to go, so change state
+  script.onload = (function(){ 
+    this.setState({loaded: true}) 
+  }).bind(this);
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
