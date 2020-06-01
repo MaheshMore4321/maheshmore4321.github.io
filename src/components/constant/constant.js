@@ -15,3 +15,6 @@ export const heroarea_api = api_baseLink + "heroarea";
 
 //INTRODUCTION
 export const intro_api = api_baseLink + "introduction";
+
+//EDUCATION
+export const education_api = api_baseLink + "education";

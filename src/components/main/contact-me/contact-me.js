@@ -16,7 +16,6 @@ class ContactMe extends Component {
       contactme_: []
     }
   }
-
 	componentDidMount(){
 		axios.get(api.contactme_api)
 		.then(response =>{ 
@@ -26,11 +25,9 @@ class ContactMe extends Component {
 			console.log(error);
 		})
   } 
-
   changeHandler = e => {
     this.setState({[e.target.name]: e.target.value});
   }  
-  
   submtHandler = e => {
     e.preventDefault();
     this.setState({loading:true});
@@ -46,11 +43,10 @@ class ContactMe extends Component {
         alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
     })
   }
-
   render() {
     const {contactme_, name, email, subject, message, loading} = this.state;
     return (
-      <div>
+      <>
         <div className="row">
 					<div className="col-md-12 animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
 						<div className="hire">
@@ -114,7 +110,7 @@ class ContactMe extends Component {
             </div>
           </div>
         </section>
-      </div>
+      </>
     )
   }
 }

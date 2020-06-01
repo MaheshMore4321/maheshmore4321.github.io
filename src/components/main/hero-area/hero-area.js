@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
 import axios from 'axios'; 
-import HeroAreaSlid from './hero-area_slide'
+import HeroAreaSlid from './hero-area_slide';
 
 class HeroArea extends Component {
   constructor(props){
@@ -27,7 +27,6 @@ class HeroArea extends Component {
   componentDidUpdate() {
     toLoadJavascriptFunction();
   }
-
   render() {
     const {heroarea_} = this.state;
     return (
