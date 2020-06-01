@@ -16,23 +16,14 @@ class Education extends Component {
   componentWillMount(){
     axios.get(api.education_api)
     .then(response => {
-      console.log(response);
-      console.log(response.data);
       this.setState({education_: response.data});
     })
-    // .catch(error =>{
-    //   console.log("error :: " + error);
-    // })
-  } 
-  componentDidMount() {
-    toLoadJavascriptFunction();
-  }
-  componentDidUpdate() {
-    toLoadJavascriptFunction();
+    .catch(error =>{
+      console.log("error :: " + error);
+    })
   }
   render() {
     const {education_} = this.state;
-    console.log("Education :: " + education_);
     return (
       <>
         <section className="sym-experience" data-section="education">
@@ -69,13 +60,3 @@ class Education extends Component {
   }
 }
 export default Education;
-
-function toLoadJavascriptFunction(){
-  const script = document.createElement("script");
-  script.src = "/js/main.js";
-  //when the script loads, we're ready to go, so change state
-  script.onload = (function(){ 
-    this.setState({loaded: true}) 
-  }).bind(this);
-  document.getElementsByTagName('head')[0].appendChild(script);
-}

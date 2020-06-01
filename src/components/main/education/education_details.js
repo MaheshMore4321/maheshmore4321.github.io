@@ -27,7 +27,7 @@ class EducationDetails extends Component {
                     this.props.data.desc && 
                     <div className="panel-body">
                       <div className="row">
-                        <p style={{lineheight:'1.4', margin:'0'}}>{this.props.data.desc}</p>
+                        <p style={{lineheight:'1.4', margin:'0'}}>{parse(this.props.data.desc)}</p>
                       </div>
                     </div>
                   }
