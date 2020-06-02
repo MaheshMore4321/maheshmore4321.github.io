@@ -18,3 +18,6 @@ export const intro_api = api_baseLink + "introduction";
 
 //EDUCATION
 export const education_api = api_baseLink + "education";
+
+//EXPERIENCE
+export const experience_api = api_baseLink + "experience";
