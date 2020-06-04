@@ -23,11 +23,11 @@ class ExperienceDetails extends Component {
                         <div id={this.props.data.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
                             <div className="panel-body">
                                 <div className="row">
-                                {
-                                    this.props.data.job_desc.map(job_desc__inner =>
-                                        <p key={job_desc__inner} style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(job_desc__inner)}</p>
-                                    )
-                                }
+                                    {
+                                        this.props.data.job_desc.map(job_desc__inner =>
+                                            <p key={job_desc__inner} style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(job_desc__inner)}</p>
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>

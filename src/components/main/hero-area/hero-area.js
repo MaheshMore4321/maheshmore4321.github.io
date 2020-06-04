@@ -34,14 +34,14 @@ class HeroArea extends Component {
         <section id="sym-hero" className="js-fullheight" data-section="home">
           <div className="flexslider js-fullheight">
             <ul className="slides">
-            {
-              heroarea_.map(heroarea_inner => 
-                <HeroAreaSlid  
-                  key={heroarea_inner.icon}
-                  data={heroarea_inner}
-                />
-              )
-            }
+              {
+                heroarea_.map(heroarea_inner => 
+                  <HeroAreaSlid  
+                    key={heroarea_inner.icon}
+                    data={heroarea_inner}
+                  />
+                )
+              }
             </ul>
           </div>
         </section>

@@ -24,7 +24,7 @@ class Sidebar extends Component {
 	render() {
 		const {sidebar_} = this.state;
     	return (
-    		<div>
+    		<>
       			<aside id="sym-aside" className="border js-fullheight" style={{backgroundImage:`url(${sidebar_.background_picture_link})`, backgroundSize: 'cover'}}>
 					<div className="text-center">
 						<div className="author-img" style={{backgroundImage:`url(${sidebar_.profile_picture_link})`}}></div>
@@ -62,7 +62,7 @@ class Sidebar extends Component {
 						<small>Thanks <a href="https://colorlib.com/wp/template/jackson/" target="_blank" rel="noopener noreferrer">Colorlib</a> for inspiration</small>
 					</div>	
 				</aside>
-			</div>
+			</>
     	);
   	}
 }

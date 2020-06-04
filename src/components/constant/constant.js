@@ -1,5 +1,5 @@
 //API_ROOT_LINK
-const test_api_baseLink = "http://localhost:8080/sym-api/me/";
+//const test_api_baseLink = "http://localhost:8080/sym-api/me/";
 const api_rootLink = "https://sym-api-dev.herokuapp.com/sym-api/";
 const api_baseLink = api_rootLink + "me/";
 
