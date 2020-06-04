@@ -35,7 +35,13 @@ class ContactMe extends Component {
       .then(response =>{ 
         this.setState({loading:false});
         console.log(response);
-        alert("Message Succesfully sent, i will get back you soon");
+
+        if(response.mailSendResponseFlag){
+          alert("Message Succesfully sent, i will get back you soon");
+        }
+        else{
+          alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
+        }
     })
       .catch(error =>{
         this.setState({loading:false});
