@@ -24,3 +24,6 @@ export const experience_api = api_baseLink + "experience";
 
 //PROJECT
 export const project_api = api_baseLink + "project";
+
+//SKILL
+export const skill_api = api_baseLink + "skill";

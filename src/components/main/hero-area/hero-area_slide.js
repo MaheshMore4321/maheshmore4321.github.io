@@ -18,7 +18,7 @@ class HeroAreaSlid extends Component {
                       parse(this.props.data.headerLine)
                     }
                     </h1>
-                    <p><a className="btn btn-primary btn-learn" href={this.props.data && this.props.data.link !== undefined && this.props.data.link} target="_blank" rel="noopener noreferrer">
+                    <p><a className="btn btn-primary btn-learn" href={this.props.data && this.props.data.link !== undefined && this.props.data.link} rel="noopener noreferrer">
                     {
                       this.props.data && this.props.data.text !== undefined &&
                       parse(this.props.data.text)
