@@ -37,8 +37,7 @@ class ProjectDetails extends Component {
                                         <p style={{margin:'0'}}><b>Roles and Responsibilities</b> : </p>
                                             {
                                                 this.props.data.prj_rl_desc.map(prj_rl_desc__inner =>
-                                                   
-                                                    <p key={prj_rl_desc__inner} style={{lineheight:'1.4',margin:'0'}}><i class="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(prj_rl_desc__inner)}</p>
+                                                    <p key={prj_rl_desc__inner} style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(prj_rl_desc__inner)}</p>
                                                 )
                                             }
                                     </div>

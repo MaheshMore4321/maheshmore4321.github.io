@@ -13,11 +13,11 @@ class SkillDetails extends Component {
             </div>
             <div id={this.props.data.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div className="panel-body">
-                    <div class="row">
+                    <div className="row">
                         {
                             this.props.data.skillList.map(skillsubList => 
-                                <div class="col-3 col-md-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xs-3">
-                                    <p key={skillsubList} style={{lineheight:'1.4',margin:'0'}}><i class="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(skillsubList)}</p>
+                                <div key={skillsubList}  className="col-3 col-md-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xs-3">
+                                    <p style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(skillsubList)}</p>
                                 </div>
                             )
                         }

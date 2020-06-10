@@ -34,9 +34,7 @@ class ContactMe extends Component {
     axios.post(api.contactme_feedback_api, this.state)
       .then(response =>{ 
         this.setState({loading:false});
-        console.log(response);
-
-        if(response.mailSendResponseFlag){
+        if(response.data.mailSendResponseFlag){
           alert("Message Succesfully sent, i will get back you soon");
         }
         else{

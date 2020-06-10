@@ -11,9 +11,8 @@ class Introduction extends Component {
 
     this.state = {
       intro_Str:"",
-      intro_ExpertieList:[],
-      loaded: false
-    }
+      intro_ExpertieList:[]
+    } 
   }
   componentWillMount(){
     axios.get(api.intro_api)
@@ -84,9 +83,5 @@ export default Introduction;
 function toLoadJavascriptFunction(){
   const script = document.createElement("script");
   script.src = "/js/main.js";
-  //when the script loads, we're ready to go, so change state
-  script.onload = (function(){ 
-    this.setState({loaded: true}) 
-  }).bind(this);
   document.getElementsByTagName('head')[0].appendChild(script);
 }

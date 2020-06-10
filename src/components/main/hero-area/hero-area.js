@@ -8,8 +8,7 @@ class HeroArea extends Component {
 		super(props)
 
 		this.state = {
-      heroarea_: [],
-      loaded: false
+      heroarea_: []
     }
   }
   componentWillMount(){
@@ -54,9 +53,5 @@ export default HeroArea;
 function toLoadJavascriptFunction(){
   const script = document.createElement("script");
   script.src = "/js/main.js";
-  //when the script loads, we're ready to go, so change state
-  script.onload = (function(){ 
-    this.setState({loaded: true}) 
-  }).bind(this);
   document.getElementsByTagName('head')[0].appendChild(script);
 }
