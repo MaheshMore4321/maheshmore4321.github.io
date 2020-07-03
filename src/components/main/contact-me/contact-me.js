@@ -17,7 +17,7 @@ class ContactMe extends Component {
     }
   }
 	componentDidMount(){
-		axios.get(api.contactme_api)
+		axios.get(api.contactme_api)//contactme
 		.then(response =>{ 
 			this.setState({contactme_: response.data});
 		})

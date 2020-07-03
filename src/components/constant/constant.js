@@ -30,4 +30,5 @@ export const skill_api = api_baseLink + "skill";
 
 //File Path
 export const JSON_FILE_DATA = '/portfolio_data.json';
+
 //export const contactme_feedback_api = api_rootLink + "emailservice/send-feedback-email";
