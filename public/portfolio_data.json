@@ -1,0 +1,21 @@
+{
+    "sidebar":{
+        "name":"Mahesh More",
+        "job_title":"Technology-Consultant @Virtusa",
+
+        "profile_picture_link":"https://i.imgur.com/Gny9TGR.jpg",
+        "background_picture_link":"https://i.imgur.com/ETOmlHB.png",
+
+        "facebook_link":"https://www.facebook.com/Maheshmore4321",
+        "twitter_link":"https://twitter.com/maheshmore4321",
+        "instgram_link":"https://www.instagram.com/maheshmore4321",
+        "linkedin_link":"https://www.linkedin.com/in/maheshmore4321",
+        "github_link":"https://www.github.com/MaheshMore4321",
+        "website_link":"https://www.coderstea.com"
+    },
+    "contactme":{
+        "mobileNumber":"+91 9768940268",
+        "address":"Mumbai, India",
+        "emailId":"MaheshMore4321@gmail.com"
+    }
+}

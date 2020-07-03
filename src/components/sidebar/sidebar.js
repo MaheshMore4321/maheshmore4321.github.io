@@ -12,9 +12,9 @@ class Sidebar extends Component {
 	}
 
 	componentDidMount(){
-		axios.get(api.sidebar_api)
+		axios.get(api.JSON_FILE_DATA)
 		.then(response =>{ 
-			this.setState({sidebar_: response.data});
+			this.setState({sidebar_: response.data.sidebar});
 		})
 		.catch(error =>{
 			console.log(error);
