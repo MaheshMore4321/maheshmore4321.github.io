@@ -78,22 +78,7 @@
 				}, 100);
 			}
 		} , { offset: '85%' } );
-	};
-
-	var burgerMenu = function() {
-		// $('.js-sym-nav-toggle').on('click', function(event){
-		// 	event.preventDefault();
-		// 	var $this = $(this);
-
-		// 	if ($('body').hasClass('offcanvas')) {
-		// 		$this.removeClass('active');
-		// 		$('body').removeClass('offcanvas');	
-		// 	} else {
-		// 		$this.addClass('active');
-		// 		$('body').addClass('offcanvas');	
-		// 	}
-		// });
-	};
+	}; 
 
 	var mobileMenuOutsideClick = function() {
 		$(document).click(function (e) {
@@ -225,18 +210,11 @@
 		counterWayPoint();
 		contentWayPoint(); 
 		clickMenu();
-		// navActive();
+		navActive();
 		navigationSection();
-		// windowScroll();
-
 		mobileMenuOutsideClick();
 		sliderMain();
 		stickyFunction();
 		owlCrouselFeatureSlide();
 	});
 }());
-
-
-
-/**** */
-

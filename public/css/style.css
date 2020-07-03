@@ -304,8 +304,7 @@ figure {
   transition: 0.5s; }
   @media screen and (max-width: 768px) {
     #sym-main {
-      width: 100%;
-      padding: 0 1em; } }
+      width: 100%;} }
 
 #sym-hero {
   min-height: 500px;
