@@ -12,14 +12,15 @@ class Project extends Component {
       loaded: false
     }
   }
+
   componentWillMount(){
-    axios.get(api.project_api)
-    .then(response => {
-      this.setState({project_: response.data});
-    })
-    .catch(error =>{
-      console.log("error :: " + error);
-    })
+		axios.get(api.JSON_FILE_DATA)
+		.then(response =>{ 
+      this.setState({project_: response.data.project});
+		})
+		.catch(error =>{
+			console.log(error);
+		})
   }
 
   render() {
@@ -38,10 +39,11 @@ class Project extends Component {
                   <div className="col-md-12">
                     <div className="timeline-centered">
                       {
-                        project_.map(project_inner =>
+                        project_.map((project_inner, index) =>
                           <ProjectDetails  
-                            key={project_inner.id}
+                            key={index}
                             data={project_inner}
+                            id={index+1}
                           />
                         )
                       }

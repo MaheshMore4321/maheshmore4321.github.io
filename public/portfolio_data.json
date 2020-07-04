@@ -219,18 +219,16 @@
 	  }
     ],
     "project" : [
-        {
-          "id": "004bcb56-d864-4319-a809-167ab3ae594b",
-          "prj_icon": "timeline-icon color-1",
-          "prj_nm": "<b>CitiBank Commercial (CRM-ICRM)</b>",
-          "prj_org": "<b>Organization</b> : Virtusa",
-          "prj_clnt": "<b>Client</b> : Citibank",
-          "prj_dur": "<b>Duration</b> : August`2019 - present",
-          "prj_tec": "<b>Technology</b> : Core &amp; advanced Java, E-core Framework, Spring Framework, jBPM, Oracle Databases",
-          "prj_typ": "<b>Project Type</b> : Development, Migration",
-          "prj_env": "<b>Environment</b> : Windows, Linux, Workflow Engine (i.e. jBPM)",
-          "prj_role": "<b>Role</b> : Senior Software Developer",
-          "prj_tmsz": "<b>Team Size</b> : 12",
+       {
+          "prj_nm": "CitiBank Commercial (CRM-ICRM)",
+          "prj_org": "Virtusa",
+          "prj_clnt": "Citibank",
+          "prj_dur": "August`2019 - present",
+          "prj_tec": "Core &amp; advanced Java, E-core Framework, Spring Framework, jBPM, Oracle Databases",
+          "prj_typ": "Development, Migration",
+          "prj_env": "Windows, Linux, Workflow Engine (i.e. jBPM)",
+          "prj_role": "Senior Software Developer",
+          "prj_tmsz": "12",
           "prj_desc": "For Citibank we developing &amp; maintaining (providing support) to CRM application we called as Citibank Commercial. Based on client requirement we designing application which help bank to handle their BFSI business in this part we focus on main on Citibank mortgage business for their client like SME/MME Also in Citibank Commercial in part of migrating team which migrate application TIBCO I-Process Workflow system to the Red-Hat JBPM Workflow management system",
           "prj_rl_desc": [
             "Working on Citibank proprietary E-core Framework &amp; their utility for application",
@@ -246,6 +244,90 @@
             "Report higher officials for project challenges, progress &amp; periodical meetings updates",
             "Documentation for code &amp; projects feature updates"
           ]
-        }
+      }, 
+	  { 
+		"prj_nm": "JNCB - Analytical Operations",
+		"prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
+		"prj_clnt": "National Commercial Bank Jamaica Limited (Kingston – Jamaica)",
+		"prj_dur": "January’2018 – August’2019",
+		"prj_tec": "Core &amps; advanced Java, JSP, Servlet, Spring Framework, MySql-Oracle-MsSql Databases",
+		"prj_typ": "Development",
+		"prj_env": "Linux, Multi-Database, Third Party API (SMS), Red-Point Interaction, Dynamics CRM",
+		"prj_role": "Developer",
+		"prj_tmsz": "9",
+		"prj_desc": "For NCB handling their all Analytical Operation, Using AI/ML concept analyze customer historical behaviors and gives prediction for best next best product (i.e. Credit Card, Loan, Insurance) which customer can buy, also manage their offers sending using application red-point interaction &amp; as per customer's response create leads for that product",
+		"prj_rl_desc": [
+		  "Involved in periodical meetings with the Project Management Team, Key Users",
+		  "Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
+		  "Same data feed in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
+		  "Configuration and Customize the Application, also Developed Plugins, Reports and UI",
+		  "Tackle and automate the banking system for leads end product",
+		  "Coordinate with Team Members for several Service, API, Test operations &amp; Software for streamline operations",
+		  "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+		  "Report higher officials for project challenges, progress &amp; periodical meetings updates",
+		  "Documentation for code &amp; projects feature updates"
+		]
+	  },
+	  {
+		"prj_nm": "Axis bank - Credit Card Loan",
+		"prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
+		"prj_clnt": "Axis Bank Mumbai, India",
+		"prj_dur": "July’2017 – December’2017",
+		"prj_tec": "Core &amps; advanced Java, MySql-Oracle Databases",
+		"prj_typ": "Development",
+		"prj_env": "Linux, Multi-Database",
+		"prj_role": "Developer",
+		"prj_tmsz": "9",
+		"prj_desc": "Predict customer which we can pitch for credit card loan, analyze existing customer historical transaction and according to, it predict customers for credit card loan then bank contact customers with various medium (SMS, Call &amp; Mail). for same predict which medium is best for that customer",
+		"prj_rl_desc": [
+		  "Involved in periodical meetings with the Project Management Team, Key Users",
+		  "Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
+		  "Data feed in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
+		  "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+		  "Report higher officials for project challenges, progress &amp; periodical meetings updates",
+		  "Documentation for code &amp; projects feature updates"
+		]
+	  },
+	  {
+		"prj_nm": "Motilal Oswal - Cross Sell Up Sell",
+		"prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
+		"prj_clnt": "Motilal Oswal Financial Services Ltd (Mumbai, India)",
+		"prj_dur": "February’2017 – June’2017",
+		"prj_tec": "Core &amp; advanced Java, MySql-MsSql Databases",
+		"prj_typ": "Development",
+		"prj_env": "Windows, Multi-Database, SSMS, SSIS &amp; ETL Tools",
+		"prj_role": "Developer",
+		"prj_tmsz": "4",
+		"prj_desc": "Predict next best product for customers (existing &amp; new) can take, on analysis &amp; learn on existing customer behaviors/data (i.e. demographics, transaction &amp; product acquired) then our AI algorithm in terms of up-sell or cross-sell the product, predict next best product for customer",
+		"prj_rl_desc": [
+		  "Involved in periodical meetings with the Project Management Team, Key Users",
+		  "Developed jobs using SSIS BI-Tools for ETL operations",
+		  "Tackle and automate the banking system for SSIS based ETL operations for same make java-based solution",
+		  "Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
+		  "Data feed in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
+		  "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+		  "Documentation for code &amp; projects feature updates"
+		]
+	  },
+	  {
+		"prj_nm": "HDFC Bank - Wipro ATM Support",
+		"prj_org": "Impact-Wipro Infotech",
+		"prj_clnt": "HDFC Bank (Mumbai, India)",
+		"prj_dur": "October’2015 – February’2017",
+		"prj_tec": "Databases, Network Testing Tools, IBM Lotus",
+		"prj_typ": "Technical Support",
+		"prj_env": "Windows, Linux, Netezza-Database, BI Report &amp; CRM Tools",
+		"prj_role": "Technical Support Engineer",
+		"prj_tmsz": "10",
+		"prj_desc": "Project is main focus on provide support for HDFC bank ATM in terms of Link(Network), Battery &amp; UPS (Power), where actively working in Link team which work in 24x7 work environment. where coordinate with HDFC bank database (Netezza database) &amp; network team, also working for power department",
+		"prj_rl_desc": [
+		  "24x7 Supports in PAN INDIA",
+		  "Log ticket for customer’s queries in CRM &amp; For same take start to end follows to resolve queries",
+		  "Provide technical support over telephone &amp; email",
+		  "Use remote support to troubleshoot and analyses issues faced by customers",
+		  "Ensure a quick response to all incoming customer queries",
+		  "To serve as a link between the bank and customers"
+		]
+	  }
     ]
 }
