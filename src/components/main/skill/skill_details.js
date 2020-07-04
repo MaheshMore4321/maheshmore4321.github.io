@@ -7,11 +7,11 @@ class SkillDetails extends Component {
         <div className="panel panel-default">
             <div className="panel-heading" role="tab" id="headingTwo">
                 <h4 className="panel-title">
-                    <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href={"#"+this.props.data.id} aria-expanded="false" aria-controls="collapseTwo">{this.props.data.skillHeader}
+                    <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href={"#skill"+this.props.id} aria-expanded="false" aria-controls="collapseTwo">{this.props.data.skillHeader}
                     </a>
                 </h4>
             </div>
-            <div id={this.props.data.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div id={"skill"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div className="panel-body">
                     <div className="row">
                         {

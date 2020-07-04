@@ -77,5 +77,175 @@
             "Coordinate with bank DBA &amp; network team"
           ]
         }
-      ]
+      ],
+	"heroarea" : [
+	  {
+		"backgroundImg": "https://i.imgur.com/Ug1qf0t.jpg",
+		"headerLine": "Hi! <br/>I'm Mahesh",
+		"link": "https://drive.google.com/file/d/1ygO1kZyoI9UwXcqZMtMcFU3UIzUwVglE/view",
+		"text": "Download CV&nbsp;",
+		"icon": "icon-download4"
+	  },
+	  {
+		"backgroundImg": "https://i.imgur.com/CBaUluq.jpg",
+		"headerLine": "I love building<br/>THINGS!!",
+		"link": "https://coderstea.com",
+		"text": "View&nbsp;My&nbsp;BlogSite&nbsp;",
+		"icon": "icon-book"
+	  },
+	  {
+		"backgroundImg": "https://i.imgur.com/VxAQYX2.png",
+		"headerLine": "Let's have a<br/>Talk!!",
+		"link": "#sec_contactme",
+		"text": "Contact&nbsp;me&nbsp;",
+		"icon": "icon-briefcase3"
+	  }
+	],
+	"intro" : {
+	  "introduction": "<strong>Hi I'm Mahesh More</strong>, Working as Senior Software Developer &amp; i have more than 5 years of experience in the IT industry. Currently working for Citi bank project @Virtusa as Senior Software Developer, Where provides the software solution for CRM &amp; various applications</p><p>I have Working on BFSI domain projects involved in the development &amp; support of and new/existing application where i use technologies like Java Core, Advanced (J2EE), Spring and Databases like MySQL, MsSQL, Oracle and Web Applications.</p><p>Hands-on experience of testing at all the levels to build an enterprise application &amp; I'm Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues. Willing to take initiative and responsibility for core component and development.",
+	  "introExpertieList": [
+		{ 
+		  "icon": "icon-bulb",
+		  "desc": "Innovative Ideas"
+		},
+		{
+		  "icon": "icon-data",
+		  "desc": "Software"
+		},
+		{
+		  "icon": "icon-phone3",
+		  "desc": "Appliation"
+		}
+	  ]
+	},
+	"skill" : [
+	  { 
+		"skillHeader": "Programming Languages",
+		"skillList": [
+		  "Core & Advanced Java"
+		]
+	  },
+	  { 
+		"skillHeader": "Framework /Technology",
+		"skillList": [
+		  "Spring (Core, MVC & Boot)",
+		  "Hibernate & JPA",
+		  "SLF4J - Log4J",
+		  "Junit",
+		  "Maven",
+		  "ReflectionAPI",
+		  "Web-Services",
+		  "Collection",
+		  "Multithreading",
+		  "JDBC"
+		]
+	  },
+	  { 
+		"skillHeader": "Java Workflow Engine",
+		"skillList": [
+		  "jBPM"
+		]
+	  },
+	  { 
+		"skillHeader": "Other Frameworks",
+		"skillList": [
+		  "E-core Framework",
+		  "Hugo"
+		]
+	  },
+	  { 
+		"skillHeader": "IDE",
+		"skillList": [
+		  "Eclipse",
+		  "IntelliJ IDEA",
+		  "STS",
+		  "Vscode"
+		]
+	  },
+	  { 
+		"skillHeader": "Operating Systems",
+		"skillList": [
+		  "Windows",
+		  "Linux (GUI & CLI)",
+		  "Cent OS"
+		]
+	  },
+	  { 
+		"skillHeader": "Software",
+		"skillList": [
+		  "SSMS",
+		  "Cyber-Duck",
+		  "FileZilla",
+		  "Red-Point Interaction",
+		  "Database Studio",
+		  "Arcon PMS"
+		]
+	  },
+	  { 
+		"skillHeader": "Databases",
+		"skillList": [
+		  "MySQL",
+		  "MariaDB",
+		  "MsSQL",
+		  "Oracle SQL Server",
+		  "IBM Netezza Server"
+		]
+	  },
+	  { 
+		"skillHeader": "Web Technology",
+		"skillList": [
+		  "Servlet",
+		  "JSP",
+		  "JavaScript",
+		  "JQuery",
+		  "Ajax",
+		  "Json",
+		  "Html"
+		]
+	  },
+	  { 
+		"skillHeader": "Web Application",
+		"skillList": [
+		  "Apache Tomcat"
+		]
+	  },
+	  { 
+		"skillHeader": "Version Control System",
+		"skillList": [
+		  "Git",
+		  "TortoiseGit",
+		  "EclipseGit"
+		]
+	  }
+    ],
+    "project" : [
+        {
+          "id": "004bcb56-d864-4319-a809-167ab3ae594b",
+          "prj_icon": "timeline-icon color-1",
+          "prj_nm": "<b>CitiBank Commercial (CRM-ICRM)</b>",
+          "prj_org": "<b>Organization</b> : Virtusa",
+          "prj_clnt": "<b>Client</b> : Citibank",
+          "prj_dur": "<b>Duration</b> : August`2019 - present",
+          "prj_tec": "<b>Technology</b> : Core &amp; advanced Java, E-core Framework, Spring Framework, jBPM, Oracle Databases",
+          "prj_typ": "<b>Project Type</b> : Development, Migration",
+          "prj_env": "<b>Environment</b> : Windows, Linux, Workflow Engine (i.e. jBPM)",
+          "prj_role": "<b>Role</b> : Senior Software Developer",
+          "prj_tmsz": "<b>Team Size</b> : 12",
+          "prj_desc": "For Citibank we developing &amp; maintaining (providing support) to CRM application we called as Citibank Commercial. Based on client requirement we designing application which help bank to handle their BFSI business in this part we focus on main on Citibank mortgage business for their client like SME/MME Also in Citibank Commercial in part of migrating team which migrate application TIBCO I-Process Workflow system to the Red-Hat JBPM Workflow management system",
+          "prj_rl_desc": [
+            "Working on Citibank proprietary E-core Framework &amp; their utility for application",
+            "Working with migration application TIBCO I-Process to the Red-Hat JBPM Workflow management system",
+            "Also working E-core Framework utility for application &amp; Job i.e. Cache loading, Operating console &amp; Job",
+            "Involved in periodical meetings with the Project Management Team, Key Users",
+            "Working with existing/legacy system/code to find &amp; fix the bug as well as migrate system to alternative technology",
+            "Working with migrating team to migrate TIBCO I-Process to Red-Hat JBPM workflow management system",
+            "Coordinate with DBA &amp; Deployment teams to Research, design, develop &amp; deploy an application",
+            "Research &amp; design the system as per the new requirements &amp; technologies",
+            "Document the code &amp; feature for independent operation",
+            "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+            "Report higher officials for project challenges, progress &amp; periodical meetings updates",
+            "Documentation for code &amp; projects feature updates"
+          ]
+        }
+    ]
 }

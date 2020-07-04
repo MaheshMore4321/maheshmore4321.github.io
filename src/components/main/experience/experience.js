@@ -44,7 +44,7 @@ class Experience extends Component {
                             <ExperienceDetails  
                               key={index}
                               data={experience_inner}
-                              id={index}
+                              id={index+1}
                             />
                           )
                         }

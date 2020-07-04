@@ -41,7 +41,7 @@ class Education extends Component {
                         <EducationDetails  
                           key={index}
                           data={education_inner}
-                          id={index}
+                          id={index+1}
                         />
                       )
                     }

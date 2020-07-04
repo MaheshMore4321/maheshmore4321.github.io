@@ -15,15 +15,15 @@ class Introduction extends Component {
     } 
   }
   componentWillMount(){
-    axios.get(api.intro_api)
-    .then(response => {
-      this.setState({intro_Str: response.data.introduction});
-      this.setState({intro_ExpertieList: response.data.introExpertieList});
-    })
-    .catch(error =>{
-      console.log("error :: " + error);
-    })
-  }
+		axios.get(api.JSON_FILE_DATA)
+		.then(response =>{ 
+      this.setState({intro_Str: response.data.intro.introduction});
+      this.setState({intro_ExpertieList: response.data.intro.introExpertieList});
+		})
+		.catch(error =>{
+			console.log(error);
+		})
+	}
   componentDidMount() {
     toLoadJavascriptFunction();
   }
@@ -43,9 +43,7 @@ class Introduction extends Component {
                     <div className="about-desc">
                       <span className="heading-meta">About Me</span>
                       <h2 className="sym-heading">Who Am I?</h2>
-                        {
-                          intro_Str && parse(intro_Str)
-                        }
+                        { intro_Str && parse("<p>"+intro_Str+"</p>") }
                       </div>
                   </div>
                 </div>
@@ -64,10 +62,11 @@ class Introduction extends Component {
             </div>
             <div className="row row-pt-md">
             {
-              intro_ExpertieList.map(introExpertieList_inner => 
-                <IntroductionExpertise
-                    key={introExpertieList_inner.icon}
-                    data = {introExpertieList_inner}
+              intro_ExpertieList.map((introExpertieList_inner, index) =>
+                <IntroductionExpertise  
+                  key={index}
+                  data={introExpertieList_inner}
+                  id={index+1}
                 />
               )
             }

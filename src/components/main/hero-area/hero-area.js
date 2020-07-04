@@ -12,14 +12,14 @@ class HeroArea extends Component {
     }
   }
   componentWillMount(){
-    axios.get(api.heroarea_api)
-    .then(response => {
-      this.setState({heroarea_: response.data});
-    })
-    .catch(error =>{
-      console.log("error :: " + error);
-    })
-  } 
+		axios.get(api.JSON_FILE_DATA)
+		.then(response =>{ 
+      this.setState({heroarea_: response.data.heroarea});
+		})
+		.catch(error =>{
+			console.log(error);
+		})
+	}
   componentDidMount() {
     toLoadJavascriptFunction();
   }

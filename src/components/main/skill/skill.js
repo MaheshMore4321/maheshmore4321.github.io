@@ -13,15 +13,15 @@ class Skill extends Component {
     }
   }
   componentWillMount(){
-    axios.get(api.skill_api)
-    .then(response => {
-      this.setState({skill_: response.data});
-    })
-    .catch(error =>{
-      console.log("error :: " + error);
-    })
+		axios.get(api.JSON_FILE_DATA)
+		.then(response =>{ 
+      this.setState({skill_: response.data.skill});
+		})
+		.catch(error =>{
+			console.log(error);
+		})
   }
-
+  
   render() {
     const {skill_} = this.state;
     return (
@@ -38,14 +38,15 @@ class Skill extends Component {
                   <div className="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                       <div className="fancy-collapse-panel">
                         <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            {
-                              skill_.map(skill_inner =>
-                                <SkillDetails  
-                                  key={skill_inner.id}
-                                  data={skill_inner}
-                                />
-                              )
-                            }
+                          {
+                            skill_.map((skill_inner, index) =>
+                              <SkillDetails  
+                                key={index}
+                                data={skill_inner}
+                                id={index+1}
+                              />
+                            )
+                          }
                         </div>
                       </div>
                     </div>
