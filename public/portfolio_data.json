@@ -16,6 +16,36 @@
     "contactme":{
         "mobileNumber":"+91 9768940268",
         "address":"Mumbai, India",
-        "emailId":"MaheshMore4321@gmail.com"
-    }
+        "emailId":"MaheshMore4321@gmail.com",
+        "feedback_link":"https://sym-api-dev.herokuapp.com/sym-api/emailservice/send-feedback-email"
+    },
+    "education":[
+        {
+            "id": "bbcb7e14-e5a7-4a45-8d7a-7d21495a288c",
+            "icon": "timeline-icon color-1",
+            "institute": "<b>Shree L.R.Tiwari College of Engineering</b>",
+            "std_branch": "<b>Bachelor of Enginnering</b>&nbsp;-&nbsp;<b>Electronics Engineering</b>",
+            "university": "<b>Mumbai University</b>",
+            "year": "<b>2015 - 2019</b>",
+            "desc": "Graduate with Distinction<br/>participate in various event as Aakash Tab dev &amps; E-yantra which organize by Bombay-IIT, also coordinate college fest- Ustav2k15 &amp; finally graduate bachelor of engineer with distinction"
+        },
+        {
+            "id": "6cdb3edb-9de1-4268-85ed-5bef083c02e5",
+            "icon": "timeline-icon color-2",
+            "institute": "<b>Patkar College</b>",
+            "std_branch": "<b>12th</b>&nbsp;-&nbsp;<b>HSC</b>&nbsp;-&nbsp;<b>Science</b>",
+            "university": "<b>Maharashtra State Board </b>",
+            "year": "<b>2010</b>",
+            "desc": null
+        },
+        {
+            "id": "704bd038-e4bd-4d1b-a282-9fe8fa4dbe55",
+            "icon": "timeline-icon color-3",
+            "institute": "<b>Indian Education Society</b>",
+            "std_branch": "<b>10th</b>&nbsp;-&nbsp;<b>SSC</b>",
+            "university": "<b>Maharashtra State Board </b>",
+            "year": "<b>2008</b>",
+            "desc": null
+        }
+    ]
 }

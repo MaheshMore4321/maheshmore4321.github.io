@@ -8,7 +8,6 @@ export const sidebar_api = api_baseLink + "sidebar";
 
 //CONTACT_ME
 export const contactme_api = api_baseLink + "contactme";
-export const contactme_feedback_api = api_rootLink + "emailservice/send-feedback-email";
 
 //HEROAREA
 export const heroarea_api = api_baseLink + "heroarea";
@@ -30,5 +29,5 @@ export const skill_api = api_baseLink + "skill";
 
 //File Path
 export const JSON_FILE_DATA = '/portfolio_data.json';
-
-//export const contactme_feedback_api = api_rootLink + "emailservice/send-feedback-email";
+//CONTACT_ME_SEND_FEEDBACK_EMAIL
+export const contactme_feedback_api = "https://sym-api-dev.herokuapp.com/sym-api/emailservice/send-feedback-email";

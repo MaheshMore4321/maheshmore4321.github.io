@@ -13,15 +13,15 @@ class Education extends Component {
       loaded: false
     }
   }
-  componentWillMount(){
-    axios.get(api.education_api)
-    .then(response => {
-      this.setState({education_: response.data});
-    })
-    .catch(error =>{
-      console.log("error :: " + error);
-    })
-  }
+  componentDidMount(){
+		axios.get(api.JSON_FILE_DATA)
+		.then(response =>{ 
+      this.setState({education_: response.data.education});
+		})
+		.catch(error =>{
+			console.log(error);
+		})
+	}
   render() {
     const {education_} = this.state;
     return (

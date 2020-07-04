@@ -13,25 +13,27 @@ class ContactMe extends Component {
       message: "",
       feedback: "my-portfolio",
       loading: false, 
+      feedbackLink_: "",
       contactme_: []
     }
   }
-	componentDidMount(){
-		axios.get(api.contactme_api)//contactme
+  componentDidMount(){
+		axios.get(api.JSON_FILE_DATA)
 		.then(response =>{ 
-			this.setState({contactme_: response.data});
+      this.setState({contactme_: response.data.contactme});
+      this.setState({feedbackLink_: response.data.contactme.feedback_link});
 		})
 		.catch(error =>{
 			console.log(error);
 		})
-  } 
+	}
   changeHandler = e => {
     this.setState({[e.target.name]: e.target.value});
   }  
   submtHandler = e => {
     e.preventDefault();
     this.setState({loading:true});
-    axios.post(api.contactme_feedback_api, this.state)
+    axios.post(this.state.feedbackLink_, this.state)
       .then(response =>{ 
         this.setState({loading:false});
         if(response.data.mailSendResponseFlag){
