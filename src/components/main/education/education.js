@@ -37,10 +37,11 @@ class Education extends Component {
                 <div className="col-md-12">
                   <div className="timeline-centered">
                     {
-                      education_.map(education_inner =>
+                      education_.map((education_inner, index) =>
                         <EducationDetails  
-                          key={education_inner.id}
+                          key={index}
                           data={education_inner}
+                          id={index}
                         />
                       )
                     }
