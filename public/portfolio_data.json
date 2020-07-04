@@ -3,8 +3,8 @@
         "name":"Mahesh More",
         "job_title":"Technology-Consultant @Virtusa",
 
-        "profile_picture_link":"https://i.imgur.com/Gny9TGR.jpg",
-        "background_picture_link":"https://i.imgur.com/ETOmlHB.png",
+        "profile_picture_link":"/images/maheshmore_pic.jpg",
+        "background_picture_link":"/images/bg.png",
 
         "facebook_link":"https://www.facebook.com/Maheshmore4321",
         "twitter_link":"https://twitter.com/maheshmore4321",
@@ -80,21 +80,21 @@
       ],
 	"heroarea" : [
 	  {
-		"backgroundImg": "https://i.imgur.com/Ug1qf0t.jpg",
+		"backgroundImg": "/images/img_bg_1.jpg",
 		"headerLine": "Hi! <br/>I'm Mahesh",
 		"link": "https://drive.google.com/file/d/1ygO1kZyoI9UwXcqZMtMcFU3UIzUwVglE/view",
 		"text": "Download CV&nbsp;",
 		"icon": "icon-download4"
 	  },
 	  {
-		"backgroundImg": "https://i.imgur.com/CBaUluq.jpg",
+		"backgroundImg": "/images/img_bg_2.jpg",
 		"headerLine": "I love building<br/>THINGS!!",
 		"link": "https://coderstea.com",
 		"text": "View&nbsp;My&nbsp;BlogSite&nbsp;",
 		"icon": "icon-book"
 	  },
 	  {
-		"backgroundImg": "https://i.imgur.com/VxAQYX2.png",
+		"backgroundImg": "/images/img_bg_3.jpg",
 		"headerLine": "Let's have a<br/>Talk!!",
 		"link": "#sec_contactme",
 		"text": "Contact&nbsp;me&nbsp;",
