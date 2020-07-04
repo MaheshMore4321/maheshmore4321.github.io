@@ -41,5 +41,41 @@
             "year": "2008",
             "desc": null
         }
-    ]
+    ],
+    "experience" : [
+        {
+          "job_compy_desig": "Consultant-Technical @Virtusa, Thane, India",
+          "job_duration": "23rd August`2019 - present",
+          "job_desc": [
+            "Virtusa working on BFSI domain project &amp; their involved in the development &amp; support for application",
+            "Virtusa assigned for Citi bank project i.e. Citi-Bank Commercial (CRM-ICRM) application",
+            "Citi Bank working on proprietary framework i.e. E-core framework with integration on Spring, Hibernate etc",
+            "Working with existing/legacy system/code to find &amp; fix the bug as well as migrate system to alternative technology",
+            "Working with migrating team to migrate TIBCO I-Process to Red-Hat JBPM workflow management system",
+            "Coordinate with DBA &amp; Deployment teams to Research, design, develop &amp; deploy an application",
+            "Research &amp; design the system as per the new requirements &amp; technologies",
+            "Document the code &amp; feature for independent operation"
+          ]
+        },
+        {
+          "job_compy_desig": "Software Developer @Trutech Webs Pvt Ltd (FluidAI), Mumbai, India",
+          "job_duration": "10th February`2017 - 21st August`2019",
+          "job_desc": [
+            "Working with existing/legacy system/code to find &amp; fix the bug as well as automate the existing manual process",
+            "Majorly working on AI-ML projects involved in the automation of sectors like banking &amp; government",
+            "Coordinate with Data Scientist &amp; DBA teams to Research, design &amp; develop an application",
+            "Research &amp; design the system as per the new requirements &amp; technologies",
+            "Document the code &amp; feature for independent operation"
+          ]
+        },
+        {
+          "job_compy_desig": "Technical Support Engineer @Impact-Wipro InfoTech, Mumbai, India",
+          "job_duration": "30th September`2015 - 9th February`2017",
+          "job_desc": [
+            "Monitor &amp; maintain the entire Pan India HDFC bank ATM network job",
+            "Working on database &amp; Linux system, to monitoring &amp; scheduled job",
+            "Coordinate with bank DBA &amp; network team"
+          ]
+        }
+      ]
 }

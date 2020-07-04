@@ -14,7 +14,7 @@ class EducationDetails extends Component {
               <div className="panel panel-default">
                 <div className="panel-heading" role="tab" id="headingOne" style={{border:'none'}}>
                   <h4 className="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href={"#"+this.props.id} aria-expanded="false" aria-controls="collapseOne" className="collapsed">
+                    <a data-toggle="collapse" data-parent="#accordion" href={"#edu"+this.props.id} aria-expanded="false" aria-controls="collapseOne" className="collapsed">
                       <p style={{margin:'0'}}><b>{parse(this.props.data.std_branch)}</b></p>
                       <p style={{margin:'0'}}><b>{parse(this.props.data.institute)}</b></p>
                       <p style={{margin:'0'}}><b>{parse(this.props.data.university)}</b></p>
@@ -22,7 +22,7 @@ class EducationDetails extends Component {
                     </a>
                   </h4>
                 </div>
-                <div id={this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
+                <div id={"edu"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
                   {
                     this.props.data.desc && 
                     <div className="panel-body">

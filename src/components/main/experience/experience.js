@@ -13,15 +13,15 @@ class Experience extends Component {
       loaded: false
     }
   }
-  componentWillMount(){
-    axios.get(api.experience_api)
-    .then(response => {
-      this.setState({experience_: response.data});
-    })
-    .catch(error =>{
-      console.log("error :: " + error);
-    })
-  }
+  componentDidMount(){
+		axios.get(api.JSON_FILE_DATA)
+		.then(response =>{ 
+      this.setState({experience_: response.data.experience});
+		})
+		.catch(error =>{
+			console.log(error);
+		})
+	}
 
   render() {
     const {experience_} = this.state;
@@ -40,10 +40,11 @@ class Experience extends Component {
                     <div className="col-md-12">
                       <div className="timeline-centered">
                         {
-                          experience_.map(experience_inner =>
+                          experience_.map((experience_inner, index) =>
                             <ExperienceDetails  
-                              key={experience_inner.id}
+                              key={index}
                               data={experience_inner}
+                              id={index}
                             />
                           )
                         }

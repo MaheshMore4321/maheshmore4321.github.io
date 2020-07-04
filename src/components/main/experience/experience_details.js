@@ -7,20 +7,20 @@ class ExperienceDetails extends Component {
       <>
         <article className="timeline-entry animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
             <div className="timeline-entry-inner">
-                <div className={this.props.data.icon}>
+                <div className={"timeline-icon color-"+this.props.id}>
                     <i className="icon-pen2"></i>
                 </div>
                 <div className="timeline-label" style={{padding:'0px'}}>
                     <div className="panel panel-default">
                         <div className="panel-heading" role="tab" id="headingOne" style={{border:'none'}}>
                             <h4 className="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href={"#"+this.props.data.id} aria-expanded="false" aria-controls="collapseOne" className="collapsed">
-                                    <p style={{margin:'0'}}>{parse(this.props.data.job_compy_desig)}</p>
-                                    <p style={{margin:'0'}}>{parse(this.props.data.job_duration)}</p>    
+                                <a data-toggle="collapse" data-parent="#accordion" href={"#exp"+this.props.id} aria-expanded="false" aria-controls="collapseOne" className="collapsed">
+                                    <p style={{margin:'0'}}><b>{parse(this.props.data.job_compy_desig)}</b></p>
+                                    <p style={{margin:'0'}}><b>Duration</b> : {parse(this.props.data.job_duration)}</p>    
                                 </a>
                             </h4>
                         </div>
-                        <div id={this.props.data.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
+                        <div id={"exp"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
                             <div className="panel-body">
                                 <div className="row">
                                     {
