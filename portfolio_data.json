@@ -17,7 +17,7 @@
         "mobileNumber":"+91 9768940268",
         "address":"Mumbai, India",
         "emailId":"MaheshMore4321@gmail.com",
-        "feedback_link":"https://sym-api-dev.herokuapp.com/sym-api/emailservice/send-feedback-email"
+        "feedback_link":"https://symapi.herokuapp.com/utility/mail/send-email"
     },
     "education":[
         {
