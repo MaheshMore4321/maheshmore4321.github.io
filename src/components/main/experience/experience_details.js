@@ -16,7 +16,7 @@ class ExperienceDetails extends Component {
                             <h4 className="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href={"#exp"+this.props.id} aria-expanded="false" aria-controls="collapseOne" className="collapsed">
                                     <p style={{margin:'0'}}><b>{parse(this.props.data.job_compy_desig)}</b></p>
-                                    <p style={{margin:'0'}}><b>Duration</b> : {parse(this.props.data.job_duration)}</p>    
+                                    <p style={{margin:'0'}}><b>Duration</b> : {parse(this.props.data.job_duration)}</p>
                                 </a>
                             </h4>
                         </div>
@@ -32,7 +32,7 @@ class ExperienceDetails extends Component {
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
         </article>
       </>

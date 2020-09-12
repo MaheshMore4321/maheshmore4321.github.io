@@ -27,10 +27,10 @@ class ProjectDetails extends Component {
                                     <div className="row">
                                         <p style={{lineheight:'1.4',margin:'0'}}><b>Technology</b> : {parse(this.props.data.prj_tec)}</p>
                                         <p style={{lineheight:'1.4',margin:'0'}}><b>Project Type</b> : {parse(this.props.data.prj_typ)}</p>
-                                        <p style={{lineheight:'1.4',margin:'0'}}><b>Environment</b> : {parse(this.props.data.prj_env)}</p>  
+                                        <p style={{lineheight:'1.4',margin:'0'}}><b>Environment</b> : {parse(this.props.data.prj_env)}</p>
                                         <p style={{lineheight:'1.4',margin:'0'}}><b>Role</b> : {parse(this.props.data.prj_role)}</p>
                                         <p style={{lineheight:'1.4',margin:'0'}}><b>Team Size</b> : {parse(this.props.data.prj_tmsz)}</p>
-                                        <br/>  
+                                        <br/>
                                         <p style={{margin:'0'}}><b>Project Description</b> : </p>
                                         <p style={{lineheight:'1.4',margin:'0'}}>{parse(this.props.data.prj_desc)}</p>
                                         <br/>

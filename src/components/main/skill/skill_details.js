@@ -15,14 +15,14 @@ class SkillDetails extends Component {
                 <div className="panel-body">
                     <div className="row">
                         {
-                            this.props.data.skillList.map(skillsubList => 
+                            this.props.data.skillList.map(skillsubList =>
                                 <div key={skillsubList}  className="col-3 col-md-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xs-3">
                                     <p style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(skillsubList)}</p>
                                 </div>
                             )
                         }
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
-import axios from 'axios'; 
- 
+import axios from 'axios';
+
 class ContactMe extends Component {
 	constructor(props){
 		super(props)
@@ -11,16 +11,18 @@ class ContactMe extends Component {
       email: "",
       subject: "",
       message: "",
-      feedback: "my-portfolio",
-      loading: false, 
+      loading: false,
       feedbackLink_: "",
+      emailIdToSentMail:"",
+      feedback: "my-portfolio",
       contactme_: []
     }
   }
   componentDidMount(){
 		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{ 
+		.then(response =>{
       this.setState({contactme_: response.data.contactme});
+      this.setState({emailIdToSentMail: response.data.contactme.emailId});
       this.setState({feedbackLink_: response.data.contactme.feedback_link});
 		})
 		.catch(error =>{
@@ -29,12 +31,12 @@ class ContactMe extends Component {
 	}
   changeHandler = e => {
     this.setState({[e.target.name]: e.target.value});
-  }  
+  }
   submtHandler = e => {
     e.preventDefault();
     this.setState({loading:true});
     axios.post(this.state.feedbackLink_, this.state)
-      .then(response =>{ 
+      .then(response =>{
         this.setState({loading:false});
         if(response.data.mailSendResponseFlag){
           alert("Message Succesfully sent, i will get back you soon");
@@ -120,4 +122,4 @@ class ContactMe extends Component {
     )
   }
 }
-export default ContactMe; 
+export default ContactMe;

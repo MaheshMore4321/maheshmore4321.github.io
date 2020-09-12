@@ -1,4 +1,7 @@
 {
+	"prop":{
+		"edit":"true"
+	},
     "sidebar":{
         "name":"Mahesh More",
         "job_title":"Technology-Consultant @Virtusa",
@@ -16,8 +19,8 @@
     "contactme":{
         "mobileNumber":"+91 9768940268",
         "address":"Mumbai, India",
-        "emailId":"MaheshMore4321@gmail.com",
-        "feedback_link":"https://sym-api-dev.herokuapp.com/sym-api/emailservice/send-feedback-email"
+		"emailId":"MaheshMore4321@gmail.com",
+		"feedback_link":"https://coderstea.herokuapp.com/utility/mail/send-email"
     },
     "education":[
         {
@@ -104,7 +107,7 @@
 	"intro" : {
 	  "introduction": "<strong>Hi I'm Mahesh More</strong>, Working as Senior Software Developer &amp; i have more than 5 years of experience in the IT industry. Currently working for Citi bank project @Virtusa as Senior Software Developer, Where provides the software solution for CRM &amp; various applications</p><p>I have Working on BFSI domain projects involved in the development &amp; support of and new/existing application where i use technologies like Java Core, Advanced (J2EE), Spring and Databases like MySQL, MsSQL, Oracle and Web Applications.</p><p>Hands-on experience of testing at all the levels to build an enterprise application &amp; I'm Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues. Willing to take initiative and responsibility for core component and development.",
 	  "introExpertieList": [
-		{ 
+		{
 		  "icon": "icon-bulb",
 		  "desc": "Innovative Ideas"
 		},
@@ -119,13 +122,13 @@
 	  ]
 	},
 	"skill" : [
-	  { 
+	  {
 		"skillHeader": "Programming Languages",
 		"skillList": [
 		  "Core & Advanced Java"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Framework /Technology",
 		"skillList": [
 		  "Spring (Core, MVC & Boot)",
@@ -140,20 +143,20 @@
 		  "JDBC"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Java Workflow Engine",
 		"skillList": [
 		  "jBPM"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Other Frameworks",
 		"skillList": [
 		  "E-core Framework",
 		  "Hugo"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "IDE",
 		"skillList": [
 		  "Eclipse",
@@ -162,7 +165,7 @@
 		  "Vscode"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Operating Systems",
 		"skillList": [
 		  "Windows",
@@ -170,7 +173,7 @@
 		  "Cent OS"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Software",
 		"skillList": [
 		  "SSMS",
@@ -181,7 +184,7 @@
 		  "Arcon PMS"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Databases",
 		"skillList": [
 		  "MySQL",
@@ -191,7 +194,7 @@
 		  "IBM Netezza Server"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Web Technology",
 		"skillList": [
 		  "Servlet",
@@ -203,13 +206,13 @@
 		  "Html"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Web Application",
 		"skillList": [
 		  "Apache Tomcat"
 		]
 	  },
-	  { 
+	  {
 		"skillHeader": "Version Control System",
 		"skillList": [
 		  "Git",
@@ -244,8 +247,8 @@
             "Report higher officials for project challenges, progress &amp; periodical meetings updates",
             "Documentation for code &amp; projects feature updates"
           ]
-      }, 
-	  { 
+      },
+	  {
 		"prj_nm": "JNCB - Analytical Operations",
 		"prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
 		"prj_clnt": "National Commercial Bank Jamaica Limited (Kingston – Jamaica)",

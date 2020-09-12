@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
 import parse from 'html-react-parser';
-import axios from 'axios'; 
+import axios from 'axios';
 
 import IntroductionExpertise from './introduction_experties';
 
@@ -12,11 +12,11 @@ class Introduction extends Component {
     this.state = {
       intro_Str:"",
       intro_ExpertieList:[]
-    } 
+    }
   }
   componentWillMount(){
 		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{ 
+		.then(response =>{
       this.setState({intro_Str: response.data.intro.introduction});
       this.setState({intro_ExpertieList: response.data.intro.introExpertieList});
 		})
@@ -63,7 +63,7 @@ class Introduction extends Component {
             <div className="row row-pt-md">
             {
               intro_ExpertieList.map((introExpertieList_inner, index) =>
-                <IntroductionExpertise  
+                <IntroductionExpertise
                   key={index}
                   data={introExpertieList_inner}
                   id={index+1}

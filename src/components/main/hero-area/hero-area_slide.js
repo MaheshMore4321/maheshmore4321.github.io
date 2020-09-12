@@ -29,7 +29,7 @@ class HeroAreaSlid extends Component {
               </div>
             </div>
           </div>
-        </li> 
+        </li>
       </>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
-import axios from 'axios'; 
+import axios from 'axios';
 
 import ExperienceDetails from './experience_details';
 
@@ -15,7 +15,7 @@ class Experience extends Component {
   }
   componentDidMount(){
 		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{ 
+		.then(response =>{
       this.setState({experience_: response.data.experience});
 		})
 		.catch(error =>{
@@ -41,7 +41,7 @@ class Experience extends Component {
                       <div className="timeline-centered">
                         {
                           experience_.map((experience_inner, index) =>
-                            <ExperienceDetails  
+                            <ExperienceDetails
                               key={index}
                               data={experience_inner}
                               id={index+1}

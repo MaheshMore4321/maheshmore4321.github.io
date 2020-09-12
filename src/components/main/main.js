@@ -9,7 +9,7 @@ import Project from "./project/project";
 import ContactMe from "./contact-me/contact-me";
 
 class Main extends Component {
-  
+
   render() {
     return (
     <div id="sym-main">

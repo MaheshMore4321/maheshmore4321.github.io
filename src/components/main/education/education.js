@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
-import axios from 'axios'; 
+import axios from 'axios';
 
 import EducationDetails from './education_details';
 
@@ -15,7 +15,7 @@ class Education extends Component {
   }
   componentDidMount(){
 		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{ 
+		.then(response =>{
       this.setState({education_: response.data.education});
 		})
 		.catch(error =>{
@@ -38,7 +38,7 @@ class Education extends Component {
                   <div className="timeline-centered">
                     {
                       education_.map((education_inner, index) =>
-                        <EducationDetails  
+                        <EducationDetails
                           key={index}
                           data={education_inner}
                           id={index+1}

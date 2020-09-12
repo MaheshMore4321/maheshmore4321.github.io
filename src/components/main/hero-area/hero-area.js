@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../constant/constant';
-import axios from 'axios'; 
+import axios from 'axios';
 import HeroAreaSlid from './hero-area_slide';
 
 class HeroArea extends Component {
@@ -13,7 +13,7 @@ class HeroArea extends Component {
   }
   componentWillMount(){
 		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{ 
+		.then(response =>{
       this.setState({heroarea_: response.data.heroarea});
 		})
 		.catch(error =>{
@@ -34,8 +34,8 @@ class HeroArea extends Component {
           <div className="flexslider js-fullheight">
             <ul className="slides">
               {
-                heroarea_.map(heroarea_inner => 
-                  <HeroAreaSlid  
+                heroarea_.map(heroarea_inner =>
+                  <HeroAreaSlid
                     key={heroarea_inner.icon}
                     data={heroarea_inner}
                   />

@@ -18,13 +18,13 @@ class EducationDetails extends Component {
                       <p style={{margin:'0'}}><b>{parse(this.props.data.std_branch)}</b></p>
                       <p style={{margin:'0'}}><b>{parse(this.props.data.institute)}</b></p>
                       <p style={{margin:'0'}}><b>{parse(this.props.data.university)}</b></p>
-                      <p style={{margin:'0'}}><b>{parse(this.props.data.year)}</b></p>    
+                      <p style={{margin:'0'}}><b>{parse(this.props.data.year)}</b></p>
                     </a>
                   </h4>
                 </div>
                 <div id={"edu"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
                   {
-                    this.props.data.desc && 
+                    this.props.data.desc &&
                     <div className="panel-body">
                       <div className="row">
                         <p style={{lineheight:'1.4', margin:'0'}}>{parse(this.props.data.desc)}</p>

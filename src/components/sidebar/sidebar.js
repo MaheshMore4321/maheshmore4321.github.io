@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import * as api from '../constant/constant';
 import axios from 'axios';
 
@@ -10,17 +11,15 @@ class Sidebar extends Component {
 			sidebar_: []
 		}
 	}
-
 	componentDidMount(){
 		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{ 
+		.then(response =>{
 			this.setState({sidebar_: response.data.sidebar});
 		})
 		.catch(error =>{
 			console.log(error);
 		})
-	} 
-
+	}
 	render() {
 		const {sidebar_} = this.state;
     	return (
@@ -51,7 +50,7 @@ class Sidebar extends Component {
 								<li><a href="#project" data-nav-section="project" className="fontSize15">Project</a></li>
 								<li><a href="#contactme" data-nav-section="contactme" className="fontSize15">Contact_Me</a></li>
 							</ul>
-					 
+
 						<div className="sym-footer margin-top-bottom">
 							<small className="fontSize15">Made with <i className="icon-heart" aria-hidden="true"></i> and <i className="icon-beer" aria-hidden="true"></i></small>
 							<br/>
@@ -59,7 +58,7 @@ class Sidebar extends Component {
 						</div>
 						<div className="sym-footer margin-top-bottom">
 							<small>Thanks <a href="https://colorlib.com/wp/template/jackson/" target="_blank" rel="noopener noreferrer">Colorlib</a> for inspiration</small>
-						</div>	
+						</div>
 						</div>
 					</nav>
 				</aside>
