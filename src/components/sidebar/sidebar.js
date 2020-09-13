@@ -48,7 +48,7 @@ class Sidebar extends Component {
 								<li><a href="#skill" data-nav-section="skill" className="fontSize15">Skill</a></li>
 								<li><a href="#experience" data-nav-section="experience" className="fontSize15">Experience</a></li>
 								<li><a href="#project" data-nav-section="project" className="fontSize15">Project</a></li>
-								<li><a href="#contactme" data-nav-section="contactme" className="fontSize15">Contact_Me</a></li>
+								<li><a href="#contactme" data-nav-section="contactme" className="fontSize15">Contact Me</a></li>
 							</ul>
 
 						<div className="sym-footer margin-top-bottom">

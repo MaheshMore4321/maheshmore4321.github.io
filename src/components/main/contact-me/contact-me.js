@@ -35,22 +35,25 @@ class ContactMe extends Component {
   submtHandler = e => {
     e.preventDefault();
     this.setState({loading:true});
-    axios.post(this.state.feedbackLink_, this.state)
-      .then(response =>{
-        this.setState({loading:false});
-        if(response.data.mailSendResponseFlag){
-          alert("Message Succesfully sent, i will get back you soon");
-        }
-        else{
-          alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
-        }
+
+    var feedbackData = {
+      name:this.state.name,
+      email:this.state.email,
+      message:`Subject :: ${this.state.subject} | Message :: ${this.state.message}`
+    };
+
+    axios.post(this.state.feedbackLink_, {feedbackData},
+      {headers: {Accept: "application/json"}})
+    .then(response =>{
+      this.setState({loading:false});
+      alert("Message Succesfully sent, i will get back you soon");
     })
-      .catch(error =>{
-        this.setState({loading:false});
-        console.log(error);
-        alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
-    })
-  }
+    .catch(error =>{
+      this.setState({loading:false});
+      alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
+    });
+  };
+
   render() {
     const {contactme_, name, email, subject, message, loading} = this.state;
     return (
