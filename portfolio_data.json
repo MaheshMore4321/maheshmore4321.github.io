@@ -1,6 +1,7 @@
 {
 	"prop":{
-		"edit":"true"
+		"edit":"true",
+		"notePoint": "shergad bihar khaimur ki pahadi"
 	},
     "sidebar":{
         "name":"Mahesh More",
@@ -20,7 +21,7 @@
         "mobileNumber":"+91 9768940268",
         "address":"Mumbai, India",
 		"emailId":"MaheshMore4321@gmail.com",
-		"feedback_link":"https://coderstea.herokuapp.com/utility/mail/send-email"
+		"feedback_link":"https://getform.io/f/917f85c3-1a6a-4f41-ac86-47bcb9572230"
     },
     "education":[
         {
