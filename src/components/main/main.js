@@ -10,23 +10,45 @@ import ContactMe from "./contact-me/contact-me";
 
 class Main extends Component {
 
+
   render() {
     return (
     <div id="sym-main">
       <hr className='no-margin'/>
-      <HeroArea/>
+
+      <HeroArea
+        data={this.props.data && this.props.data.heroarea}
+      />
       <hr className='no-margin'/>
-      <Introduction/>
+
+      <Introduction
+        data={this.props.data && this.props.data.intro}
+      />
       <hr className='no-margin'/>
-      <Education/>
+
+      <Education
+        data={this.props.data && this.props.data.education}
+      />
       <hr className='no-margin'/>
-      <Skill/>
+
+      <Skill
+        data={this.props.data && this.props.data.skill}
+      />
       <hr className='no-margin'/>
-      <Experience/>
+
+      <Experience
+        data={this.props.data && this.props.data.experience}
+      />
       <hr className='no-margin'/>
-      <Project/>
+
+      <Project
+        data={this.props.data && this.props.data.project}
+      />
       <hr className='no-margin'/>
-      <ContactMe/>
+
+      <ContactMe
+        data={this.props.data && this.props.data.contactme}
+      />
       <hr className='no-margin'/>
     </div>
     );

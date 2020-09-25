@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as api from '../../constant/constant';
 import axios from 'axios';
 
 class ContactMe extends Component {
@@ -12,23 +11,8 @@ class ContactMe extends Component {
       subject: "",
       message: "",
       loading: false,
-      feedbackLink_: "",
-      emailIdToSentMail:"",
-      feedback: "my-portfolio",
-      contactme_: []
     }
   }
-  componentDidMount(){
-		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{
-      this.setState({contactme_: response.data.contactme});
-      this.setState({emailIdToSentMail: response.data.contactme.emailId});
-      this.setState({feedbackLink_: response.data.contactme.feedback_link});
-		})
-		.catch(error =>{
-			console.log(error);
-		})
-	}
   changeHandler = e => {
     this.setState({[e.target.name]: e.target.value});
   }
@@ -42,7 +26,7 @@ class ContactMe extends Component {
       message:`Subject :: ${this.state.subject} | Message :: ${this.state.message}`
     };
 
-    axios.post(this.state.feedbackLink_, {feedbackData},
+    axios.post(this.props.data.feedback_link, {feedbackData},
       {headers: {Accept: "application/json"}})
     .then(response =>{
       this.setState({loading:false});
@@ -55,7 +39,7 @@ class ContactMe extends Component {
   };
 
   render() {
-    const {contactme_, name, email, subject, message, loading} = this.state;
+    const {name, email, subject, message, loading} = this.state;
     return (
       <>
         <div className="row">
@@ -79,16 +63,16 @@ class ContactMe extends Component {
                 <div  className="sym-feature sym-feature-sm animate-box" data-animate-effect="fadeInLeft">
                   <div  className="sym-icon"><i  className="icon-globe-outline"></i></div>
                   <div  className="sym-text">
-                    <p><a href={"mailto:"+contactme_.emailId}>{contactme_.emailId}</a></p>
+                    <p><a href={this.props.data && "mailto:" + this.props.data.emailId}>{this.props.data && this.props.data.emailId}</a></p>
                   </div>
                 </div>
                 <div  className="sym-feature sym-feature-sm animate-box" data-animate-effect="fadeInLeft">
                   <div  className="sym-icon"><i  className="icon-map"></i></div>
-                  <div  className="sym-text"><p>{contactme_.address}</p></div>
+                  <div  className="sym-text"><p>{this.props.data && this.props.data.address}</p></div>
                 </div>
                 <div  className="sym-feature sym-feature-sm animate-box" data-animate-effect="fadeInLeft">
                   <div  className="sym-icon"><i  className="icon-phone"></i></div>
-                  <div  className="sym-text"><p><a href="tel://">{contactme_.mobileNumber}</a></p></div>
+                  <div  className="sym-text"><p><a href={this.props.data && "tel://" + this.props.data.mobileNumber}>{this.props.data && this.props.data.mobileNumber}</a></p></div>
                 </div>
               </div>
               <div  className="col-md-7 col-md-push-1">

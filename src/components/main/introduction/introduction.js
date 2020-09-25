@@ -1,29 +1,9 @@
 import React, { Component } from 'react';
-import * as api from '../../constant/constant';
 import parse from 'html-react-parser';
-import axios from 'axios';
 
 import IntroductionExpertise from './introduction_experties';
 
 class Introduction extends Component {
-  constructor(props){
-    super(props)
-
-    this.state = {
-      intro_Str:"",
-      intro_ExpertieList:[]
-    }
-  }
-  componentWillMount(){
-		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{
-      this.setState({intro_Str: response.data.intro.introduction});
-      this.setState({intro_ExpertieList: response.data.intro.introExpertieList});
-		})
-		.catch(error =>{
-			console.log(error);
-		})
-	}
   componentDidMount() {
     toLoadJavascriptFunction();
   }
@@ -31,7 +11,6 @@ class Introduction extends Component {
     toLoadJavascriptFunction();
   }
   render() {
-    const {intro_Str, intro_ExpertieList} = this.state;
     return (
       <>
         <section className="sym-about" data-section="aboutme">
@@ -43,7 +22,7 @@ class Introduction extends Component {
                     <div className="about-desc">
                       <span className="heading-meta">About Me</span>
                       <h2 className="sym-heading">Who Am I?</h2>
-                        { intro_Str && parse("<p>"+intro_Str+"</p>") }
+                        { this.props.data && parse("<p>"+this.props.data.introduction+"</p>") }
                       </div>
                   </div>
                 </div>
@@ -62,7 +41,7 @@ class Introduction extends Component {
             </div>
             <div className="row row-pt-md">
             {
-              intro_ExpertieList.map((introExpertieList_inner, index) =>
+              this.props.data && this.props.data.introExpertieList.map((introExpertieList_inner, index) =>
                 <IntroductionExpertise
                   key={index}
                   data={introExpertieList_inner}

@@ -1,31 +1,9 @@
 import React, { Component } from 'react';
-import * as api from '../../constant/constant';
-import axios from 'axios';
 
 import ExperienceDetails from './experience_details';
 
 class Experience extends Component {
-  constructor(props){
-		super(props)
-
-		this.state = {
-      experience_: [],
-      loaded: false
-    }
-  }
-  componentDidMount(){
-		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{
-      this.setState({experience_: response.data.experience});
-		})
-		.catch(error =>{
-			console.log(error);
-		})
-	}
-
   render() {
-    const {experience_} = this.state;
-
     return (
       <>
         <section className="sym-experience" data-section="experience">
@@ -40,7 +18,7 @@ class Experience extends Component {
                     <div className="col-md-12">
                       <div className="timeline-centered">
                         {
-                          experience_.map((experience_inner, index) =>
+                          this.props.data && this.props.data.map((experience_inner, index) =>
                             <ExperienceDetails
                               key={index}
                               data={experience_inner}

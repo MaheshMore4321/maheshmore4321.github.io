@@ -1,30 +1,8 @@
 import React, { Component } from 'react';
-import * as api from '../../constant/constant';
-import axios from 'axios';
 
 import ProjectDetails from './project_details';
 class Project extends Component {
-  constructor(props){
-		super(props)
-
-		this.state = {
-      project_: [],
-      loaded: false
-    }
-  }
-
-  componentWillMount(){
-		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{
-      this.setState({project_: response.data.project});
-		})
-		.catch(error =>{
-			console.log(error);
-		})
-  }
-
   render() {
-    const {project_} = this.state;
     return (
       <>
         <section className="sym-experience" data-section="project">
@@ -39,7 +17,7 @@ class Project extends Component {
                   <div className="col-md-12">
                     <div className="timeline-centered">
                       {
-                        project_.map((project_inner, index) =>
+                        this.props.data && this.props.data.map((project_inner, index) =>
                           <ProjectDetails
                             key={index}
                             data={project_inner}

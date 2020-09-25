@@ -1,29 +1,8 @@
 import React, { Component } from 'react';
-import * as api from '../../constant/constant';
-import axios from 'axios';
 
 import SkillDetails from './skill_details';
 class Skill extends Component {
-  constructor(props){
-		super(props)
-
-		this.state = {
-      skill_: [],
-      loaded: false
-    }
-  }
-  componentWillMount(){
-		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{
-      this.setState({skill_: response.data.skill});
-		})
-		.catch(error =>{
-			console.log(error);
-		})
-  }
-
   render() {
-    const {skill_} = this.state;
     return (
       <>
         <section className="sym-skills" data-section="skill">
@@ -39,7 +18,7 @@ class Skill extends Component {
                       <div className="fancy-collapse-panel">
                         <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                           {
-                            skill_.map((skill_inner, index) =>
+                            this.props.data && this.props.data.map((skill_inner, index) =>
                               <SkillDetails
                                 key={index}
                                 data={skill_inner}

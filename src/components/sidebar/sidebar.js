@@ -1,42 +1,22 @@
 import React, { Component } from 'react';
 
-import * as api from '../constant/constant';
-import axios from 'axios';
-
 class Sidebar extends Component {
-	constructor(props){
-		super(props)
-
-		this.state = {
-			sidebar_: []
-		}
-	}
-	componentDidMount(){
-		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{
-			this.setState({sidebar_: response.data.sidebar});
-		})
-		.catch(error =>{
-			console.log(error);
-		})
-	}
 	render() {
-		const {sidebar_} = this.state;
     	return (
     		<>
-      			<aside id="sym-aside" className="border js-fullheight" style={{backgroundImage:`url(${sidebar_.background_picture_link})`, backgroundSize: 'cover'}}>
+      			<aside id="sym-aside" className="border js-fullheight" style={{backgroundImage:`url(${this.props.data && this.props.data.background_picture_link})`, backgroundSize: 'cover'}}>
 					<div className="text-center">
-						<div className="author-img" style={{backgroundImage:`url(${sidebar_.profile_picture_link})`}}></div>
-						<h1 id="sym-logo"><a href="index.html">{sidebar_.name}</a></h1>
-						<span className="position">{sidebar_.job_title}</span>
+						<div className="author-img" style={{backgroundImage:`url(${this.props.data && this.props.data.profile_picture_link})`}}></div>
+						<h1 id="sym-logo"><a href="index.html">{this.props.data && this.props.data.name}</a></h1>
+						<span className="position">{this.props.data && this.props.data.job_title}</span>
 						<div className="sym-footer margin-top-bottom">
 							<ul>
-								<li><a href={sidebar_.facebook_link} target="_blank" rel="noopener noreferrer"><i className="icon-facebook2"></i></a></li>
-								<li><a href={sidebar_.twitter_link} target="_blank" rel="noopener noreferrer"><i className="icon-twitter2"></i></a></li>
-								<li><a href={sidebar_.instgram_link} target="_blank" rel="noopener noreferrer"><i className="icon-instagram"></i></a></li>
-								<li><a href={sidebar_.linkedin_link} target="_blank" rel="noopener noreferrer"><i className="icon-linkedin2"></i></a></li>
-								<li><a href={sidebar_.github_link} target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>
-								<li><a href={sidebar_.website_link} target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>
+								<li><a href={this.props.data && this.props.data.facebook_link} target="_blank" rel="noopener noreferrer"><i className="icon-facebook2"></i></a></li>
+								<li><a href={this.props.data && this.props.data.twitter_link} target="_blank" rel="noopener noreferrer"><i className="icon-twitter2"></i></a></li>
+								<li><a href={this.props.data && this.props.data.instgram_link} target="_blank" rel="noopener noreferrer"><i className="icon-instagram"></i></a></li>
+								<li><a href={this.props.data && this.props.data.linkedin_link} target="_blank" rel="noopener noreferrer"><i className="icon-linkedin2"></i></a></li>
+								<li><a href={this.props.data && this.props.data.github_link} target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>
+								<li><a href={this.props.data && this.props.data.website_link} target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>
 							</ul>
 						</div>
 					</div>
