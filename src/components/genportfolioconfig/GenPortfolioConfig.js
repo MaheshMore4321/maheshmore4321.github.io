@@ -1,8 +1,5 @@
-import React, { Component, useState } from 'react';
-import {Modal, Button} from 'react-bootstrap';
-import Portfolio from '../Portfolio';
+import React, { Component } from 'react';
 import PortfolioUi from '../portfolio/PortfolioUi';
-
 
 class GenPortfolioConfig extends Component {
   constructor(props){
@@ -463,7 +460,6 @@ class GenPortfolioConfig extends Component {
   }
 
   Example = () => {
-    const [show, setShow] = useState(false);
     return (
       <>
         <button className="form-control" data-toggle="modal" data-target="#myModal">Live Preview</button>
@@ -490,17 +486,6 @@ class GenPortfolioConfig extends Component {
     const {prflImgSrc, bkglImgSrc} = this.state;
     return (
     <>
-      {/* <Modal show={this.state.toggle} onHide={this.close}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Portfolio/>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={this.close}>Close</Button>
-        </Modal.Footer>
-      </Modal> */}
       <form onSubmit={this.handleSubmit}>
         <div className="row">
           <div className="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
