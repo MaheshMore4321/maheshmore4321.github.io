@@ -22,7 +22,7 @@ class EducationDetails extends Component {
                     </a>
                   </h4>
                 </div>
-                <div id={"edu"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
+                <div id={"edu"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style={{height:'0px'}}>
                   {
                     this.props.data.desc &&
                     <div className="panel-body">

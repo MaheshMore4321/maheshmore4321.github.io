@@ -6,9 +6,6 @@ class GenPortfolioConfig extends Component {
 		super(props)
 
 		this.state = {
-      sidebar:[],
-      values: [],
-
       allData: {
         "sidebar":{
           name:"Mahesh More",
@@ -43,20 +40,9 @@ class GenPortfolioConfig extends Component {
 
       prflImgSrc:'/images/default-profile.jpg',
       bkglImgSrc: '/images/bg.png',
-
-      toggle: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-
-    this.toggle = this.toggle.bind(this);
-
-  }
-
-  toggle(event) {
-    this.setState((prevState) => ({
-      toggle: !prevState.toggle
-    }));
   }
 
   changeHandler = e => {
@@ -150,6 +136,12 @@ class GenPortfolioConfig extends Component {
     link.download = 'filename.json';
     link.href = url;
     link.click();
+  }
+
+  cnvrt() {
+    const fileData = JSON.stringify(this.state.allData);
+    // const blob = new S([fileData], {type: "text/json"});
+    return fileData;
   }
 
   heroAreaUI(j){
@@ -444,25 +436,11 @@ class GenPortfolioConfig extends Component {
     );
   }
 
-  getInitialState() {
-    return { toggle: false };
-  }
-
-  open = () => {
-    this.setState({
-      toggle: true
-    });
-  }
-  close = () => {
-    this.setState({
-      toggle: false
-    });
-  }
-
-  Example = () => {
+  LivePreviewModal = () => {
     return (
       <>
         <button className="form-control" data-toggle="modal" data-target="#myModal">Live Preview</button>
+
         <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div className="modal-dialog" role="document">
             <div className="modal-content">
@@ -472,6 +450,36 @@ class GenPortfolioConfig extends Component {
               </div>
               <div className="modal-body">
                 <PortfolioUi data={this.state.allData}/>
+              </div>
+              <div className="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  getLiveModalJSON = () => {
+    return (
+      <>
+        <button className="form-control" data-toggle="modal" data-target="#myModal2">Get JSON</button>
+
+        <div className="modal fade" id="myModal2" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div className="modal-body">
+                {JSON.stringify(this.state.allData)}
+                {/* {this.state.allData} */}
+                {/* JSON.stringify({this.state.allData}) */}
+                {/* {this.state.allData.map(block => block.component)} */}
+                {/* <div>{this.state.allData.map((selected, index) => (
+                  <p key={index}>{selected.ridername}</p>
+                ))}</div> */}
               </div>
               <div className="modal-footer">
               </div>
@@ -704,14 +712,11 @@ class GenPortfolioConfig extends Component {
         </div>
 
         <div className="row">
-          <div  className="col-md-4">
-            <button className="form-control" onClick={this.handleSubmit}>get Config</button>
+          <div  className="col-md-6">
+            <this.getLiveModalJSON/>
           </div>
-          <div  className="col-md-4">
-            <input type="submit" className="form-control" value="Submit" />
-          </div>
-          <div  className="col-md-4">
-            <this.Example/>
+          <div  className="col-md-6">
+            <this.LivePreviewModal/>
           </div>
         </div>
       </form>

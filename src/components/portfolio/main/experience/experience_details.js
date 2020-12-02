@@ -20,7 +20,7 @@ class ExperienceDetails extends Component {
                                 </a>
                             </h4>
                         </div>
-                        <div id={"exp"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
+                        <div id={"exp"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style={{height:'0px'}}>
                             <div className="panel-body">
                                 <div className="row">
                                     {

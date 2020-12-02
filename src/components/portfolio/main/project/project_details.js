@@ -18,11 +18,11 @@ class ProjectDetails extends Component {
                                         <p style={{margin:'0'}}><b>{parse(this.props.data.prj_nm)}</b></p>
                                         <p style={{margin:'0'}}><b>Organization</b> : {parse(this.props.data.prj_org)}</p>
                                         <p style={{margin:'0'}}><b>Client</b> : {parse(this.props.data.prj_clnt)}</p>
-                                        <p style={{margin:'0'}}><b>Duration</b> : {parse(this.props.data.prj_dur)}</p>    
+                                        <p style={{margin:'0'}}><b>Duration</b> : {parse(this.props.data.prj_dur)}</p>
                                     </a>
                                 </h4>
                             </div>
-                            <div id={"prj"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style={{height:'0px'}}>
+                            <div id={"prj"+this.props.id} className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" style={{height:'0px'}}>
                                 <div className="panel-body">
                                     <div className="row">
                                         <p style={{lineheight:'1.4',margin:'0'}}><b>Technology</b> : {parse(this.props.data.prj_tec)}</p>
