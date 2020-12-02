@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import PortfolioUi from './portfolio/PortfolioUi';
 import * as api from './portfolio/constant/constant';
 import axios from 'axios';
 
-import PortfolioUi from './portfolio/PortfolioUi';
 class Portfolio extends Component {
   constructor(props){
     super(props)
@@ -24,7 +24,6 @@ class Portfolio extends Component {
 
   render() {
     const {portfolio_data} =  this.state;
-    //console.log(portfolio_data);
     return (
       <PortfolioUi
         data={portfolio_data}

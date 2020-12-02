@@ -32,6 +32,7 @@
 		<link rel="stylesheet" href="%PUBLIC_URL%/css/owl.carousel.min.css">
 		<link rel="stylesheet" href="%PUBLIC_URL%/css/owl.theme.default.min.css">
 		<link rel="stylesheet" href="%PUBLIC_URL%/css/style.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css"></link>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
@@ -43,6 +44,7 @@
 	</body>
 	<footer>
 		<script src="%PUBLIC_URL%/js/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
 		<script src="%PUBLIC_URL%/js/jquery.easing.1.3.js"></script>
 		<script src="%PUBLIC_URL%/js/bootstrap.min.js"></script>
 		<script src="%PUBLIC_URL%/js/jquery.waypoints.min.js"></script>
@@ -54,11 +56,24 @@
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007968-1"></script>
 		<script>
-			document.cookie = "AC-C=ac-c;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax"; 
+			document.cookie = "AC-C=ac-c;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax";
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'UA-169007968-1');
+		</script>
+		<script>
+			$('.modal-content').resizable({
+				//alsoResize: ".modal-dialog",
+				//minHeight: 150
+			});
+			$('.modal-dialog').draggable();
+
+			$('#myModal').on('show.bs.modal', function () {
+				$(this).find('.modal-body').css({
+					'max-height':'100%'
+				});
+			});
 		</script>
 	</footer>
 </html>

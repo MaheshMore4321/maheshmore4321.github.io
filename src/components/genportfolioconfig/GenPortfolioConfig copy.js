@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import {Modal, Button} from 'react-bootstrap';
 import Portfolio from '../Portfolio';
-import PortfolioUi from '../portfolio/PortfolioUi';
+//import PortfolioUi from '../portfolio/PortfolioUi';
 
 
 class GenPortfolioConfig extends Component {
@@ -466,22 +466,25 @@ class GenPortfolioConfig extends Component {
     const [show, setShow] = useState(false);
     return (
       <>
-        <button className="form-control" data-toggle="modal" data-target="#myModal">Live Preview</button>
-        <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 className="modal-title" id="myModalLabel">Modal title</h4>
-              </div>
-              <div className="modal-body">
-                <PortfolioUi data={this.state.allData}/>
-              </div>
-              <div className="modal-footer">
-              </div>
-            </div>
-          </div>
-        </div>
+        <Button variant="primary" onClick={() => setShow(true)}>
+          Live Preview
+        </Button>
+        <Modal
+          show={show}
+          //size="lg"
+          onHide={() => setShow(false)}
+          //dialogClassName="modal-90w"
+          //aria-labelledby="example-modal-sizes-title-lg"
+        style={{width:"1000px"}}>
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-lg">
+              Live Preview
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body style={{width:"1000px"}}>
+            <Portfolio/>
+          </Modal.Body>
+        </Modal>
       </>
     );
   }
@@ -720,7 +723,7 @@ class GenPortfolioConfig extends Component {
 
         <div className="row">
           <div  className="col-md-4">
-            <button className="form-control" onClick={this.handleSubmit}>get Config</button>
+          <button className="form-control" onClick={this.handleSubmit}>get Config</button>
           </div>
           <div  className="col-md-4">
             <input type="submit" className="form-control" value="Submit" />
