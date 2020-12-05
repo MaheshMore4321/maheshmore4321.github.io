@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import parse from 'html-react-parser';
 
-import IntroductionExpertise from './introduction_experties';
+import IntroductionExpertise from './IntroductionExperties';
 
 class Introduction extends Component {
   componentDidMount() {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import PortfolioUi from '../portfolio/PortfolioUi';
+
+import PortfolioUi from './PortfolioUi';
 
 class GenPortfolioConfig extends Component {
   constructor(props){

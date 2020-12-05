@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ExperienceDetails from './experience_details';
+import ExperienceDetails from './ExperienceDetails';
 
 class Experience extends Component {
   render() {

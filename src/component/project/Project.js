@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import ProjectDetails from './project_details';
+import ProjectDetails from './ProjectDetails';
+
 class Project extends Component {
   render() {
     return (

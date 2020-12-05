@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import HeroAreaSlid from './hero-area_slide';
+import HeroAreaSlid from './HeroAreaSlide';
 
 class HeroArea extends Component {
   componentDidMount() {

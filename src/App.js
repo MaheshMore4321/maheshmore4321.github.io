@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import Portfolio from './components/Portfolio';
-import GenPortfolioConfig from './components/genportfolioconfig/GenPortfolioConfig';
+import Portfolio from './view/Portfolio';
+import GenPortfolioConfig from './view/GenPortfolioConfig';
 
 class App extends Component {
   render() {
@@ -18,5 +18,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

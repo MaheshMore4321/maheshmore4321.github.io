@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Sidebar from './sidebar/sidebar'
-import Main from './main/main'
+import Sidebar from '../component/sidebar/Sidebar';
+import Main from './Main';
 
 class PortfolioUi extends Component {
   render() {

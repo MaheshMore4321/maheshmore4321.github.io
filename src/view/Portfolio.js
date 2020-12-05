@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import PortfolioUi from './portfolio/PortfolioUi';
-import * as api from './portfolio/constant/constant';
 import axios from 'axios';
+
+import PortfolioUi from './PortfolioUi';
+import * as api from '../constant/Constant';
 
 class Portfolio extends Component {
   constructor(props){

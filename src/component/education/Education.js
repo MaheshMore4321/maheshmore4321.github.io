@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import EducationDetails from './education_details';
+import EducationDetails from './EducationDetails';
 
 class Education extends Component {
   render() {
