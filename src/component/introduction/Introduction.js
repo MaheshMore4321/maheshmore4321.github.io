@@ -4,12 +4,12 @@ import parse from 'html-react-parser';
 import IntroductionExpertise from './IntroductionExperties';
 
 class Introduction extends Component {
-  componentDidMount() {
-    toLoadJavascriptFunction();
-  }
-  componentDidUpdate() {
-    toLoadJavascriptFunction();
-  }
+  //  componentDidMount() {
+  //    toLoadJavascriptFunction();
+  //  }
+  // componentDidUpdate() {
+  //   toLoadJavascriptFunction();
+  // }
   render() {
     return (
       <>
@@ -58,8 +58,8 @@ class Introduction extends Component {
 }
 export default Introduction;
 
-function toLoadJavascriptFunction(){
-  const script = document.createElement("script");
-  script.src = "/js/main.js";
-  document.getElementsByTagName('head')[0].appendChild(script);
-}
+// function toLoadJavascriptFunction(){
+//   const script = document.createElement("script");
+//   script.src = "/js/main.js";
+//   document.getElementsByTagName('head')[0].appendChild(script);
+// }

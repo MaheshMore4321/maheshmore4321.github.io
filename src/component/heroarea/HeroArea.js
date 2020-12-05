@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import HeroAreaSlid from './HeroAreaSlide';
 
 class HeroArea extends Component {
-  componentDidMount() {
-    toLoadJavascriptFunction();
-  }
-  componentDidUpdate() {
-    toLoadJavascriptFunction();
-  }
+  // componentDidMount() {
+  //   toLoadJavascriptFunction();
+  // }
+  // componentDidUpdate() {
+  //   toLoadJavascriptFunction();
+  // }
   render() {
     return (
       <>
@@ -18,7 +18,7 @@ class HeroArea extends Component {
               {
                 this.props.data && this.props.data.map(heroarea_inner =>
                   <HeroAreaSlid
-                    key={heroarea_inner.icon}
+                    key={heroarea_inner.icon+""+(new Date()).valueOf()}
                     data={heroarea_inner}
                   />
                 )
@@ -32,8 +32,8 @@ class HeroArea extends Component {
 }
 export default HeroArea;
 
-function toLoadJavascriptFunction(){
-  const script = document.createElement("script");
-  script.src = "/js/main.js";
-  document.getElementsByTagName('head')[0].appendChild(script);
-}
+// function toLoadJavascriptFunction(){
+//   const script = document.createElement("script");
+//   script.src = "/js/main.js";
+//   document.getElementsByTagName('head')[0].appendChild(script);
+// }

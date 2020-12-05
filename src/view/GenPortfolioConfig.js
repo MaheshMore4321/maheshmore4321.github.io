@@ -30,10 +30,12 @@ class GenPortfolioConfig extends Component {
   }
 
   //----------------------CLICK ACTION HANDLERS-------------------------------------------------------
-  changeHandler = e => {
+  changeHandler = (e) => {
     //console.log("---------changeHandler---------");
     let allData = this.state.allData;
     //console.log(allData);
+    //console.log(e);
+    //console.log(e.target.name);
     const val = e.target.name.split('|');
     //console.log(val);
     if(val.length === 2 ){
@@ -72,8 +74,9 @@ class GenPortfolioConfig extends Component {
     //console.log("---------changeHandler---------");
   }
 
-  addClick(i){
+  addClick = (i) => {
     //console.log("---------addClick---------");
+    //console.log(i);
     let allData = this.state.allData;
     //console.log(allData);
     const val = i.split('|');
@@ -110,8 +113,8 @@ class GenPortfolioConfig extends Component {
     //console.log("---------addClick---------");
   }
 
-  removeClick(j, i) {
-    //console.log("---------addArea---------");
+  removeClick = (j, i) => {
+    //console.log("---------removeClick---------");
     //console.log(" j : "+j+", i : "+i);
     const val = j.split('|');
     //console.log(val);
@@ -134,30 +137,45 @@ class GenPortfolioConfig extends Component {
     //console.log(allData);
     this.setState({ allData });
     //console.log(allData);
-    //console.log("---------addArea---------");
+    //console.log("---------removeClick---------");
   }
   //----------------------CLICK ACTION HANDLERS-------------------------------------------------------
   //----------------------UTILITY---------------------------------------------------------------------
-  getMapData(j){
+  getMapData = (j) => {
+    //console.log("---------getMapData---------");
+    //console.log(j);
     const val = j.split('|');
+    //console.log(val);
     let map = [];
     let allData = this.state.allData;
+    //console.log(allData);
+    //console.log(map);
     if(val.length === 3 ){
+      //console.log("val is 3");
       if(allData[val[0]][val[1]][val[2]]) {
+        //console.log("val is 3.1");
         map=Array.from(allData[val[0]][val[1]][val[2]]);
+        //console.log(map);
       }
+      //console.log(map);
     }
     else if(val.length === 2 ){
+      //console.log("val is 2");
       map=Array.from(allData[val[0]][val[1]]);
+      //console.log(map);
     }
     else {
+      //console.log("val is not 2");
       map=Array.from(allData[val[0]]);
+      //console.log(map);
     }
+    //console.log(map);
+    //console.log("---------getMapData---------");
     return map;
   }
   //----------------------UTILITY---------------------------------------------------------------------
   //----------------------UI SECTIONS/COMPONENTS------------------------------------------------------
-  heroAreaUI(j){
+  heroAreaUI = (j) => {
     return Array.from(this.state.allData[j]).map((el, i) =>
       <div key={i}>
         <div className="row">
@@ -188,9 +206,9 @@ class GenPortfolioConfig extends Component {
     )
   }
 
-  
 
-  intrExpertiesUI(j){
+
+  intrExpertiesUI = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
@@ -215,7 +233,7 @@ class GenPortfolioConfig extends Component {
     )
   }
 
-  eductnUI(j){
+  eductnUI = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
@@ -247,7 +265,7 @@ class GenPortfolioConfig extends Component {
     )
   }
 
-  skillUI(j){
+  skillUI = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
@@ -271,7 +289,7 @@ class GenPortfolioConfig extends Component {
     )
   }
 
-  addAryUI(j){
+  addAryUI = (j) => {
     const val = j.split('|');
     const map = this.getMapData(j);
     return map.map((el, i) =>
@@ -292,7 +310,7 @@ class GenPortfolioConfig extends Component {
     );
   }
 
-  ExperienceUI(j){
+  ExperienceUI = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
@@ -320,7 +338,7 @@ class GenPortfolioConfig extends Component {
       </div>
     )
   }
-  addAryForFullLineUI(j){
+  addAryForFullLineUI = (j) => {
     const val = j.split('|');
     const map = this.getMapData(j);
     return map.map((el, i) =>
@@ -341,7 +359,7 @@ class GenPortfolioConfig extends Component {
     );
   }
 
-  ProjectUI(j){
+  ProjectUI = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
@@ -412,7 +430,7 @@ class GenPortfolioConfig extends Component {
       </div>
     )
   }
-  addAryForPrjFullLineUI(j){
+  addAryForPrjFullLineUI = (j) => {
     const val = j.split('|');
     const map = this.getMapData(j);
     return map.map((el, i) =>
@@ -493,7 +511,7 @@ class GenPortfolioConfig extends Component {
     const {prflImgSrc, bkglImgSrc} = this.state;
     return (
     <>
-      <form>
+      {/* <form> */}
         <div className="row">
           <div className="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
             <span className="heading-meta"  style={{padding:'10px 15px 0 15px'}}>Generate Portfolio Config</span>
@@ -718,7 +736,7 @@ class GenPortfolioConfig extends Component {
             <this.LivePreviewModal/>
           </div>
         </div>
-      </form>
+      {/* </form> */}
     </>
     );
   }

@@ -13,7 +13,7 @@ class Portfolio extends Component {
     }
   }
 
-  componentWillMount(){
+  componentDidMount(){
 		axios.get(api.JSON_FILE_DATA)
 		.then(response =>{
       this.setState({portfolio_data: response.data});
