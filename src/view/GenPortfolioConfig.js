@@ -9,43 +9,27 @@ class GenPortfolioConfig extends Component {
 		this.state = {
       allData: {
         "sidebar":{
-          name:"Mahesh More",
-          job_title:"Technology-Consultant @Virtusa",
-
-          profile_picture_link:"/images/maheshmore_pic.jpg",
-          background_picture_link:"/images/bg.png",
-
-          facebook_link:"https://www.facebook.com/Maheshmore4321",
-          twitter_link:"https://twitter.com/maheshmore4321",
-          instgram_link:"https://www.instagram.com/maheshmore4321",
-          linkedin_link:"https://www.linkedin.com/in/maheshmore4321",
-          github_link:"https://www.github.com/MaheshMore4321",
-          website_link:"https://www.coderstea.com"
+          name:"", job_title:"", profile_picture_link:"", background_picture_link:"", facebook_link:"", twitter_link:"", instgram_link:"", linkedin_link:"", github_link:"", website_link:""
         },
         "heroarea" : [],
         "intro" : {
-          introduction:"",
-          "introExpertieList": []
+          introduction:"", "introExpertieList": []
         },
         "education":[],
         "skill": [],
         "experience": [],
         "project": [],
         "contactme":{
-          mobileNumber:"",
-          address:"",
-          emailId:"",
-          feedback_link:""
+          mobileNumber:"", address:"", emailId:"", feedback_link:""
         }
       },
 
       prflImgSrc:'/images/default-profile.jpg',
       bkglImgSrc: '/images/bg.png',
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  //----------------------CLICK ACTION HANDLERS-------------------------------------------------------
   changeHandler = e => {
     //console.log("---------changeHandler---------");
     let allData = this.state.allData;
@@ -53,98 +37,126 @@ class GenPortfolioConfig extends Component {
     const val = e.target.name.split('|');
     //console.log(val);
     if(val.length === 2 ){
+      //console.log("val is 2");
       allData[val[0]][val[1]] = e.target.value;
+      //console.log(allData);
     }
     else if(val.length === 3 ){
+      //console.log("val is 3");
       if(!allData[val[0]][val[1]]) {
+        //console.log("val is 3.1");
         allData[val[0]][val[1]] = [];
+        //console.log(allData);
       }
       allData[val[0]][val[1]][val[2]] = e.target.value;
+      //console.log(allData);
     }
     else if(val.length === 4 ){
+      //console.log("val is 4");
       if(!allData[val[0]][val[1]]) {
+        //console.log("val is 4.1");
         allData[val[0]][val[1]] = [];
+        //console.log(allData);
       }
       if(!allData[val[0]][val[1]][val[2]]) {
+        //console.log("val is 4.2");
         allData[val[0]][val[1]][val[2]] = [];
+        //console.log(allData);
       }
       allData[val[0]][val[1]][val[2]][val[3]] = e.target.value;
+      //console.log(allData);
     }
     //console.log(allData);
     this.setState({ allData });
-    console.log(allData);
+    //console.log(allData);
     //console.log("---------changeHandler---------");
   }
-  addArea(i){
-    //console.log("---------addArea---------");
+
+  addClick(i){
+    //console.log("---------addClick---------");
     let allData = this.state.allData;
     //console.log(allData);
     const val = i.split('|');
     //console.log(val);
     if(val.length === 1 ){
+      //console.log("val is 1");
       allData[i] = [...allData[i], ''];
+      //console.log(allData);
     }
     if(val.length === 2 ){
+      //console.log("val is 2");
       allData[val[0]][val[1]] = [...allData[val[0]][val[1]], ''];
+      //console.log(allData);
     }
     else if(val.length === 3 ){
+      //console.log("val is 3");
       if(!allData[val[0]][val[1]]) {
+        //console.log("val is 3.1");
         allData[val[0]][val[1]] = [];
+        //console.log(allData);
       }
       if(!allData[val[0]][val[1]][val[2]]) {
+        //console.log("val is 3.2");
         allData[val[0]][val[1]][val[2]] = [];
+        //console.log(allData);
       }
       //console.log(allData);
       allData[val[0]][val[1]][val[2]] = [...allData[val[0]][val[1]][val[2]], ''];
+      //console.log(allData);
     }
     //console.log(allData);
     this.setState({ allData });
     //console.log(allData);
-    //console.log("---------addArea---------");
+    //console.log("---------addClick---------");
   }
+
   removeClick(j, i) {
     //console.log("---------addArea---------");
     //console.log(" j : "+j+", i : "+i);
     const val = j.split('|');
     //console.log(val);
     let allData = this.state.allData;
+    //console.log(allData);
     if(val.length === 2 ){
+      //console.log("val is 2");
       let innrAllData = allData[val[0]];
+      //console.log(innrAllData);
+      //console.log(allData);
       innrAllData[val[1]].splice(i,1);
+      //console.log(innrAllData);
+      //console.log(allData);
     }
     else {
+      //console.log("val is not 2");
       allData[val[0]].splice(i,1);
+      //console.log(allData);
     }
     //console.log(allData);
     this.setState({ allData });
     //console.log(allData);
     //console.log("---------addArea---------");
   }
-  handleSubmit(event) {
-    //console.log("---------handleSubmit---------");
+  //----------------------CLICK ACTION HANDLERS-------------------------------------------------------
+  //----------------------UTILITY---------------------------------------------------------------------
+  getMapData(j){
+    const val = j.split('|');
+    let map = [];
     let allData = this.state.allData;
-    this.handleSaveToPC(allData);
-    console.log(allData);
-    alert(JSON.stringify(allData));
-    event.preventDefault();
-    //console.log("---------handleSubmit---------");
+    if(val.length === 3 ){
+      if(allData[val[0]][val[1]][val[2]]) {
+        map=Array.from(allData[val[0]][val[1]][val[2]]);
+      }
+    }
+    else if(val.length === 2 ){
+      map=Array.from(allData[val[0]][val[1]]);
+    }
+    else {
+      map=Array.from(allData[val[0]]);
+    }
+    return map;
   }
-  handleSaveToPC = jsonData => {
-    const fileData = JSON.stringify(jsonData);
-    const blob = new Blob([fileData], {type: "text/json"});
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.download = 'filename.json';
-    link.href = url;
-    link.click();
-  }
-
-  cnvrt() {
-    const fileData = JSON.stringify(this.state.allData);
-    // const blob = new S([fileData], {type: "text/json"});
-    return fileData;
-  }
-
+  //----------------------UTILITY---------------------------------------------------------------------
+  //----------------------UI SECTIONS/COMPONENTS------------------------------------------------------
   heroAreaUI(j){
     return Array.from(this.state.allData[j]).map((el, i) =>
       <div key={i}>
@@ -176,23 +188,7 @@ class GenPortfolioConfig extends Component {
     )
   }
 
-  getMapData(j){
-    const val = j.split('|');
-    let map = [];
-    let allData = this.state.allData;
-    if(val.length === 3 ){
-      if(allData[val[0]][val[1]][val[2]]) {
-        map=Array.from(allData[val[0]][val[1]][val[2]]);
-      }
-    }
-    else if(val.length === 2 ){
-      map=Array.from(allData[val[0]][val[1]]);
-    }
-    else {
-      map=Array.from(allData[val[0]]);
-    }
-    return map;
-  }
+  
 
   intrExpertiesUI(j){
     const map = this.getMapData(j);
@@ -268,7 +264,7 @@ class GenPortfolioConfig extends Component {
           </div>
           <div  className="col-md-12">
             {this.addAryUI("skill|"+i+"|skillList")}
-              <input type='button' value='Add Skill Technology' onClick={this.addArea.bind(this, "skill|"+i+"|skillList")}/>
+              <input type='button' value='Add Skill Technology' onClick={this.addClick.bind(this, "skill|"+i+"|skillList")}/>
           </div>
         </div>
       </div>
@@ -318,7 +314,7 @@ class GenPortfolioConfig extends Component {
           </div>
           <div  className="col-md-12">
             {this.addAryForFullLineUI("experience|"+i+"|job_desc")}
-              <input type='button' value='Add Job Description' onClick={this.addArea.bind(this, "experience|"+i+"|job_desc")}/>
+              <input type='button' value='Add Job Description' onClick={this.addClick.bind(this, "experience|"+i+"|job_desc")}/>
           </div>
         </div>
       </div>
@@ -410,7 +406,7 @@ class GenPortfolioConfig extends Component {
           </div>
           <div  className="col-md-12">
             {this.addAryForPrjFullLineUI("project|"+i+"|prj_rl_desc")}
-            <input type='button' value='Add Project Description' onClick={this.addArea.bind(this, "project|"+i+"|prj_rl_desc")}/>
+            <input type='button' value='Add Project Description' onClick={this.addClick.bind(this, "project|"+i+"|prj_rl_desc")}/>
           </div>
         </div>
       </div>
@@ -436,7 +432,8 @@ class GenPortfolioConfig extends Component {
       </div>
     );
   }
-
+  //----------------------UI SECTIONS/COMPONENTS------------------------------------------------------
+  //----------------------UI SECTIONS/MODAL-----------------------------------------------------------
   LivePreviewModal = () => {
     return (
       <>
@@ -490,12 +487,13 @@ class GenPortfolioConfig extends Component {
       </>
     );
   }
+  //----------------------UI SECTIONS/MODAL-----------------------------------------------------------
 
   render() {
     const {prflImgSrc, bkglImgSrc} = this.state;
     return (
     <>
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <div className="row">
           <div className="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
             <span className="heading-meta"  style={{padding:'10px 15px 0 15px'}}>Generate Portfolio Config</span>
@@ -575,7 +573,7 @@ class GenPortfolioConfig extends Component {
             <div className="panel-body">
               <div className="row" style={{padding:'10px'}} >
                 {this.heroAreaUI('heroarea')}
-                <input type='button' value='Add Hero Area' onClick={this.addArea.bind(this, 'heroarea')}/>
+                <input type='button' value='Add Hero Area' onClick={this.addClick.bind(this, 'heroarea')}/>
               </div>
             </div>
           </div>
@@ -595,7 +593,7 @@ class GenPortfolioConfig extends Component {
                   <textarea name="intro|introduction" onChange={this.changeHandler} id="intro" cols="30" rows="7" className="form-control" placeholder="Introduction" required></textarea>
                 </div>
                 {this.intrExpertiesUI('intro|introExpertieList')}
-                <input type='button' value='Add Introduction Experties' onClick={this.addArea.bind(this, 'intro|introExpertieList')}/>
+                <input type='button' value='Add Introduction Experties' onClick={this.addClick.bind(this, 'intro|introExpertieList')}/>
               </div>
             </div>
           </div>
@@ -612,7 +610,7 @@ class GenPortfolioConfig extends Component {
             <div className="panel-body">
               <div className="row" style={{padding:'10px'}} >
                 {this.eductnUI('education')}
-                <input type='button' value='Add Education' onClick={this.addArea.bind(this, 'education')}/>
+                <input type='button' value='Add Education' onClick={this.addClick.bind(this, 'education')}/>
               </div>
             </div>
           </div>
@@ -629,7 +627,7 @@ class GenPortfolioConfig extends Component {
             <div className="panel-body">
               <div className="row" style={{padding:'10px'}} >
                 {this.skillUI('skill')}
-                <input type='button' value='Add Skill' onClick={this.addArea.bind(this, 'skill')}/>
+                <input type='button' value='Add Skill' onClick={this.addClick.bind(this, 'skill')}/>
               </div>
             </div>
           </div>
@@ -646,7 +644,7 @@ class GenPortfolioConfig extends Component {
             <div className="panel-body">
               <div className="row" style={{padding:'10px'}} >
                 {this.ExperienceUI('experience')}
-                <input type='button' value='Add Experience' onClick={this.addArea.bind(this, 'experience')}/>
+                <input type='button' value='Add Experience' onClick={this.addClick.bind(this, 'experience')}/>
               </div>
             </div>
           </div>
@@ -663,7 +661,7 @@ class GenPortfolioConfig extends Component {
             <div className="panel-body">
               <div className="row" style={{padding:'10px'}} >
                 {this.ProjectUI('project')}
-                <input type='button' value='Add Project' onClick={this.addArea.bind(this, 'project')}/>
+                <input type='button' value='Add Project' onClick={this.addClick.bind(this, 'project')}/>
               </div>
             </div>
           </div>
