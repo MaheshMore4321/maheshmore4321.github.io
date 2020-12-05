@@ -22,8 +22,8 @@ class Introduction extends Component {
                     <div className="about-desc">
                       <span className="heading-meta">About Me</span>
                       <h2 className="sym-heading">Who Am I?</h2>
-                        { this.props.data && parse("<p>"+this.props.data.introduction+"</p>") }
-                      </div>
+                      { this.props.data && parse("<p>"+this.props.data.introduction+"</p>") }
+                    </div>
                   </div>
                 </div>
               </div>

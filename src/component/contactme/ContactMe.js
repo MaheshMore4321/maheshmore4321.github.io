@@ -20,22 +20,22 @@ class ContactMe extends Component {
     e.preventDefault();
     this.setState({loading:true});
 
+    var headersData = {headers: {Accept: "application/json"}};
     var feedbackData = {
       name:this.state.name,
       email:this.state.email,
       message:`Subject :: ${this.state.subject} | Message :: ${this.state.message}`
     };
 
-    axios.post(this.props.data.feedback_link, {feedbackData},
-      {headers: {Accept: "application/json"}})
-    .then(response =>{
-      this.setState({loading:false});
-      alert("Message Succesfully sent, i will get back you soon");
-    })
-    .catch(error =>{
-      this.setState({loading:false});
-      alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
-    });
+    axios.post(this.props.data.feedback_link, {feedbackData}, {headersData})
+      .then(response =>{
+        this.setState({loading:false});
+        alert("Message Succesfully sent, i will get back you soon");
+      })
+      .catch(error =>{
+        this.setState({loading:false});
+        alert("It's Seems That the Server Error, But you still contact me over mail, i will get back you soon");
+      });
   };
 
   render() {
