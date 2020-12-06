@@ -26,9 +26,11 @@ class Portfolio extends Component {
   render() {
     const {portfolio_data} =  this.state;
     return (
-      <PortfolioUi
-        data={portfolio_data}
-      />
+      <>
+        <PortfolioUi
+          data={portfolio_data}
+        />
+      </>
     );
   }
 }

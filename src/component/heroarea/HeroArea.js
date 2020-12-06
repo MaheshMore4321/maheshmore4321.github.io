@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 import HeroAreaSlid from './HeroAreaSlide';
 
 class HeroArea extends Component {
-  // componentDidMount() {
-  //   toLoadJavascriptFunction();
-  // }
-  // componentDidUpdate() {
-  //   toLoadJavascriptFunction();
-  // }
+  componentDidMount(){
+    //toLoadJavascriptFunction();
+  }
+  componentDidUpdate(){
+    //toLoadJavascriptFunction();
+  }
   render() {
     return (
       <>
         <section id="sym-hero" className="js-fullheight" data-section="home">
-          <div className="flexslider js-fullheight">
+          <div id="navibar" className="flexslider js-fullheight">
             <ul className="slides">
               {
                 this.props.data && this.props.data.map(heroarea_inner =>
@@ -32,8 +32,9 @@ class HeroArea extends Component {
 }
 export default HeroArea;
 
-// function toLoadJavascriptFunction(){
-//   const script = document.createElement("script");
-//   script.src = "/js/main.js";
-//   document.getElementsByTagName('head')[0].appendChild(script);
-// }
+function toLoadJavascriptFunction() {
+  const script = document.createElement("script");
+  script.src = "/js/main.js";
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
+

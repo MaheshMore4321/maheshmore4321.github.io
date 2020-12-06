@@ -472,6 +472,7 @@ class GenPortfolioConfig extends Component {
             </div>
           </div>
         </div>
+        {/* {toLoadJavascriptFunction} */}
       </>
     );
   }
@@ -742,3 +743,9 @@ class GenPortfolioConfig extends Component {
   }
 }
 export default GenPortfolioConfig;
+
+function toLoadJavascriptFunction(){
+  // const script = document.createElement("script");
+  // script.src = "/js/main.js";
+  // document.getElementsByTagName('head')[0].appendChild(script);
+}

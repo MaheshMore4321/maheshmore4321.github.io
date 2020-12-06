@@ -18,12 +18,18 @@ class HeroAreaSlid extends Component {
                         parse(this.props.data.headerLine)
                       }
                     </h1>
-                    <p><a className="btn btn-primary btn-learn" href={this.props.data && this.props.data.link !== undefined && this.props.data.link} rel="noopener noreferrer">
-                      {
-                        this.props.data && this.props.data.text !== undefined &&
-                        parse(this.props.data.text)
-                      }
-                    <i className={this.props.data && this.props.data.icon !== undefined && this.props.data.icon}></i></a></p>
+                    <div id={this.props.data && this.props.data.link !== undefined && this.props.data.link.includes("#") ? "navbar" : ''}>
+                      <ul style={{paddingInlineStart:"inherit"}}>
+                        <li style={{minHeight:"fit-content",listStyle:"none"}}><a className="btn btn-primary btn-learn" href={this.props.data && this.props.data.link !== undefined && this.props.data.link} rel="noopener noreferrer" data-nav-section={this.props.data && this.props.data.link !== undefined && this.props.data.link.includes("#") ? this.props.data.link.substring(1) : ''} >
+                          {
+                            this.props.data && this.props.data.text !== undefined &&
+                            parse(this.props.data.text)
+                          }
+                          <i className={this.props.data && this.props.data.icon !== undefined && this.props.data.icon}></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

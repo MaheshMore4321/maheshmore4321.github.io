@@ -8,3 +8,11 @@ $('.js-sym-nav-toggle').on('click', function(event){
 		$('body').addClass('offcanvas');
 	}
 });
+
+$('.modal-content').resizable();
+$('.modal-dialog').draggable();
+$('#myModal').on('show.bs.modal', function () {
+	$(this).find('.modal-body').css({
+		'max-height':'100%'
+	});
+});

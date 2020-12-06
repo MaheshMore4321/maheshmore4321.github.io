@@ -10,10 +10,6 @@ import ContactMe from "../component/contactme/ContactMe";
 
 class Main extends Component {
 
-  componentDidMount() {
-    toLoadJavascriptFunction();
-  }
-
   render() {
     return (
       <div id="sym-main">
@@ -58,9 +54,3 @@ class Main extends Component {
   }
 }
 export default Main;
-
-function toLoadJavascriptFunction(){
-  const script = document.createElement("script");
-  script.src = "/js/main.js";
-  document.getElementsByTagName('head')[0].appendChild(script);
-}

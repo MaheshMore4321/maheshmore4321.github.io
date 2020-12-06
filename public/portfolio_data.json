@@ -99,7 +99,7 @@
 	  {
 		"backgroundImg": "/images/img_bg_3.jpg",
 		"headerLine": "Let's have a<br/>Talk!!",
-		"link": "#sec_contactme",
+		"link": "#contactme",
 		"text": "Contact&nbsp;me&nbsp;",
 		"icon": "icon-briefcase3"
 	  }
