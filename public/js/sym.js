@@ -21,17 +21,18 @@ $('#clickNeedToCopy').on('click', function(event){
 	event.preventDefault();
 	CopyToClipboard('divNeedToCopy');
 });
-function CopyToClipboard(containerid) {
-	if (document.selection) {
-	  var range = document.body.createTextRange();
-	  range.moveToElementText(document.getElementById(containerid));
-	  range.select().createTextRange();
-	  document.execCommand("copy");
-	} else if (window.getSelection) {
-	  var range = document.createRange();
-	  range.selectNode(document.getElementById(containerid));
-	  window.getSelection().addRange(range);
-	  document.execCommand("copy");
-	}
-	alert("Text has been copied, now paste in the text-area");
-  }
+$('#clickNeedToCopyb').on('click', function(event){
+	event.preventDefault();
+	CopyToClipboard('divNeedToCopyb');
+});
+
+CopyToClipboard = (containerid) => {
+	CopyTextToClipboard(document.getElementById(containerid).innerText);
+}
+CopyTextToClipboard = (text) => {
+	navigator.clipboard.writeText(text).then(function() {
+		alert("Copying to clipboard was successful!");
+	}, function(err) {
+		console.error('Async: Could not copy text: ', err);
+	});
+}
