@@ -649,7 +649,7 @@ educationTab = (j) => {
             </div>
           </div>
         </div>
-        {toLoadJavascriptFunction()}
+        {/* {toLoadJavascriptFunction()} */}
       </>
     );
   }
