@@ -17,12 +17,13 @@ class Education extends Component {
                 <div className="col-md-12">
                   <div className="timeline-centered">
                     {
-                      this.props.data && this.props.data.map((education_inner, index) =>
-                        <EducationDetails
-                          key={index}
-                          data={education_inner}
-                          id={index+1}
-                        />
+                      this.props.data && this.props.data.map((education_inner, index) => {
+                          <EducationDetails
+                            key={index}
+                            data={education_inner}
+                            id={index+1}
+                          />
+                        }
                       )
                     }
                     <article className="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">

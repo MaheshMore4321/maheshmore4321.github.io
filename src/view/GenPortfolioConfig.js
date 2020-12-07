@@ -4,26 +4,19 @@ import PortfolioUi from './PortfolioUi';
 
 class GenPortfolioConfig extends Component {
   constructor(props){
-		super(props)
+    super(props)
 
 		this.state = {
       allData: {
-        "sidebar":{
-          name:"", job_title:"", profile_picture_link:"", background_picture_link:"", facebook_link:"", twitter_link:"", instgram_link:"", linkedin_link:"", github_link:"", website_link:""
-        },
+        "sidebar":{ name:"", job_title:"", profile_picture_link:"", background_picture_link:"", facebook_link:"", twitter_link:"", instgram_link:"", linkedin_link:"", github_link:"", website_link:"" },
         "heroarea" : [],
-        "intro" : {
-          introduction:"", "introExpertieList": []
-        },
+        "intro" : { introduction:"", "introExpertieList": [] },
         "education":[],
         "skill": [],
         "experience": [],
         "project": [],
-        "contactme":{
-          mobileNumber:"", address:"", emailId:"", feedback_link:""
-        }
+        "contactme":{ mobileNumber:"", address:"", emailId:"", feedback_link:"" }
       },
-
       prflImgSrc:'/images/default-profile.jpg',
       bkglImgSrc: '/images/bg.png',
     };
@@ -31,152 +24,178 @@ class GenPortfolioConfig extends Component {
 
   //----------------------CLICK ACTION HANDLERS-------------------------------------------------------
   changeHandler = (e) => {
-    //console.log("---------changeHandler---------");
     let allData = this.state.allData;
-    //console.log(allData);
-    //console.log(e);
-    //console.log(e.target.name);
     const val = e.target.name.split('|');
-    //console.log(val);
     if(val.length === 2 ){
-      //console.log("val is 2");
       allData[val[0]][val[1]] = e.target.value;
-      //console.log(allData);
     }
     else if(val.length === 3 ){
-      //console.log("val is 3");
       if(!allData[val[0]][val[1]]) {
-        //console.log("val is 3.1");
         allData[val[0]][val[1]] = [];
-        //console.log(allData);
       }
       allData[val[0]][val[1]][val[2]] = e.target.value;
-      //console.log(allData);
     }
     else if(val.length === 4 ){
-      //console.log("val is 4");
       if(!allData[val[0]][val[1]]) {
-        //console.log("val is 4.1");
         allData[val[0]][val[1]] = [];
-        //console.log(allData);
       }
       if(!allData[val[0]][val[1]][val[2]]) {
-        //console.log("val is 4.2");
         allData[val[0]][val[1]][val[2]] = [];
-        //console.log(allData);
       }
       allData[val[0]][val[1]][val[2]][val[3]] = e.target.value;
-      //console.log(allData);
     }
-    //console.log(allData);
     this.setState({ allData });
-    //console.log(allData);
-    //console.log("---------changeHandler---------");
   }
 
   addClick = (i) => {
-    //console.log("---------addClick---------");
-    //console.log(i);
     let allData = this.state.allData;
-    //console.log(allData);
     const val = i.split('|');
-    //console.log(val);
     if(val.length === 1 ){
-      //console.log("val is 1");
       allData[i] = [...allData[i], ''];
-      //console.log(allData);
     }
     if(val.length === 2 ){
-      //console.log("val is 2");
       allData[val[0]][val[1]] = [...allData[val[0]][val[1]], ''];
-      //console.log(allData);
     }
     else if(val.length === 3 ){
-      //console.log("val is 3");
       if(!allData[val[0]][val[1]]) {
-        //console.log("val is 3.1");
         allData[val[0]][val[1]] = [];
-        //console.log(allData);
       }
       if(!allData[val[0]][val[1]][val[2]]) {
-        //console.log("val is 3.2");
         allData[val[0]][val[1]][val[2]] = [];
-        //console.log(allData);
       }
-      //console.log(allData);
       allData[val[0]][val[1]][val[2]] = [...allData[val[0]][val[1]][val[2]], ''];
-      //console.log(allData);
     }
-    //console.log(allData);
     this.setState({ allData });
-    //console.log(allData);
-    //console.log("---------addClick---------");
   }
 
   removeClick = (j, i) => {
-    //console.log("---------removeClick---------");
-    //console.log(" j : "+j+", i : "+i);
     const val = j.split('|');
-    //console.log(val);
     let allData = this.state.allData;
-    //console.log(allData);
     if(val.length === 2 ){
-      //console.log("val is 2");
       let innrAllData = allData[val[0]];
-      //console.log(innrAllData);
-      //console.log(allData);
       innrAllData[val[1]].splice(i,1);
-      //console.log(innrAllData);
-      //console.log(allData);
     }
     else {
-      //console.log("val is not 2");
       allData[val[0]].splice(i,1);
-      //console.log(allData);
     }
-    //console.log(allData);
     this.setState({ allData });
-    //console.log(allData);
-    //console.log("---------removeClick---------");
   }
   //----------------------CLICK ACTION HANDLERS-------------------------------------------------------
   //----------------------UTILITY---------------------------------------------------------------------
   getMapData = (j) => {
-    //console.log("---------getMapData---------");
-    //console.log(j);
     const val = j.split('|');
-    //console.log(val);
     let map = [];
     let allData = this.state.allData;
-    //console.log(allData);
-    //console.log(map);
     if(val.length === 3 ){
-      //console.log("val is 3");
       if(allData[val[0]][val[1]][val[2]]) {
-        //console.log("val is 3.1");
         map=Array.from(allData[val[0]][val[1]][val[2]]);
-        //console.log(map);
       }
-      //console.log(map);
     }
     else if(val.length === 2 ){
-      //console.log("val is 2");
       map=Array.from(allData[val[0]][val[1]]);
-      //console.log(map);
     }
     else {
-      //console.log("val is not 2");
       map=Array.from(allData[val[0]]);
-      //console.log(map);
     }
-    //console.log(map);
-    //console.log("---------getMapData---------");
     return map;
   }
   //----------------------UTILITY---------------------------------------------------------------------
   //----------------------UI SECTIONS/COMPONENTS------------------------------------------------------
-  heroAreaUI = (j) => {
-    return Array.from(this.state.allData[j]).map((el, i) =>
+  sidebarUI = () => {
+    return (
+      <>
+        <div className="row">
+          <div className="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+            <span className="heading-meta"  style={{padding:'10px 15px 0 15px'}}>Generate Portfolio Config</span>
+          </div>
+        </div>
+        <div className="panel panel-default">
+          <div className="panel-heading" role="tab" id="headingSidebar">
+            <h4 className="panel-title">
+              <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#SidebarData" aria-expanded="false" aria-controls="collapseTwo">Sidebar</a>
+            </h4>
+          </div>
+          <div id="SidebarData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSidebar">
+            <div className="panel-body">
+              <div className="row">
+                <section id="sec_headingSidebar" className="sym-sidebar" data-section="dataSidebar" style={{padding:"0 10px 0 10px"}}>
+                  <div  className="sym-narrow-content">
+                    <div  className="row">
+                      <div  className="col-md-6">
+                        <h2  className="sym-heading">Profile Area</h2>
+                        <br></br>
+                        <div  className="sym-feature sym-feature-sm animate-box" data-animate-effect="fadeInLeft" style={{height:"235px",backgroundImage:`url(${this.state.allData['sidebar'].background_picture_link||this.state.bkglImgSrc})`,backgroundSize:"cover"}}>
+                          <div className="author-img" style={{backgroundImage:`url(${this.state.allData['sidebar'].profile_picture_link||this.state.prflImgSrc})`,width:'150px',height:'150px',margin:'10px auto',marginBottom:'30px',borderRadius:'50%'}}>
+                            <input type="text" name="sidebar|profile_picture_link" onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}} placeholder={this.state.bkglImgSrc} required/>
+                          </div>
+                          <input type="text" name="sidebar|background_picture_link" onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}} placeholder={this.state.prflImgSrc} required/>
+                        </div>
+                        <div className="form-group">
+                          <input type="text"  name="sidebar|name" onChange={this.changeHandler} className="form-control" placeholder="NameOnProfile" required/>
+                        </div>
+                        <div className="form-group">
+                          <input type="text"  name="sidebar|job_title" onChange={this.changeHandler} className="form-control" placeholder="JobTitle" required/>
+                        </div>
+                      </div>
+                      <div  className="col-md-6">
+                        <div  className="row">
+                          <div  className="col-md-12 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+                            <h2  className="sym-heading">Social Network's</h2>
+                            <br></br>
+                            <div  className="form-group">
+                              <input type="text"  name="sidebar|facebook_link" onChange={this.changeHandler} className="form-control" placeholder="Facebook" required/>
+                            </div>
+                            <div  className="form-group">
+                              <input type="text"  name="sidebar|twitter_link" onChange={this.changeHandler} className="form-control" placeholder="Twitter" required/>
+                            </div>
+                            <div  className="form-group">
+                              <input type="text"  name="sidebar|instgram_link" onChange={this.changeHandler} className="form-control" placeholder="Instagram" required/>
+                            </div>
+                            <div  className="form-group">
+                              <input type="text"  name="sidebar|linkedin_link" onChange={this.changeHandler} className="form-control" placeholder="LinkedIn" required/>
+                            </div>
+                            <div  className="form-group">
+                              <input type="text"  name="sidebar|github_link" onChange={this.changeHandler} className="form-control" placeholder="Github" required/>
+                            </div>
+                            <div  className="form-group">
+                              <input type="text"  name="sidebar|website_link" onChange={this.changeHandler} className="form-control" placeholder="BlogSite" required/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  heroareaUI = () => {
+    return (
+      <div className="panel panel-default">
+        <div className="panel-heading" role="tab" id="headingHeroArea">
+          <h4 className="panel-title">
+            <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#HeroAreaData" aria-expanded="false" aria-controls="collapseTwo">Hero Area</a>
+          </h4>
+        </div>
+        <div id="HeroAreaData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingHeroArea">
+          <div className="panel-body">
+            <div className="row" style={{padding:'10px'}} >
+              {this.heroareaTab('heroarea')}
+              <input type='button' value='Add Hero Area' onClick={this.addClick.bind(this, 'heroarea')}/>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  heroareaTab = (j) => {
+    const map = this.getMapData(j);
+    return map.map((el, i) =>
       <div key={i}>
         <div className="row">
           <div className="col-md-6">
@@ -203,12 +222,32 @@ class GenPortfolioConfig extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
-
-
-  intrExpertiesUI = (j) => {
+  introductionUI = () => {
+    return (
+      <div className="panel panel-default">
+        <div className="panel-heading" role="tab" id="headingIntrod">
+          <h4 className="panel-title">
+            <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#IntrodData" aria-expanded="false" aria-controls="collapseTwo">Introduction</a>
+          </h4>
+        </div>
+        <div id="IntrodData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingIntrod">
+          <div className="panel-body">
+            <div className="row" style={{padding:'10px'}} >
+              <div className="form-group">
+                <textarea name="intro|introduction" onChange={this.changeHandler} id="intro" cols="30" rows="7" className="form-control" placeholder="Introduction" required></textarea>
+              </div>
+              {this.introductionExpertiesTab('intro|introExpertieList')}
+              <input type='button' value='Add Introduction Experties' onClick={this.addClick.bind(this, 'intro|introExpertieList')}/>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  introductionExpertiesTab = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
@@ -233,7 +272,27 @@ class GenPortfolioConfig extends Component {
     )
   }
 
-  eductnUI = (j) => {
+educationUI = () => {
+  return (
+    <div className="panel panel-default">
+      <div className="panel-heading" role="tab" id="headingEductn">
+        <h4 className="panel-title">
+          <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
+            href="#EductnData" aria-expanded="false" aria-controls="collapseTwo">Education</a>
+        </h4>
+      </div>
+      <div id="EductnData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEductn">
+        <div className="panel-body">
+          <div className="row" style={{padding:'10px'}} >
+            {this.educationTab('education')}
+            <input type='button' value='Add Education' onClick={this.addClick.bind(this, 'education')}/>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+educationTab = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
@@ -472,7 +531,7 @@ class GenPortfolioConfig extends Component {
             </div>
           </div>
         </div>
-        {/* {toLoadJavascriptFunction} */}
+        {toLoadJavascriptFunction()}
       </>
     );
   }
@@ -509,131 +568,12 @@ class GenPortfolioConfig extends Component {
   //----------------------UI SECTIONS/MODAL-----------------------------------------------------------
 
   render() {
-    const {prflImgSrc, bkglImgSrc} = this.state;
     return (
-    <>
-      {/* <form> */}
-        <div className="row">
-          <div className="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-            <span className="heading-meta"  style={{padding:'10px 15px 0 15px'}}>Generate Portfolio Config</span>
-          </div>
-        </div>
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingSidebar">
-            <h4 className="panel-title">
-              <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-                  href="#SidebarData" aria-expanded="false" aria-controls="collapseTwo">Sidebar</a>
-            </h4>
-          </div>
-          <div id="SidebarData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSidebar">
-            <div className="panel-body">
-              <div className="row">
-                <section id="sec_headingSidebar" className="sym-sidebar" data-section="dataSidebar" style={{padding:"0 10px 0 10px"}}>
-                  <div  className="sym-narrow-content">
-                    <div  className="row">
-                      <div  className="col-md-6">
-                        <h2  className="sym-heading">Profile Area</h2>
-                        <br></br>
-                        <div  className="sym-feature sym-feature-sm animate-box" data-animate-effect="fadeInLeft" style={{height:"235px",backgroundImage:`url(${this.state.allData['sidebar'].background_picture_link||this.state.bkglImgSrc})`,backgroundSize:"cover"}}>
-                          <div className="author-img" style={{backgroundImage:`url(${this.state.allData['sidebar'].profile_picture_link||this.state.prflImgSrc})`,width:'150px',height:'150px',margin:'10px auto',marginBottom:'30px',borderRadius:'50%'}}>
-                            <input type="text" name="sidebar|profile_picture_link" onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}}placeholder={bkglImgSrc} required/>
-                          </div>
-                          <input type="text" name="sidebar|background_picture_link" onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}}placeholder={prflImgSrc} required/>
-                        </div>
-                        <div className="form-group">
-                          <input type="text"  name="sidebar|name" value={this.state.allData['sidebar'].name||''} onChange={this.changeHandler} className="form-control" placeholder="NameOnProfile" required/>
-                        </div>
-                        <div className="form-group">
-                          <input type="text"  name="sidebar|job_title" value={this.state.allData['sidebar'].job_title||''} onChange={this.changeHandler} className="form-control" placeholder="JobTitle" required/>
-                        </div>
-                      </div>
-                      <div  className="col-md-6">
-                        <div  className="row">
-                          <div  className="col-md-12 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-                            <h2  className="sym-heading">Social Network's</h2>
-                            <br></br>
-                            <div  className="form-group">
-                              <input type="text"  name="sidebar|facebook_link" value={this.state.allData['sidebar'].facebook_link||''} onChange={this.changeHandler} className="form-control" placeholder="Facebook" required/>
-                            </div>
-                            <div  className="form-group">
-                              <input type="text"  name="sidebar|twitter_link" value={this.state.allData['sidebar'].twitter_link||''} onChange={this.changeHandler} className="form-control" placeholder="Twitter" required/>
-                            </div>
-                            <div  className="form-group">
-                              <input type="text"  name="sidebar|instgram_link" value={this.state.allData['sidebar'].instgram_link||''} onChange={this.changeHandler} className="form-control" placeholder="Instagram" required/>
-                            </div>
-                            <div  className="form-group">
-                              <input type="text"  name="sidebar|linkedin_link" value={this.state.allData['sidebar'].linkedin_link||''} onChange={this.changeHandler} className="form-control" placeholder="LinkedIn" required/>
-                            </div>
-                            <div  className="form-group">
-                              <input type="text"  name="sidebar|github_link" value={this.state.allData['sidebar'].github_link||''} onChange={this.changeHandler} className="form-control" placeholder="Github" required/>
-                            </div>
-                            <div  className="form-group">
-                              <input type="text"  name="sidebar|website_link" value={this.state.allData['sidebar'].website_link||''} onChange={this.changeHandler} className="form-control" placeholder="BlogSite" required/>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingHeroArea">
-              <h4 className="panel-title">
-                  <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-                  href="#HeroAreaData" aria-expanded="false" aria-controls="collapseTwo">Hero Area</a>
-              </h4>
-          </div>
-          <div id="HeroAreaData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingHeroArea">
-            <div className="panel-body">
-              <div className="row" style={{padding:'10px'}} >
-                {this.heroAreaUI('heroarea')}
-                <input type='button' value='Add Hero Area' onClick={this.addClick.bind(this, 'heroarea')}/>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingIntrod">
-            <h4 className="panel-title">
-              <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-                  href="#IntrodData" aria-expanded="false" aria-controls="collapseTwo">Introduction</a>
-            </h4>
-          </div>
-          <div id="IntrodData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingIntrod">
-            <div className="panel-body">
-              <div className="row" style={{padding:'10px'}} >
-                <div className="form-group">
-                  <textarea name="intro|introduction" onChange={this.changeHandler} id="intro" cols="30" rows="7" className="form-control" placeholder="Introduction" required></textarea>
-                </div>
-                {this.intrExpertiesUI('intro|introExpertieList')}
-                <input type='button' value='Add Introduction Experties' onClick={this.addClick.bind(this, 'intro|introExpertieList')}/>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingEductn">
-            <h4 className="panel-title">
-              <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-                href="#EductnData" aria-expanded="false" aria-controls="collapseTwo">Education</a>
-            </h4>
-          </div>
-          <div id="EductnData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEductn">
-            <div className="panel-body">
-              <div className="row" style={{padding:'10px'}} >
-                {this.eductnUI('education')}
-                <input type='button' value='Add Education' onClick={this.addClick.bind(this, 'education')}/>
-              </div>
-            </div>
-          </div>
-        </div>
+      <>
+        <this.sidebarUI/>
+        <this.heroareaUI/>
+        <this.introductionUI/>
+        <this.educationUI/>
 
         <div className="panel panel-default">
           <div className="panel-heading" role="tab" id="headingSkill">
@@ -737,8 +677,7 @@ class GenPortfolioConfig extends Component {
             <this.LivePreviewModal/>
           </div>
         </div>
-      {/* </form> */}
-    </>
+      </>
     );
   }
 }

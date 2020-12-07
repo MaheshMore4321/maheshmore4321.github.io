@@ -15,10 +15,10 @@ class EducationDetails extends Component {
                 <div className="panel-heading" role="tab" id="headingOne" style={{border:'none'}}>
                   <h4 className="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href={"#edu"+this.props.id} aria-expanded="false" aria-controls="collapseOne" className="collapsed">
-                      <p style={{margin:'0'}}><b>{parse(this.props.data.std_branch)}</b></p>
-                      <p style={{margin:'0'}}><b>{parse(this.props.data.institute)}</b></p>
-                      <p style={{margin:'0'}}><b>{parse(this.props.data.university)}</b></p>
-                      <p style={{margin:'0'}}><b>{parse(this.props.data.year)}</b></p>
+                      <p style={{margin:'0'}}><b>{this.props.data && this.props.std_branch !== undefined ? dataparse(this.props.data.std_branch):'d'}</b></p>
+                      <p style={{margin:'0'}}><b>{this.props.data && this.props.institute !== undefined ? parse(this.props.data.institute):'c'}</b></p>
+                      <p style={{margin:'0'}}><b>{this.props.data && this.props.university !== undefined ? parse(this.props.data.university):'b'}</b></p>
+                      <p style={{margin:'0'}}><b>{this.props.data && this.props.year !== undefined ? parse(this.props.data.year):'a'}</b></p>
                     </a>
                   </h4>
                 </div>

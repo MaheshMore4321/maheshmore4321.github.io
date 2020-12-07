@@ -16,11 +16,12 @@ class HeroArea extends Component {
           <div id="navibar" className="flexslider js-fullheight">
             <ul className="slides">
               {
-                this.props.data && this.props.data.map(heroarea_inner =>
+                this.props.data && this.props.data.map((heroarea_inner, i) => {
                   <HeroAreaSlid
-                    key={heroarea_inner.icon+""+(new Date()).valueOf()}
+                    key={i}
                     data={heroarea_inner}
                   />
+                  }
                 )
               }
             </ul>
