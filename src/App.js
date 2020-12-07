@@ -11,9 +11,9 @@ class App extends Component {
       <Router>
         <>
           <Switch>
-            <Route exact path='/' component={Portfolio} />
+            {/* <Route exact path='/' component={Portfolio} /> */}
             <Route exact path='/undefined' component={Undefined} />
-            <Route exact path='/generate_portfolio_config' component={GenPortfolioConfig} />
+            <Route exact path='/' component={GenPortfolioConfig} />
           </Switch>
         </>
       </Router>
