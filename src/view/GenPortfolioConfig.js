@@ -104,7 +104,7 @@ class GenPortfolioConfig extends Component {
   sidebarUI = () => {
     return (
       <>
-        <div className="row">
+        <div className="row" style={{marginRight:"0px"}}>
           <div className="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
             <span className="heading-meta"  style={{padding:'10px 15px 0 15px'}}>Generate Portfolio Config</span>
           </div>
@@ -608,12 +608,12 @@ educationTab = (j) => {
   //----------------------UI SECTIONS/MODAL-----------------------------------------------------------
   LaunchModal = () => {
     return (
-      <div className="row">
-        <div  className="col-md-6">
-          <this.getLiveModalJSON/>
+      <div className="row" style={{marginRight:"0px"}}>
+        <div className="col-md-6">
+          {this.getLiveModalJSON()}
         </div>
-        <div  className="col-md-6">
-          <this.LivePreviewModal/>
+        <div className="col-md-6">
+          {this.LivePreviewModal()}
         </div>
       </div>
     );
@@ -624,11 +624,22 @@ educationTab = (j) => {
         <button className="form-control" data-toggle="modal" data-target="#myModal">Live Preview</button>
 
         <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
+          <div id="md" className="modal-dialog" role="document">
+            <div id="mc" className="modal-content">
               <div className="modal-header">
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+                <div className="row">
+                  <div className="col-md-3" style={{float:"left"}}>
+                    <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+                  </div>
+                  <div className="col-md-6"></div>
+                  <div className="col-md-3" style={{float:"right"}}>
+                    <button id="clickNeedToCopyb" className="form-control">Click to copy</button>
+                  </div>
+                  <div id="divNeedToCopyb" style={{display:"none"}}>
+                    {JSON.stringify(this.state.allData)}
+                  </div>
+                </div>
               </div>
               <div className="modal-body">
                 <PortfolioUi data={this.state.allData}/>
@@ -651,17 +662,19 @@ educationTab = (j) => {
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div className="row">
+                  <div className="col-md-3" style={{float:"left"}}>
+                    <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+                  </div>
+                  <div className="col-md-6"></div>
+                  <div className="col-md-3" style={{float:"right"}}>
+                    <button id="clickNeedToCopy" className="form-control">Click to copy</button>
+                  </div>
+                </div>
               </div>
-              <div className="modal-body">
+              <div id="divNeedToCopy" className="modal-body" style={{wordWrap:"break-word"}}>
                 {JSON.stringify(this.state.allData)}
-                {/* {this.state.allData} */}
-                {/* JSON.stringify({this.state.allData}) */}
-                {/* {this.state.allData.map(block => block.component)} */}
-                {/* <div>{this.state.allData.map((selected, index) => (
-                  <p key={index}>{selected.ridername}</p>
-                ))}</div> */}
               </div>
               <div className="modal-footer">
               </div>
@@ -669,7 +682,7 @@ educationTab = (j) => {
           </div>
         </div>
       </>
-    );
+    ); // --> 775 888 3637
   }
   //----------------------UI SECTIONS/MODAL-----------------------------------------------------------
 
