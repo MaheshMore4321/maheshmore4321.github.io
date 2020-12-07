@@ -4,6 +4,7 @@ import EducationDetails from './EducationDetails';
 
 class Education extends Component {
   render() {
+    let index=1;
     return (
       <>
         <section className="sym-experience" data-section="education">
@@ -17,13 +18,12 @@ class Education extends Component {
                 <div className="col-md-12">
                   <div className="timeline-centered">
                     {
-                      this.props.data && this.props.data.map((education_inner, index) => {
-                          <EducationDetails
-                            key={index}
-                            data={education_inner}
-                            id={index+1}
-                          />
-                        }
+                      this.props.data && this.props.data.map(education_inner =>
+                        <EducationDetails
+                          key={index++}
+                          id={index}
+                          data={education_inner}
+                        />
                       )
                     }
                     <article className="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">

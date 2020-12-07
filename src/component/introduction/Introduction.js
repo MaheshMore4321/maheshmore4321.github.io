@@ -4,13 +4,8 @@ import parse from 'html-react-parser';
 import IntroductionExpertise from './IntroductionExperties';
 
 class Introduction extends Component {
-  componentDidMount(){
-    //toLoadJavascriptFunction();
-  }
-  componentDidUpdate(){
-    //toLoadJavascriptFunction();
-  }
   render() {
+    let index = 1;
     return (
       <>
         <section className="sym-about" data-section="aboutme">
@@ -41,11 +36,11 @@ class Introduction extends Component {
             </div>
             <div className="row row-pt-md">
             {
-              this.props.data && this.props.data.introExpertieList.map((introExpertieList_inner, index) =>
+              this.props.data && this.props.data.introExpertieList.map(introExpertieList_inner =>
                 <IntroductionExpertise
-                  key={index}
+                  key={index++}
+                  id={index}
                   data={introExpertieList_inner}
-                  id={index+1}
                 />
               )
             }
@@ -57,9 +52,3 @@ class Introduction extends Component {
   }
 }
 export default Introduction;
-
-function toLoadJavascriptFunction() {
-  const script = document.createElement("script");
-  script.src = "/js/main.js";
-  document.getElementsByTagName('head')[0].appendChild(script);
-}

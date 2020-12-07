@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SkillDetails from './SkillDetails';
 class Skill extends Component {
   render() {
+    let index = 1;
     return (
       <>
         <section className="sym-skills" data-section="skill">
@@ -18,11 +19,11 @@ class Skill extends Component {
                 <div className="fancy-collapse-panel">
                   <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     {
-                      this.props.data && this.props.data.map((skill_inner, index) =>
+                      this.props.data && this.props.data.map(skill_inner =>
                         <SkillDetails
-                          key={index}
+                          key={index++}
+                          id={index}
                           data={skill_inner}
-                          id={index+1}
                         />
                       )
                     }

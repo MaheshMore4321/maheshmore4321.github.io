@@ -4,6 +4,7 @@ import ExperienceDetails from './ExperienceDetails';
 
 class Experience extends Component {
   render() {
+    let index = 1;
     return (
       <>
         <section className="sym-experience" data-section="experience">
@@ -18,11 +19,11 @@ class Experience extends Component {
               <div className="col-md-12">
                 <div className="timeline-centered">
                   {
-                    this.props.data && this.props.data.map((experience_inner, index) =>
+                    this.props.data && this.props.data.map(experience_inner =>
                       <ExperienceDetails
-                        key={index}
+                        key={index++}
+                        id={index}
                         data={experience_inner}
-                        id={index+1}
                       />
                     )
                   }

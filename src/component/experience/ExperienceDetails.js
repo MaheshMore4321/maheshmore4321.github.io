@@ -15,8 +15,8 @@ class ExperienceDetails extends Component {
                         <div className="panel-heading" role="tab" id="headingOne" style={{border:'none'}}>
                             <h4 className="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href={"#exp"+this.props.id} aria-expanded="false" aria-controls="collapseOne" className="collapsed">
-                                    <p style={{margin:'0'}}><b>{parse(this.props.data.job_compy_desig)}</b></p>
-                                    <p style={{margin:'0'}}><b>Duration</b> : {parse(this.props.data.job_duration)}</p>
+                                    <p style={{margin:'0'}}><b>{this.props.data && this.props.data.job_compy_desig !== undefined ? parse(this.props.data.job_compy_desig) : 'no job_compy_desig found'}</b></p>
+                                    <p style={{margin:'0'}}><b>Duration</b> : {this.props.data && this.props.data.job_duration !== undefined ? parse(this.props.data.job_duration) : 'no job_duration found'}</p>
                                 </a>
                             </h4>
                         </div>

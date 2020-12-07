@@ -14,8 +14,7 @@ class HeroAreaSlid extends Component {
                   <div className="desc">
                     <h1>
                       {
-                        this.props.data && this.props.data.headerLine !== undefined &&
-                        parse(this.props.data.headerLine)
+                        this.props.data && this.props.data.headerLine !== undefined && parse(this.props.data.headerLine)
                       }
                     </h1>
                     <div id={this.props.data && this.props.data.link !== undefined && this.props.data.link.includes("#") ? "navbar" : ''}>
@@ -23,8 +22,7 @@ class HeroAreaSlid extends Component {
                         <li style={{minHeight:"fit-content",listStyle:"none"}}>
                           <a className="btn btn-primary btn-learn" href={this.props.data && this.props.data.link !== undefined ? this.props.data.link:''} rel="noopener noreferrer" data-nav-section={this.props.data && this.props.data.link !== undefined && this.props.data.link.includes("#") ? this.props.data.link.substring(1) : ''} >
                           {
-                            this.props.data && this.props.data.text !== undefined &&
-                            parse(this.props.data.text)
+                            this.props.data && this.props.data.text !== undefined && parse(this.props.data.text)
                           }
                             <i className={this.props.data && this.props.data.icon !== undefined ? this.props.data.icon : ''}></i>
                           </a>

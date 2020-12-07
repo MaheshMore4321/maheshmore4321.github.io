@@ -15,21 +15,15 @@ class Portfolio extends Component {
 
   componentDidMount(){
 		axios.get(api.JSON_FILE_DATA)
-		.then(response =>{
-      this.setState({portfolio_data: response.data});
-		})
-		.catch(error =>{
-			console.log(error);
-		})
+		.then(response =>{ this.setState({portfolio_data: response.data}); })
+		.catch(error =>{ console.log(error); })
   }
 
   render() {
     const {portfolio_data} =  this.state;
     return (
       <>
-        <PortfolioUi
-          data={portfolio_data}
-        />
+        <PortfolioUi data={portfolio_data}/>
       </>
     );
   }

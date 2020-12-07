@@ -254,12 +254,12 @@ class GenPortfolioConfig extends Component {
         <div  className="row">
           <div  className="col-md-5">
             <div className="form-group">
-              <input type="text"  name={"intro|introExpertieList|"+i+"|icon"} onChange={this.changeHandler} className="form-control" value={this.state.allData['intro']['introExpertieList'][i].icon||''} placeholder="Introduction Experties Icon" required/>
+              <input type="text"  name={"intro|introExpertieList|"+i+"|icon"} onChange={this.changeHandler} className="form-control" placeholder="Introduction Experties Icon" required/>
             </div>
           </div>
           <div  className="col-md-5">
             <div className="form-group">
-              <input type="text"  name={"intro|introExpertieList|"+i+"|desc"} onChange={this.changeHandler} className="form-control" value={this.state.allData['intro']['introExpertieList'][i].desc||''} placeholder="Introduction Experties Description" required/>
+              <input type="text"  name={"intro|introExpertieList|"+i+"|desc"} onChange={this.changeHandler} className="form-control" placeholder="Introduction Experties Description" required/>
             </div>
           </div>
           <div  className="col-md-2">
@@ -299,21 +299,21 @@ educationTab = (j) => {
         <div className="row">
           <div className="col-md-6">
             <div className="form-group">
-              <input type="text"  name={"education|"+i+"|institute"} onChange={this.changeHandler} className="form-control" value={this.state.allData['education'][i].institute||''} placeholder="Education Institude" required/>
+              <input type="text"  name={"education|"+i+"|institute"} onChange={this.changeHandler} className="form-control" placeholder="Education Institude" required/>
             </div>
             <div className="form-group">
-              <input type="text"  name={"education|"+i+"|std_branch"} onChange={this.changeHandler} className="form-control" value={this.state.allData['education'][i].std_branch||''} placeholder="Education Standard Branch" required/>
+              <input type="text"  name={"education|"+i+"|std_branch"} onChange={this.changeHandler} className="form-control" placeholder="Education Standard Branch" required/>
             </div>
             <div className="form-group">
-              <input type="text"  name={"education|"+i+"|university"} onChange={this.changeHandler} className="form-control" value={this.state.allData['education'][i].university||''} placeholder="Education University" required/>
+              <input type="text"  name={"education|"+i+"|university"} onChange={this.changeHandler} className="form-control" placeholder="Education University" required/>
             </div>
           </div>
           <div className="col-md-6">
             <div className="form-group">
-              <input type="text"  name={"education|"+i+"|year"} onChange={this.changeHandler} className="form-control" value={this.state.allData['education'][i].year||''} placeholder="Education Year" required/>
+              <input type="text"  name={"education|"+i+"|year"} onChange={this.changeHandler} className="form-control"  placeholder="Education Year" required/>
             </div>
             <div className="form-group">
-              <input type="text"  name={"education|"+i+"|desc"} onChange={this.changeHandler} className="form-control" value={this.state.allData['education'][i].desc||''} placeholder="Education Description" required/>
+              <input type="text"  name={"education|"+i+"|desc"} onChange={this.changeHandler} className="form-control" placeholder="Education Description" required/>
             </div>
             <div className="form-group">
               <input type='button' name={"education|"+i} value='remove' onClick={this.removeClick.bind(this, 'education', i)}/>
@@ -324,14 +324,33 @@ educationTab = (j) => {
     )
   }
 
-  skillUI = (j) => {
+  skillUI = () => {
+    return (
+      <div className="panel panel-default">
+        <div className="panel-heading" role="tab" id="headingSkill">
+          <h4 className="panel-title">
+            <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#skillData" aria-expanded="false" aria-controls="collapseTwo">Skill</a>
+          </h4>
+        </div>
+        <div id="skillData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSkill">
+          <div className="panel-body">
+            <div className="row" style={{padding:'10px'}} >
+              {this.skillTab('skill')}
+              <input type='button' value='Add Skill' onClick={this.addClick.bind(this, 'skill')}/>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  skillTab = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
-      <div key={i}>
-        <div  className="row">
-          <div  className="col-md-6">
+      // <div >
+        <div key={i} className="row">
+          <div className="col-md-6">
             <div className="form-group">
-              <input type="text"  name={"skill|"+i+"|skillHeader"} onChange={this.changeHandler} className="form-control" value={this.state.allData['skill'][i].skillHeader||''} placeholder="Skill Header" required/>
+              <input type="text"  name={"skill|"+i+"|skillHeader"} onChange={this.changeHandler} className="form-control" placeholder="Skill Header" required/>
             </div>
           </div>
           <div  className="col-md-6">
@@ -340,48 +359,63 @@ educationTab = (j) => {
             </div>
           </div>
           <div  className="col-md-12">
-            {this.addAryUI("skill|"+i+"|skillList")}
-              <input type='button' value='Add Skill Technology' onClick={this.addClick.bind(this, "skill|"+i+"|skillList")}/>
+            {this.addSkillListArrayTab("skill|"+i+"|skillList")}
+            <input type='button' value='Add Skill Technology' onClick={this.addClick.bind(this, "skill|"+i+"|skillList")}/>
           </div>
         </div>
-      </div>
-    )
+      // </div>
+    );
   }
-
-  addAryUI = (j) => {
-    const val = j.split('|');
+  addSkillListArrayTab = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
-      <div key={i}>
-        <div  className="col-md-3">
-          <div  className="col-md-9">
-            <div className="form-group">
-              <input type="text"  name={j+"|"+i} onChange={this.changeHandler} className="form-control" value={this.state.allData[val[0]][val[1]][val[2]][i]||''} placeholder="Skill Name" required/>
-            </div>
+      <div key={i} className="col-md-3">
+        <div  className="col-md-9">
+          <div className="form-group">
+            <input type="text"  name={j+"|"+i} onChange={this.changeHandler} className="form-control" placeholder="Skill Name" required/>
           </div>
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type='button' name={j+"|"+i} value='remove' onClick={this.removeClick.bind(this, 'skill', i)}/>
-            </div>
+        </div>
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type='button' name={j+"|"+i} value='remove' onClick={this.removeClick.bind(this, 'skill', i)}/>
           </div>
         </div>
       </div>
     );
   }
 
-  ExperienceUI = (j) => {
+  experienceUI = () => {
+    return (
+      <div className="panel panel-default">
+        <div className="panel-heading" role="tab" id="headingExperience">
+          <h4 className="panel-title">
+            <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#experienceData" aria-expanded="false" aria-controls="collapseTwo">Experience</a>
+          </h4>
+        </div>
+        <div id="experienceData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingExperience">
+          <div className="panel-body">
+            <div className="row" style={{padding:'10px'}} >
+              {this.experienceTab('experience')}
+              <input type='button' value='Add Experience' onClick={this.addClick.bind(this, 'experience')}/>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  experienceTab = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
         <div  className="row">
           <div  className="col-md-5">
             <div className="form-group">
-              <input type="text"  name={"experience|"+i+"|job_compy_desig"} onChange={this.changeHandler} className="form-control" value={this.state.allData['experience'][i].job_compy_desig||''} placeholder="Job Company/Designation" required/>
+              <input type="text"  name={"experience|"+i+"|job_compy_desig"} onChange={this.changeHandler} className="form-control" placeholder="Job Company/Designation" required/>
             </div>
           </div>
           <div  className="col-md-5">
             <div className="form-group">
-              <input type="text"  name={"experience|"+i+"|job_duration"} onChange={this.changeHandler} className="form-control" value={this.state.allData['experience'][i].job_duration||''} placeholder="Job Duration" required/>
+              <input type="text"  name={"experience|"+i+"|job_duration"} onChange={this.changeHandler} className="form-control" placeholder="Job Duration" required/>
             </div>
           </div>
           <div  className="col-md-2">
@@ -390,22 +424,21 @@ educationTab = (j) => {
             </div>
           </div>
           <div  className="col-md-12">
-            {this.addAryForFullLineUI("experience|"+i+"|job_desc")}
+            {this.addExperienceListArrayTab("experience|"+i+"|job_desc")}
               <input type='button' value='Add Job Description' onClick={this.addClick.bind(this, "experience|"+i+"|job_desc")}/>
           </div>
         </div>
       </div>
     )
   }
-  addAryForFullLineUI = (j) => {
-    const val = j.split('|');
+  addExperienceListArrayTab = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
         <div  className="row">
           <div  className="col-md-10">
             <div className="form-group">
-              <input type="text"  name={j+"|"+i} onChange={this.changeHandler} className="form-control" value={this.state.allData[val[0]][val[1]][val[2]][i]||''} placeholder="Job Description" required/>
+              <input type="text"  name={j+"|"+i} onChange={this.changeHandler} className="form-control" placeholder="Job Description" required/>
             </div>
           </div>
           <div  className="col-md-2">
@@ -418,91 +451,153 @@ educationTab = (j) => {
     );
   }
 
-  ProjectUI = (j) => {
-    const map = this.getMapData(j);
-    return map.map((el, i) =>
-      <div key={i}>
-        <div  className="row">
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_nm"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_nm||''} placeholder="Project Name" required/>
+  projectUI = () => {
+    return (
+      <div className="panel panel-default">
+        <div className="panel-heading" role="tab" id="headingProject">
+          <h4 className="panel-title">
+            <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#projectData" aria-expanded="false" aria-controls="collapseTwo">Project</a>
+          </h4>
+        </div>
+        <div id="projectData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingProject">
+          <div className="panel-body">
+            <div className="row" style={{padding:'10px'}} >
+              {this.projectTab('project')}
+              <input type='button' value='Add Project' onClick={this.addClick.bind(this, 'project')}/>
             </div>
-          </div>
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_org"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_org||''} placeholder="Project Oraganisation" required/>
-            </div>
-          </div>
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_clnt"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_clnt||''} placeholder="Project Client" required/>
-            </div>
-          </div>
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_dur"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_dur||''} placeholder="Project Duration" required/>
-            </div>
-          </div>
-
-          <div  className="col-md-12">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_tec"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_tec||''} placeholder="Project Technology" required/>
-            </div>
-          </div>
-
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_typ"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_typ||''} placeholder="Project Type" required/>
-            </div>
-          </div>
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_env"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_env||''} placeholder="Project Enviroment" required/>
-            </div>
-          </div>
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_role"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_role||''} placeholder="Project Role" required/>
-            </div>
-          </div>
-          <div  className="col-md-3">
-            <div className="form-group">
-              <input type="text"  name={"project|"+i+"|prj_tmsz"} onChange={this.changeHandler} className="form-control" value={this.state.allData['project'][i].prj_tmsz||''} placeholder="Project Team Size" required/>
-            </div>
-          </div>
-
-          <div  className="col-md-11">
-            <div className="form-group">
-              <textarea name="project|prj_desc" onChange={this.changeHandler} id="prj_desc" cols="30" rows="7" className="form-control" placeholder="Project Short Introduction" required></textarea>
-            </div>
-          </div>
-          <div  className="col-md-1">
-            <div className="form-group">
-              <input type='button' name={"project|"+i} value='remove' onClick={this.removeClick.bind(this, 'project', i)}/>
-            </div>
-          </div>
-          <div  className="col-md-12">
-            {this.addAryForPrjFullLineUI("project|"+i+"|prj_rl_desc")}
-            <input type='button' value='Add Project Description' onClick={this.addClick.bind(this, "project|"+i+"|prj_rl_desc")}/>
           </div>
         </div>
       </div>
     )
   }
-  addAryForPrjFullLineUI = (j) => {
-    const val = j.split('|');
+  projectTab = (j) => {
+    const map = this.getMapData(j);
+    return map.map((el, i) =>
+      <div key={i} className="row">
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_nm"} onChange={this.changeHandler} className="form-control" placeholder="Project Name" required/>
+          </div>
+        </div>
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_org"} onChange={this.changeHandler} className="form-control" placeholder="Project Oraganisation" required/>
+          </div>
+        </div>
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_clnt"} onChange={this.changeHandler} className="form-control" placeholder="Project Client" required/>
+          </div>
+        </div>
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_dur"} onChange={this.changeHandler} className="form-control" placeholder="Project Duration" required/>
+          </div>
+        </div>
+
+        <div  className="col-md-12">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_tec"} onChange={this.changeHandler} className="form-control" placeholder="Project Technology" required/>
+          </div>
+        </div>
+
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_typ"} onChange={this.changeHandler} className="form-control" placeholder="Project Type" required/>
+          </div>
+        </div>
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_env"} onChange={this.changeHandler} className="form-control" placeholder="Project Enviroment" required/>
+          </div>
+        </div>
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_role"} onChange={this.changeHandler} className="form-control" placeholder="Project Role" required/>
+          </div>
+        </div>
+        <div  className="col-md-3">
+          <div className="form-group">
+            <input type="text"  name={"project|"+i+"|prj_tmsz"} onChange={this.changeHandler} className="form-control" placeholder="Project Team Size" required/>
+          </div>
+        </div>
+
+        <div  className="col-md-11">
+          <div className="form-group">
+            <textarea name="project|prj_desc" onChange={this.changeHandler} id="prj_desc" cols="30" rows="7" className="form-control" placeholder="Project Short Introduction" required></textarea>
+          </div>
+        </div>
+        <div  className="col-md-1">
+          <div className="form-group">
+            <input type='button' name={"project|"+i} value='remove' onClick={this.removeClick.bind(this, 'project', i)}/>
+          </div>
+        </div>
+        <div  className="col-md-12">
+          {this.addProjectListArrayTab("project|"+i+"|prj_rl_desc")}
+          <input type='button' value='Add Project Description' onClick={this.addClick.bind(this, "project|"+i+"|prj_rl_desc")}/>
+        </div>
+      </div>
+    )
+  }
+  addProjectListArrayTab = (j) => {
     const map = this.getMapData(j);
     return map.map((el, i) =>
       <div key={i}>
         <div  className="row">
           <div  className="col-md-10">
             <div className="form-group">
-              <input type="text"  name={j+"|"+i} onChange={this.changeHandler} className="form-control" value={this.state.allData[val[0]][val[1]][val[2]][i]||''} placeholder="Project Description" required/>
+              <input type="text"  name={j+"|"+i} onChange={this.changeHandler} className="form-control" placeholder="Project Description" required/>
             </div>
           </div>
           <div  className="col-md-2">
             <div className="form-group">
               <input type='button' name={j+"|"+i} value='remove' onClick={this.removeClick.bind(this, 'skill', i)}/>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  contactmeUI = () => {
+    return (
+      <div className="panel panel-default">
+        <div className="panel-heading" role="tab" id="headingcontactme">
+          <h4 className="panel-title">
+            <a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#contactmeData" aria-expanded="false" aria-controls="collapseTwo">Contact Me</a>
+          </h4>
+        </div>
+        <div id="contactmeData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingcontactme">
+          <div className="panel-body">
+            <div className="row">
+              <section id="sec_headingcontactme" className="sym-contactme" data-section="datacontactme" style={{padding:"0 10px 0 10px"}}>
+                <div  className="sym-narrow-content">
+                  <div  className="row">
+                    <div  className="col-md-4">
+                      <div className="form-group">
+                        <input type="text"  name="contactme|mobileNumber" onChange={this.changeHandler} className="form-control" placeholder="Mobile Number" required/>
+                      </div>
+                    </div>
+                    <div  className="col-md-4">
+                      <div className="form-group">
+                        <input type="text"  name="contactme|address" onChange={this.changeHandler} className="form-control" placeholder="Address" required/>
+                      </div>
+                    </div>
+                    <div  className="col-md-4">
+                      <div className="form-group">
+                        <input type="text"  name="contactme|emailId" onChange={this.changeHandler} className="form-control" placeholder="EmailId" required/>
+                      </div>
+                    </div>
+                  </div>
+                  <div  className="row">
+                    <div  className="col-md-12">
+                      <div className="form-group">
+                        <input type="text"  name="contactme|feedback_link" onChange={this.changeHandler} className="form-control" placeholder="Conact Form Feedback API link" required/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
@@ -511,6 +606,18 @@ educationTab = (j) => {
   }
   //----------------------UI SECTIONS/COMPONENTS------------------------------------------------------
   //----------------------UI SECTIONS/MODAL-----------------------------------------------------------
+  LaunchModal = () => {
+    return (
+      <div className="row">
+        <div  className="col-md-6">
+          <this.getLiveModalJSON/>
+        </div>
+        <div  className="col-md-6">
+          <this.LivePreviewModal/>
+        </div>
+      </div>
+    );
+  }
   LivePreviewModal = () => {
     return (
       <>
@@ -535,7 +642,6 @@ educationTab = (j) => {
       </>
     );
   }
-
   getLiveModalJSON = () => {
     return (
       <>
@@ -574,109 +680,11 @@ educationTab = (j) => {
         <this.heroareaUI/>
         <this.introductionUI/>
         <this.educationUI/>
-
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingSkill">
-            <h4 className="panel-title">
-              <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-                  href="#skillData" aria-expanded="false" aria-controls="collapseTwo">Skill</a>
-            </h4>
-          </div>
-          <div id="skillData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSkill">
-            <div className="panel-body">
-              <div className="row" style={{padding:'10px'}} >
-                {this.skillUI('skill')}
-                <input type='button' value='Add Skill' onClick={this.addClick.bind(this, 'skill')}/>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingExperience">
-            <h4 className="panel-title">
-              <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-                  href="#experienceData" aria-expanded="false" aria-controls="collapseTwo">Experience</a>
-            </h4>
-          </div>
-          <div id="experienceData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingExperience">
-            <div className="panel-body">
-              <div className="row" style={{padding:'10px'}} >
-                {this.ExperienceUI('experience')}
-                <input type='button' value='Add Experience' onClick={this.addClick.bind(this, 'experience')}/>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingProject">
-            <h4 className="panel-title">
-              <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-              href="#projectData" aria-expanded="false" aria-controls="collapseTwo">Project</a>
-            </h4>
-          </div>
-          <div id="projectData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingProject">
-            <div className="panel-body">
-              <div className="row" style={{padding:'10px'}} >
-                {this.ProjectUI('project')}
-                <input type='button' value='Add Project' onClick={this.addClick.bind(this, 'project')}/>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="panel panel-default">
-          <div className="panel-heading" role="tab" id="headingcontactme">
-            <h4 className="panel-title">
-              <a className="collapsed" data-toggle="collapse" data-parent="#accordion"
-                href="#contactmeData" aria-expanded="false" aria-controls="collapseTwo">Contact Me</a>
-            </h4>
-          </div>
-          <div id="contactmeData" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingcontactme">
-            <div className="panel-body">
-              <div className="row">
-                <section id="sec_headingcontactme" className="sym-contactme" data-section="datacontactme" style={{padding:"0 10px 0 10px"}}>
-                  <div  className="sym-narrow-content">
-                    <div  className="row">
-                      <div  className="col-md-4">
-                        <div className="form-group">
-                          <input type="text"  name="contactme|mobileNumber" value={this.state.allData['contactme'].mobileNumber||''} onChange={this.changeHandler} className="form-control" placeholder="Mobile Number" required/>
-                        </div>
-                      </div>
-                      <div  className="col-md-4">
-                        <div className="form-group">
-                          <input type="text"  name="contactme|address" value={this.state.allData['contactme'].address||''} onChange={this.changeHandler} className="form-control" placeholder="Address" required/>
-                        </div>
-                      </div>
-                      <div  className="col-md-4">
-                        <div className="form-group">
-                          <input type="text"  name="contactme|emailId" value={this.state.allData['contactme'].emailId||''} onChange={this.changeHandler} className="form-control" placeholder="EmailId" required/>
-                        </div>
-                      </div>
-                    </div>
-                    <div  className="row">
-                      <div  className="col-md-12">
-                        <div className="form-group">
-                          <input type="text"  name="contactme|feedback_link" value={this.state.allData['contactme'].feedback_link||''} onChange={this.changeHandler} className="form-control" placeholder="Conact Form Feedback API link" required/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div  className="col-md-6">
-            <this.getLiveModalJSON/>
-          </div>
-          <div  className="col-md-6">
-            <this.LivePreviewModal/>
-          </div>
-        </div>
+        <this.skillUI/>
+        <this.experienceUI/>
+        <this.projectUI/>
+        <this.contactmeUI/>
+        <this.LaunchModal/>
       </>
     );
   }
@@ -684,7 +692,7 @@ educationTab = (j) => {
 export default GenPortfolioConfig;
 
 function toLoadJavascriptFunction(){
-  // const script = document.createElement("script");
-  // script.src = "/js/main.js";
-  // document.getElementsByTagName('head')[0].appendChild(script);
+  const script = document.createElement("script");
+  script.src = "/js/main.js";
+  document.getElementsByTagName('head')[0].appendChild(script);
 }

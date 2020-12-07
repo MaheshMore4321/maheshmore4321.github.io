@@ -4,6 +4,7 @@ import ProjectDetails from './ProjectDetails';
 
 class Project extends Component {
   render() {
+    let index = 1;
     return (
       <>
         <section className="sym-experience" data-section="project">
@@ -18,11 +19,11 @@ class Project extends Component {
               <div className="col-md-12">
                 <div className="timeline-centered">
                   {
-                    this.props.data && this.props.data.map((project_inner, index) =>
+                    this.props.data && this.props.data.map(project_inner =>
                       <ProjectDetails
-                        key={index}
+                        key={index++}
+                        id={index}
                         data={project_inner}
-                        id={index+1}
                       />
                     )
                   }
