@@ -19,32 +19,53 @@ class GenPortfolioConfig extends Component {
       },
       prflImgSrc:'/images/default-profile.jpg',
       bkglImgSrc: '/images/bg.png',
+      flagNeedToRefresh: false,
     };
   }
 
   //----------------------CLICK ACTION HANDLERS-------------------------------------------------------
   changeHandler = (e) => {
+    //console.log("---------changeHandler---------");
     let allData = this.state.allData;
+    //console.log(allData);
+    //console.log(e);
+    //console.log(e.target.name);
     const val = e.target.name.split('|');
+    //console.log(val);
     if(val.length === 2 ){
+      //console.log("val is 2");
       allData[val[0]][val[1]] = e.target.value;
+      //console.log(allData);
     }
     else if(val.length === 3 ){
+      //console.log("val is 3");
       if(!allData[val[0]][val[1]]) {
+        //console.log("val is 3.1");
         allData[val[0]][val[1]] = [];
+        //console.log(allData);
       }
       allData[val[0]][val[1]][val[2]] = e.target.value;
+      //console.log(allData);
     }
     else if(val.length === 4 ){
+      //console.log("val is 4");
       if(!allData[val[0]][val[1]]) {
+        //console.log("val is 4.1");
         allData[val[0]][val[1]] = [];
+        //console.log(allData);
       }
       if(!allData[val[0]][val[1]][val[2]]) {
+        //console.log("val is 4.2");
         allData[val[0]][val[1]][val[2]] = [];
+        //console.log(allData);
       }
       allData[val[0]][val[1]][val[2]][val[3]] = e.target.value;
+      //console.log(allData);
     }
+    //console.log(allData);
     this.setState({ allData });
+    //console.log(allData);
+    //console.log("---------changeHandler---------");
   }
 
   addClick = (i) => {
@@ -649,7 +670,8 @@ educationTab = (j) => {
             </div>
           </div>
         </div>
-        {/* {toLoadJavascriptFunction()} */}
+        {this.state.flagNeedToRefresh ? toLoadJavascriptFunction() : console.log('first check')}
+        {this.state.flagNeedToRefresh ?  this.setState({flagNeedToRefresh: false}): console.log('second check')}
       </>
     );
   }
