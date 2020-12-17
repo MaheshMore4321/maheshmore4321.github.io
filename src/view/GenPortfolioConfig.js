@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 import PortfolioUi from './PortfolioUi';
 
+import SidebarJSON from '../component/sidebar/SidebarJSON';
+import HeroAreaSlideJSON from '../component/heroarea/HeroAreaSlideJSON';
+import IntroExpertieListJSON from '../component/introduction/IntroExpertieListJSON';
+import EducationJSON from '../component/education/EducationJSON';
+import SkillJSON from '../component/skill/SkillJSON';
+import ExperienceJSON from '../component/experience/ExperienceJSON';
+import ProjectJSON from '../component/project/ProjectJSON';
+import ContactMeJSON from '../component/contactme/ContactMeJSON';
 class GenPortfolioConfig extends Component {
   constructor(props){
     super(props)
@@ -179,7 +187,7 @@ class GenPortfolioConfig extends Component {
                               <input type="text"  name="sidebar|github_link" onChange={this.changeHandler} className="form-control" placeholder="Github" required/>
                             </div>
                             <div  className="form-group">
-                              <input type="text"  name="sidebar|website_link" onChange={this.changeHandler} className="form-control" placeholder="BlogSite" required/>
+                              <input type="text"  name="sidebar|website_link" onChange={this.changeHandler} className="form-control" placeholder="Website" required/>
                             </div>
                           </div>
                         </div>
@@ -545,7 +553,7 @@ educationTab = (j) => {
 
         <div  className="col-md-11">
           <div className="form-group">
-            <textarea name="project|prj_desc" onChange={this.changeHandler} id="prj_desc" cols="30" rows="7" className="form-control" placeholder="Project Short Introduction" required></textarea>
+            <textarea name={"project|"+i+"|prj_desc"} onChange={this.changeHandler} id="prj_desc" cols="30" rows="7" className="form-control" placeholder="Project Description" required></textarea>
           </div>
         </div>
         <div  className="col-md-1">
@@ -555,7 +563,7 @@ educationTab = (j) => {
         </div>
         <div  className="col-md-12">
           {this.addProjectListArrayTab("project|"+i+"|prj_rl_desc")}
-          <input type='button' value='Add Project Description' onClick={this.addClick.bind(this, "project|"+i+"|prj_rl_desc")}/>
+          <input type='button' value='Add Project Role Description' onClick={this.addClick.bind(this, "project|"+i+"|prj_rl_desc")}/>
         </div>
       </div>
     )
@@ -639,6 +647,7 @@ educationTab = (j) => {
       </div>
     );
   }
+
   LivePreviewModal = () => {
     return (
       <>
@@ -651,14 +660,14 @@ educationTab = (j) => {
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div className="row">
                   <div className="col-md-3" style={{float:"left"}}>
-                    <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 className="modal-title" id="myModalLabel">Live Preview</h4>
                   </div>
                   <div className="col-md-6"></div>
                   <div className="col-md-3" style={{float:"right"}}>
                     <button id="clickNeedToCopyb" className="form-control">Click to copy</button>
                   </div>
                   <div id="divNeedToCopyb" style={{display:"none"}}>
-                    {JSON.stringify(this.state.allData)}
+                    {this.getPortfolioJSON()}
                   </div>
                 </div>
               </div>
@@ -670,8 +679,8 @@ educationTab = (j) => {
             </div>
           </div>
         </div>
-        {this.state.flagNeedToRefresh ? toLoadJavascriptFunction() : console.log('first check')}
-        {this.state.flagNeedToRefresh ?  this.setState({flagNeedToRefresh: false}): console.log('second check')}
+        {this.state.flagNeedToRefresh ? toLoadJavascriptFunction() : ''}
+        {this.state.flagNeedToRefresh ?  this.setState({flagNeedToRefresh: false}): ''}
       </>
     );
   }
@@ -687,7 +696,7 @@ educationTab = (j) => {
               <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div className="row">
                   <div className="col-md-3" style={{float:"left"}}>
-                    <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 className="modal-title" id="myModalLabel">Get JSON For PortfolioUi</h4>
                   </div>
                   <div className="col-md-6"></div>
                   <div className="col-md-3" style={{float:"right"}}>
@@ -696,7 +705,7 @@ educationTab = (j) => {
                 </div>
               </div>
               <div id="divNeedToCopy" className="modal-body" style={{wordWrap:"break-word"}}>
-                {JSON.stringify(this.state.allData)}
+                {this.getPortfolioJSON()}
               </div>
               <div className="modal-footer">
               </div>
@@ -704,7 +713,81 @@ educationTab = (j) => {
           </div>
         </div>
       </>
-    ); // --> 775-888-3637
+    );
+  }
+
+  getPortfolioJSON = () => {
+    let heroareaIndex = 1;
+    let introExpertieListIndex = 1;
+    let educationIndex = 1;
+    let skillIndex = 1;
+    let experienceIndex = 1;
+    let projectIndex = 1;
+    return (
+      <>
+        {"{"}
+          <SidebarJSON data={this.state.allData.sidebar}/>,
+          "heroarea" : [{
+            this.state.allData && this.state.allData.heroarea.map(heroarea_inner =>
+              <HeroAreaSlideJSON
+                key={heroareaIndex++}
+                id={heroareaIndex}
+                data={heroarea_inner}
+              />
+            )
+          }],
+          "intro" : {"{"}
+            "introduction":"{this.state.allData && this.state.allData.intro && this.state.allData.intro.introduction && this.state.allData.intro.introduction}",
+            "introExpertieList": [{
+              this.state.allData && this.state.allData.intro && this.state.allData.intro.introExpertieList && this.state.allData.intro.introExpertieList.map(introExpertieList_inner =>
+                <IntroExpertieListJSON
+                  key={introExpertieListIndex++}
+                  id={introExpertieListIndex}
+                  data={introExpertieList_inner}
+                />
+              )
+            }]
+          {"},"}
+          "education" : [{
+            this.state.allData && this.state.allData.education.map(education_inner =>
+              <EducationJSON
+                key={educationIndex++}
+                id={educationIndex}
+                data={education_inner}
+              />
+            )
+          }],
+          "skill" : [{
+            this.state.allData && this.state.allData.skill.map(skill_inner =>
+              <SkillJSON
+                key={skillIndex++}
+                id={skillIndex}
+                data={skill_inner}
+              />
+            )
+          }],
+          "experience" : [{
+            this.state.allData && this.state.allData.experience.map(experience_inner =>
+              <ExperienceJSON
+                key={experienceIndex++}
+                id={experienceIndex}
+                data={experience_inner}
+              />
+            )
+          }],
+          "project" : [{
+            this.state.allData && this.state.allData.project.map(project_inner =>
+              <ProjectJSON
+                key={projectIndex++}
+                id={projectIndex}
+                data={project_inner}
+              />
+            )
+          }],
+          <ContactMeJSON data={this.state.allData.contactme}/>
+        {"}"}
+      </>
+    );
   }
   //----------------------UI SECTIONS/MODAL-----------------------------------------------------------
 

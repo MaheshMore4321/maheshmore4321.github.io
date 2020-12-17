@@ -4,7 +4,7 @@ class Sidebar extends Component {
 	render() {
     	return (
     		<>
-      			<aside id="sym-aside" className="border js-fullheight" style={{backgroundImage:`url(${this.props.data && this.props.data.background_picture_link})`, backgroundSize: 'cover', maxHeight:'max-content', height:'max-content'}}>
+      			<aside id="sym-aside" className="border js-fullheight" style={{backgroundImage:`url(${this.props.data && this.props.data.background_picture_link})`, backgroundSize: 'cover', maxHeight:'-webkit-fill-available', height:'-webkit-fill-available'}}>
 					<div className="text-center">
 						<div className="author-img" style={{backgroundImage:`url(${this.props.data && this.props.data.profile_picture_link})`}}></div>
 						<h1 id="sym-logo"><a href="index.html">{this.props.data && this.props.data.name}</a></h1>

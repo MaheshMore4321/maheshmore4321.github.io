@@ -16,7 +16,7 @@ class SkillDetails extends Component {
                 <div id={"panel-body-skill"+this.props.id} className="panel-body">
                     <div id={"panel-body-row-skill"+this.props.id} className="row">
                         {
-                            this.props.data && this.props.data.skillList.map(skillsubList =>
+                            this.props.data && this.props.data.skillList && this.props.data.skillList.map(skillsubList =>
                                 <div key={index++}  className="col-3 col-md-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xs-3">
                                     <p style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(skillsubList)}</p>
                                 </div>

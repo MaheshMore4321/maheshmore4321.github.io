@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import parse from 'html-react-parser';
 
 import ProjectDetails from './ProjectDetails';
+import ProjectJSON from './ProjectJSON';
 
 class Project extends Component {
   render() {
