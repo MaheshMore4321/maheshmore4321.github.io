@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 
 class ExperienceDetails extends Component {
   render() {
+    let index=1;
     return (
       <>
         <article className="timeline-entry animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
@@ -25,7 +26,7 @@ class ExperienceDetails extends Component {
                                 <div className="row">
                                     {
                                         this.props.data && this.props.data.job_desc && this.props.data.job_desc.map(job_desc__inner =>
-                                            <p key={job_desc__inner} style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(job_desc__inner)}</p>
+                                            <p key={index++} style={{lineheight:'1.4',margin:'0'}}><i className="fa fa-circle" aria-hidden="true" style={{verticalalign:'middle',fontsize:'8px'}}>&nbsp;&nbsp;</i>{parse(job_desc__inner)}</p>
                                         )
                                     }
                                 </div>
