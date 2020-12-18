@@ -1,8 +1,9 @@
+
 {
-  "name": "my-portfolio",
-  "version": "0.1.0",
+  "name": "@maheshmore4321/maheshmore4321.github.io",
+
+  "version": "1.0.0",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "axios": "^0.19.2",
     "html-react-parser": "^0.10.3",
@@ -26,5 +27,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MaheshMore4321/maheshmore4321.github.io.git"
+  }
 }
