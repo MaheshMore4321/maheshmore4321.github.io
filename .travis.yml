@@ -1,24 +1,15 @@
 language: node_js
 node_js:
-  - '8'
-cache: yarn
-install:
-  - npm run install
-jobs:
-  include:
-    - stage: Build and test
-      script:
-        - npm run build
-    - stage: npm release
-      script: npm run build
-      deploy:
-        provider: npm
-        email: '$NPM_EMAIL'
-        api_key: '$NPM_TOKEN'
-        skip_cleanup: true
-        on:
-          tags: true
-branches:
-  only:
-    - master
-    - /^v[0-9]+.*$/
+  - "stable"
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: npm
+  email: '$NPM_EMAIL'
+  api_key: '$NPM_TOKEN'
+script:
+  - npm set https://registry.npmjs.org/:_authToken=$NPM_TOKEN
+  - npm install
+  - npm run build
+  - npm publish
