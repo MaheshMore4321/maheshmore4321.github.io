@@ -1,30 +1,7 @@
 language: node_js
 node_js:
-  - "8.15"
   - "node"
-  - "lts/*"
 
-jobs:
-  include:
-    - stage: lint
-      name: "Lint && Dist"
-      script:
-        - npm run lint && npm run dist
-    # Define the release stage that runs semantic-release
-    - stage: release
-      node_js: lts/*
-      deploy:
-        provider: script
-        skip_cleanup: true
-        script:
-          - npx semantic-release
-
-before_install:
-  - npm install -g npm@6.7
-install:
-  - npm install
-  - ./install_react.sh
-env:
-  matrix:
-    - REACT_VERSION=16.7
-    - REACT_VERSION=16.8
+after_success:
+  - npm run build
+  - npm run deploy
