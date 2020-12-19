@@ -7,3 +7,7 @@ cache:
 script:
   - npm run build
   - npm publish
+deploy:
+  provider: npm
+  email: "maheshmore4321@gmail.com"
+  api_key: $NPM_TOKEN
