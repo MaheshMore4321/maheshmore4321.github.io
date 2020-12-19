@@ -9,7 +9,5 @@ deploy:
   email: '$NPM_EMAIL'
   api_key: '$NPM_TOKEN'
 script:
-  - npm set https://registry.npmjs.org/:_authToken=$NPM_TOKEN
   - npm install
   - npm run build
-  - npm publish
