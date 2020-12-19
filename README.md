@@ -1,15 +1,4 @@
-<style>
-.rotate {
-  animation: spin 10s linear infinite;
-  border-radius: 50%;
-}
-@keyframes spin {
-  100% {
-    transform: rotate(1turn);
-}
-</style>
-
-<img class="rotate" src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/react-512.png" align="left"
+<img class="rotate" src="https://i.ibb.co/CHFRgkn/5fde90c51ea69147606634.gif" align="left"
      alt="reactJs logo" width="100" height="100">
 # &nbsp;MaheshMore4321.github.io
 
