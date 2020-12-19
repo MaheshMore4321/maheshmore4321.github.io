@@ -1,16 +1,24 @@
 language: node_js
 node_js:
-  - "stable"
-cache:
-  directories:
-  - node_modules
-deploy:
-  provider: npm
-  email:
-    secure: "eOnNl1C3AgFJGt3DfhKqHyA8wPfcCxNv4BDXfkZyzrRc5D4Mf/dAuxbiCftoPUgEh5LGFtjsLR4ouUPY2RhleWVVvZkfWX1j0RZ5BbxJ63mgM22k0PK9GxgpCwdoPPNx/fTB1bXmVezSA0DbL4f8Cy4+JS90XHCSE5Ms0nEg2p2aCgrqpbSwrVDMkzq/Ha2q0z3STiPKbTctL1KjwaKaQX7mpkMFXUGPnkbi3QZLdZ5f0XHPQB/Rc8RgKnOaWBlq11w9DVZGc0OLQBB4w4EWVwYes6aiXEEPQA4eamNuQQQ0WdkQ9lR8Xg+qqq81Tnwe46iznzE8+Ju4QCKlXMlEJvbrh/kCwffM7PANQwXKxM+rhESah9TqupA0R/uE6CPPdp8ZQ7Qkd55zzTafmhxL8wMjPtdRTuYisC40VtFu/Dj/hCJnJnISabuTXesDxYOxABIKwQGsFjlumu6a8bFKRPpAHxEZ3oS5nOijJTxSghwr4QsmTmW3peuRmuC8SNDrMVu+fxwDrHlD/69pYkrVd91VBVIrpYQWR5bJb9geYTAd9/3d66Pbn0Ip/Cy0NPAM4SQ5L/KBMcCxUV11iXdAHiSu3MgNSfjNFLFu/dhqfcrV1i4seie11wbTZyGt3vpj6XMslj6Ucn18kQyvyzH5HmI5L1XteL3w+KBTmbtCIx0="
-  api_key:
-    secure: "wVCQkThB1z1OJ7ThQItCjm47hEVc0/yoqdjHN6MZIgWX5SmNGvVsRoinWV4jsNA7n4YCQ+M8/+IJxAtmItz5NHo2YTpVK9fA3+cQ0fKsWfmulCtAsGs+q0lDNG4GSZm/KN1gKXzGkyH71jq95AziOXbVLfcChUl2eZxKdWg611uOXkXaqQnctv5DJ7vqqiQYTcoZTaf5q9qsQFzCO4dHY2BlAkuUCT67ulvmBz0mq/2Qw+G+5iMunLii8orj8HLM/aV8PNApvgNaPyngLQixdeCONmqUg2XlmxLjnqocqgBgJfvtvGDLbmjg8I6TrSrzlfvVGlN4X+vNBfDbPdfrQK0Rvp5FFQOXOMY2KgUKwu69TBzUNDv4MV/wMJgcyxu88ci9MG4HIYjYJogUaEXpmanGaquNf/tqsiMchKIBgpJzPC2ZTwfyu1lnVIgWR/xbN8UrvLVjDsA/FICGL1Xd9dEhFpMixFYoN84Tqx//BZueDg4J+M5iK4fUIF+u20AfBTZcwI3W34FD95ABrK5uakRV0KeYYCLukuBZzBdh8up6WHJhnbbSERCA+uAs0rvjj5JFugNbPNLePfsDtr2Le7w192i4/ji+VuGZgL46iFH8iL18TBi5YyFVf5l6WvigOwefnap7WZ0W76GhSV2BCNswu6GEuqNzI6iiguezOUc="
-script:
-  - npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-  - npm run build
-  - npm publish
+  - '8'
+cache: yarn
+install:
+  - yarn install
+jobs:
+  include:
+    - stage: Build and test
+      script:
+        - yarn build
+    - stage: npm release
+      script: yarn build
+      deploy:
+        provider: npm
+        email: '$NPM_EMAIL'
+        api_key: '$NPM_TOKEN'
+        skip_cleanup: true
+        on:
+          tags: true
+branches:
+  only:
+    - master
+    - /^v[0-9]+.*$/
