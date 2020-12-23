@@ -16,11 +16,10 @@
 [![issues-shield](https://img.shields.io/github/issues/MaheshMore4321/maheshmore4321.github.io?style=flat-square)](https://github.com/MaheshMore4321/maheshmore4321.github.io/issues) 
 
 ## 🚀[Demo](https://maheshmore4321.github.io)
-<img src="https://img.shields.io/website?url=https://maheshmore4321.github.io&logo=github&style=flat-square"/>
-[Github Pages](http://maheshmore4321.github.io)
-</br>
-<img src="https://img.shields.io/website?url=https://maheshmore4321.com&logo=react&style=flat-square"/>
-[Website](http://maheshmore4321.com) 
+[Github Pages](http://maheshmore4321.github.io)&nbsp;&nbsp;<img src="https://img.shields.io/website?url=https://maheshmore4321.github.io&logo=github&style=flat-square"/>
+
+[Demo Website](http://maheshmore4321.com)&nbsp;&nbsp;<img src="https://img.shields.io/website?url=https://maheshmore4321.com&logo=react&style=flat-square"/>
+ 
 <p align="center">
 	<strong>
     	•&nbsp;
