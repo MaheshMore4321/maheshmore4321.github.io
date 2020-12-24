@@ -263,22 +263,38 @@ z
       <div key={i}>
         <div className="row">
           <div className="col-md-6">
+            <div  className="form-group sym-feature sym-feature-sm" data-animate-effect="fadeInLeft" style={{height:"235px",backgroundImage:`url(${this.state.allData['heroarea'][i].backgroundImg||this.state.bkglImgSrc})`,backgroundSize:"cover"}}>
+             <input type="text" name={"heroarea|"+i+"|backgroundImg"} value={this.state.allData['heroarea'][i].backgroundImg||''} onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}} placeholder='Background Image path' required/>
+            </div>
+          </div>
+          <div className="col-md-6">
             <div className="form-group">
-              <input type="text"  name={"heroarea|"+i+"|backgroundImg"} onChange={this.changeHandler} className="form-control" value={this.state.allData['heroarea'][i].backgroundImg||''} placeholder="Background Image path" required/>
+              <div className="row">
+                <div className="col-md-1">
+                  <div className="iconMgn">
+                    <i className={this.state.allData['heroarea'][i].icon||''}></i>
+                  </div>
+                </div>
+                <div className="col-md-11">
+                  <select className="form-control" name={"heroarea|"+i+"|icon"} value={this.state.allData['heroarea'][i].icon||''}  onChange={this.changeHandler}>
+                    <option value="icon-download4">Download Icon</option>
+                    <option value="icon-book">Book Icon</option>
+                    <option value="icon-briefcase3">Briefcase Icon</option>
+                    <option value="icon-bulb">Bulb Icon</option>
+                    <option value="icon-data">Data Icon</option>
+                    <option value="icon-phone3">Phone Icon</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div className="form-group">
               <input type="text"  name={"heroarea|"+i+"|headerLine"} onChange={this.changeHandler} className="form-control" value={this.state.allData['heroarea'][i].headerLine||''} placeholder="HeaderLine" required/>
             </div>
             <div className="form-group">
-              <input type="text"  name={"heroarea|"+i+"|link"} onChange={this.changeHandler} className="form-control" value={this.state.allData['heroarea'] && this.state.allData['heroarea'][i] && this.state.allData['heroarea'][i].link && this.state.allData['heroarea'][i].link||''} placeholder="Link" required></input>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
               <input type="text"  name={"heroarea|"+i+"|text"} onChange={this.changeHandler} className="form-control" value={this.state.allData['heroarea'][i].text||''} placeholder="Text line" required/>
             </div>
             <div className="form-group">
-              <input type="text"  name={"heroarea|"+i+"|icon"} onChange={this.changeHandler} className="form-control" value={this.state.allData['heroarea'][i].icon||''} placeholder="Icon" required/>
+              <input type="text"  name={"heroarea|"+i+"|link"} onChange={this.changeHandler} className="form-control" value={this.state.allData['heroarea'] && this.state.allData['heroarea'][i] && this.state.allData['heroarea'][i].link && this.state.allData['heroarea'][i].link||''} placeholder="Link" required></input>
             </div>
             <div className="form-group">
               <input type='button' name={"heroarea|"+i} value='remove' onClick={this.removeClick.bind(this, 'heroarea', i)}/>
@@ -319,7 +335,23 @@ z
         <div  className="row">
           <div  className="col-md-5">
             <div className="form-group">
-              <input type="text"  name={"intro|introExpertieList|"+i+"|icon"} value={this.state.allData['intro']['introExpertieList'][i].icon||''} onChange={this.changeHandler} className="form-control" placeholder="Introduction Experties Icon" required/>
+              <div className="row">
+                <div className="col-md-1">
+                  <div className="iconMgn">
+                    <i className={this.state.allData['intro']['introExpertieList'][i].icon||''}></i>
+                  </div>
+                </div>
+                <div className="col-md-11">
+                  <select className="form-control" name={"intro|introExpertieList|"+i+"|icon"} value={this.state.allData['intro']['introExpertieList'][i].icon||''} onChange={this.changeHandler}>
+                    <option value="icon-download4">Download Icon</option>
+                    <option value="icon-book">Book Icon</option>
+                    <option value="icon-briefcase3">Briefcase Icon</option>
+                    <option value="icon-bulb">Bulb Icon</option>
+                    <option value="icon-data">Data Icon</option>
+                    <option value="icon-phone3">Phone Icon</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           <div  className="col-md-5">
