@@ -23,9 +23,9 @@
 <p align="center">
 	<strong>
     	•&nbsp;
-        <a href="http://maheshmore4321.com/">Website Live Preview</a>
+        <a href="https://maheshmore4321.netlify.app/">Website Live Preview</a>
 		&nbsp;&nbsp;•&nbsp;
-        <a href="http://maheshmore4321.com/generate_portfolio_config">Generate Portfolio JSON</a>
+        <a href="https://maheshmore4321.netlify.app/generate_portfolio_config">Generate Portfolio JSON</a>
 	</strong>
 </p>
 
