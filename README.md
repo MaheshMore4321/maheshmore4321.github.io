@@ -18,7 +18,7 @@
 ## 🚀[Demo](https://maheshmore4321.github.io)
 [Github Pages](http://maheshmore4321.github.io)&nbsp;&nbsp;<img src="https://img.shields.io/website?url=https://maheshmore4321.github.io&logo=github&style=flat-square"/>
 
-[Demo Website](http://maheshmore4321.com)&nbsp;&nbsp;<img src="https://img.shields.io/website?url=https://maheshmore4321.com&logo=react&style=flat-square"/>
+[Demo Website](https://maheshmore4321.netlify.app/)&nbsp;&nbsp;<img src="https://img.shields.io/website?url=https://maheshmore4321.netlify.app&logo=react&style=flat-square"/>
  
 <p align="center">
 	<strong>
