@@ -30,21 +30,27 @@
 </p>
 
 ## Overview
-MaheshMore4321.github.io is a Professional portfolio version whihc is act as live resume site, which help recruiter & viewer to get more closeup on your professional detail with less hassel & interactive way.
-In this portfolio had two main pages which better you learn,
+MaheshMore4321.github.io is a Professional portfolio UI which explain professional journey, so the viewer can get more insight about your professional journey, 
+
+a recruiter's perspective it is a live version of your resume, which helps you to show your strength to a recruiter. It also helps to get your dream job. 
+
+This User-friendly UI helps the viewer to understand with less hassle & an interactive way
 
 ### Portfolio Home page
 
 ![PortfolioHomePage](https://i.ibb.co/b6D9Z7M/PicOne.png)
 
-Professional [portfolio home page](https://maheshmore4321.netlify.app), which show display json data, which we had stored in [portfolio_data.json](https://github.com/MaheshMore4321/maheshmore4321.github.io/blob/master/public/portfolio_data.json) file.
+Professional [portfolio home page](https://maheshmore4321.netlify.app), which display json data, which you had stored in [portfolio_data.json](https://github.com/MaheshMore4321/maheshmore4321.github.io/blob/master/public/portfolio_data.json) file.
 
 ### Generate Portfolio JSON Page
 
 ![GeneratePortfolioJson](https://i.ibb.co/r5wkGQM/pic2.png)
 
-On portfolio page show data which stored from [Generate Portfolio JSON Page](https://maheshmore4321.netlify.app/generate_portfolio_config), you just need to fill all details i.e. Education, Experience etc
-& have to generate json that json have to paste in portfolio_data.json so it will start showing that data in the next section we will learn Installation steps and usage
+On portfolio page show data which retrive from [Generate Portfolio JSON Page](https://maheshmore4321.netlify.app/generate_portfolio_config) page, you just need to fill all details a form i.e. Education, Experience etc.
+
+& have to generate json that json have to paste in portfolio_data.json file so it will start showing that data 
+
+In the next section we will learn Installation steps and usage
 
 
 ## 🛠️ Installation Steps and usage
@@ -75,17 +81,19 @@ Once we had started server than we have to go [http://localhost:3000/generate_po
 
 ![GeneratePortfolioJson](https://i.ibb.co/r5wkGQM/pic2.png)
 
-Than we had to fill all details, Meanwhile we can Get JSON & View Live preview for same 
+Than we had to fill all form, 
 
-Get JSON Preview
+Meanwhile we can Get JSON & View Live preview
+
+**Get JSON Preview**
 
 ![Get JSON Preview](https://i.ibb.co/k1rhJYm/getJson.png)
 
-Check Live Version
+**Check Live Version**
 
 ![Check Live Version](https://i.ibb.co/HGwQCdh/ivep.png)
 
-Than Once you got required UI Data than click to copy JSON , then that json paste in [maheshmore4321.github.io/public/portfolio_data.json](maheshmore4321.github.io/public/portfolio_data.json) file.
+Then Once you got required UI data than click to copy JSON & paste in [maheshmore4321.github.io/public/portfolio_data.json](maheshmore4321.github.io/public/portfolio_data.json) file.
 
 🌟 You are all set!
 
