@@ -175,7 +175,7 @@ For Support, Reach out to me at one of the following places:
 [![linkedin-shield](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](https://www.linkedin.com/in/maheshmore4321/)
 [![github-shield](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Maheshmore4321)
 
-<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2maheshmore4321.github.io">
+<a href="https://twitter.com/intent/tweet?text=Wow:&url=https://maheshmore4321.github.io">
 <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2maheshmore4321.github.io"/>
 </a>
 <a href="https://twitter.com/MaheshMore4321">
