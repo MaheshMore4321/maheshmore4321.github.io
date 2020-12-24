@@ -29,10 +29,29 @@
 	</strong>
 </p>
 
+## Overview
+MaheshMore4321.github.io is a Professional portfolio version whihc is act as live resume site, which help recruiter & viewer to get more closeup on your professional detail with less hassel & interactive way.
+In this portfolio had two main pages which better you learn,
+
+### Portfolio Home page
+
+![PortfolioHomePage](https://i.ibb.co/b6D9Z7M/PicOne.png)
+
+Professional [portfolio home page](https://maheshmore4321.netlify.app), which show display json data, which we had stored in [portfolio_data.json](https://github.com/MaheshMore4321/maheshmore4321.github.io/blob/master/public/portfolio_data.json) file.
+
+### Generate Portfolio JSON Page
+
+![GeneratePortfolioJson](https://i.ibb.co/r5wkGQM/pic2.png)
+
+On portfolio page show data which stored from [Generate Portfolio JSON Page](https://maheshmore4321.netlify.app/generate_portfolio_config), you just need to fill all details i.e. Education, Experience etc
+& have to generate json that json have to paste in portfolio_data.json so it will start showing that data in the next section we will learn Installation steps and usage
+
+
 ## 🛠️ Installation Steps and usage
+
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-### Running from source
+### Installation Steps
 
 ```bash
 # Clone the repository
@@ -47,20 +66,31 @@ npm install
 # Run the app
 npm run start
 ```
-### Running
+#### Running
 ```bash
 $ npm run start
 ```
+### Usage 
+Once we had started server than we have to go [http://localhost:3000/generate_portfolio_config](http://localhost:3000/generate_portfolio_config) Link which will show below UI
 
-### Production build
-```bash
-# Production Resource
-npm run build
-```
+![GeneratePortfolioJson](https://i.ibb.co/r5wkGQM/pic2.png)
+
+Than we had to fill all details, Meanwhile we can Get JSON & View Live preview for same 
+
+Get JSON Preview
+
+![Get JSON Preview](https://i.ibb.co/k1rhJYm/getJson.png)
+
+Check Live Version
+
+![Check Live Version](https://i.ibb.co/HGwQCdh/ivep.png)
+
+Than Once you got required UI Data than click to copy JSON , then that json paste in [maheshmore4321.github.io/public/portfolio_data.json](maheshmore4321.github.io/public/portfolio_data.json) file.
+
+🌟 You are all set!
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-</br></br>
-🌟 You are all set!
+
 
 ## Available Scripts
 
@@ -81,9 +111,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
-
-
-
 
 
 ## 🍰 Contributing
