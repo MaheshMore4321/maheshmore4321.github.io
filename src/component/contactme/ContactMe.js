@@ -50,7 +50,7 @@ class ContactMe extends Component {
 						</div>
 					</div>
 				</div>
-        <section id="contactme" className="sym-contact" data-section="contactme">
+        <section className="sym-contact" data-section="contactme">
           <div  className="sym-narrow-content">
             <div  className="row">
               <div  className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
