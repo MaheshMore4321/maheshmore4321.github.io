@@ -27,7 +27,6 @@ class GenPortfolioConfig extends Component {
       },
       prflImgSrc:'/images/default-profile.jpg',
       bkglImgSrc: '/images/bg.png',
-      flagNeedToRefresh: false,
     };
   }
 
@@ -277,6 +276,7 @@ z
                 </div>
                 <div className="col-md-11">
                   <select className="form-control" name={"heroarea|"+i+"|icon"} value={this.state.allData['heroarea'][i].icon||''}  onChange={this.changeHandler}>
+                    <option>Select Icon</option>
                     <option value="icon-download4">Download Icon</option>
                     <option value="icon-book">Book Icon</option>
                     <option value="icon-briefcase3">Briefcase Icon</option>
@@ -343,6 +343,7 @@ z
                 </div>
                 <div className="col-md-11">
                   <select className="form-control" name={"intro|introExpertieList|"+i+"|icon"} value={this.state.allData['intro']['introExpertieList'][i].icon||''} onChange={this.changeHandler}>
+                    <option>Select Icon</option>
                     <option value="icon-download4">Download Icon</option>
                     <option value="icon-book">Book Icon</option>
                     <option value="icon-briefcase3">Briefcase Icon</option>
@@ -726,7 +727,7 @@ z
   LivePreviewModal = () => {
     return (
       <>
-        <button className="form-control" data-toggle="modal" data-target="#myModal">Live Preview</button>
+        <button id="loadLivePreview" className="form-control" data-toggle="modal" data-target="#myModal">Live Preview</button>
 
         <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div id="md" className="modal-dialog" role="document">
@@ -754,8 +755,6 @@ z
             </div>
           </div>
         </div>
-        {this.state.flagNeedToRefresh ? toLoadJavascriptFunction() : ''}
-        {this.state.flagNeedToRefresh ?  this.setState({flagNeedToRefresh: false}): ''}
       </>
     );
   }
@@ -883,9 +882,3 @@ z
   }
 }
 export default GenPortfolioConfig;
-
-function toLoadJavascriptFunction(){
-  const script = document.createElement("script");
-  script.src = "/js/main.js";
-  document.getElementsByTagName('head')[0].appendChild(script);
-}

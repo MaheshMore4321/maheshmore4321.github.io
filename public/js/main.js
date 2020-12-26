@@ -1,6 +1,4 @@
-;(function () {
-
-	'use strict';
+	//'use strict';
 
 	var isMobile = {
 		Android: function() {
@@ -204,7 +202,7 @@
 		})
 	}
 
-	$(function(){
+	function loadIconImages(){
 		fullHeight();
 		counter();
 		counterWayPoint();
@@ -216,5 +214,10 @@
 		sliderMain();
 		stickyFunction();
 		owlCrouselFeatureSlide();
-	});
-}());
+	}
+
+	window.addEventListener('load', function() {loadIconImages();})
+
+	$('#loadLivePreview').click(function(){
+		loadIconImages();
+	})

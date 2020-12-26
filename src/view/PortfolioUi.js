@@ -11,10 +11,6 @@ import Project from "../component/project/Project";
 import ContactMe from "../component/contactme/ContactMe";
 
 class PortfolioUi extends Component {
-  componentDidMount(){
-    toLoadJavascriptFunction();
-  }
-
   render() {
     return (
       <div id="sym-page">
@@ -48,9 +44,3 @@ class PortfolioUi extends Component {
   }
 }
 export default PortfolioUi;
-
-function toLoadJavascriptFunction() {
-  const script = document.createElement("script");
-  script.src = "/js/main.js";
-  document.getElementsByTagName('body')[0].appendChild(script);
-}
