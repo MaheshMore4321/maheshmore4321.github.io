@@ -33,4 +33,5 @@ build/
 ### node module ###
 /node_modules/
 /build/
-.eslintcache
+*.eslintcache
+package-lock.json
