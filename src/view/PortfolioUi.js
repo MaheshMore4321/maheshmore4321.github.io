@@ -18,7 +18,10 @@ class PortfolioUi extends Component {
         <Sidebar data={this.props.data && this.props.data.sidebar && this.props.data.sidebar} />
 
         <div id="sym-main">
-          <HeroArea data={this.props.data && this.props.data.heroarea && this.props.data.heroarea} />
+          {this.props.data && this.props.data.refreshcomponent &&
+          <HeroArea data={this.props.data && this.props.data.heroarea && this.props.data.heroarea}
+                    refreshcomponent={this.props.data && this.props.data.refreshcomponent && this.props.data.refreshcomponent}/>
+          }
           <hr className='no-margin'/>
 
           <Introduction data={this.props.data && this.props.data.intro && this.props.data.intro} />
