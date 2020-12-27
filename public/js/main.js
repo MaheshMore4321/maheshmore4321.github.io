@@ -200,6 +200,7 @@ var owlCrouselFeatureSlide = function() {
 }
 
 function loadIconImages(){
+	//console.log('start loadIconImages');
 	fullHeight();
 	counter();
 	counterWayPoint();
@@ -211,6 +212,18 @@ function loadIconImages(){
 	sliderMain();
 	stickyFunction();
 	owlCrouselFeatureSlide();
+	//console.log('End loadIconImages');
+	//console.log(document.getElementById('myModal').style.display);
 }
 window.addEventListener('load', function() {loadIconImages()})
-$('#loadLivePreview').click(function(){loadIconImages()})
+// $('#loadLivePreview').mouseover(function(){loadIconImages()})
+// $('#heroareadiv').mouseover(function(){loadIconImages()})
+// $('#sym-hero').mouseover(function(){loadIconImages()})
+// $('#sym-main').mouseover(function(){loadIconImages()})
+// $('#root').mouseover(function(){
+// 	let myModalDisplay = document.getElementById('myModal').style.display;
+// 	if(myModalDisplay==='block'){
+// 		loadIconImages();
+// 	}
+// });
+$('#loadComponentPreview').click(function(){loadIconImages()})
