@@ -5,10 +5,10 @@ class HeroAreaSlid extends Component {
   render() {
     return (
       <>
-        <li style={{backgroundImage:`url(${this.props.data && this.props.data.backgroundImg !== undefined && this.props.data.backgroundImg})`}}>
+        <li className={this.props.id && this.props.id !== undefined && "li-"+this.props.id} style={{backgroundImage:`url(${this.props.data && this.props.data.backgroundImg !== undefined && this.props.data.backgroundImg})`}}>
           <div className="overlay"></div>
           <div className="container-fluid">
-            <div className="row">
+            <div id="heroareadiv" className="row">
               <div className="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
                 <div className="slider-text-inner js-fullheight">
                   <div className="desc">

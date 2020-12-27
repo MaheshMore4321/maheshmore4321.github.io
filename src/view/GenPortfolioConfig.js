@@ -16,17 +16,19 @@ class GenPortfolioConfig extends Component {
 
 		this.state = {
       allData: {
-        "sidebar":{ name:"", job_title:"", profile_picture_link:"/images/default-profile.jpg", background_picture_link:"/images/bg.png", facebook_link:"", twitter_link:"", instgram_link:"", linkedin_link:"", github_link:"", website_link:"" },
+        "sidebar":{ name:"", job_title:"", profile_picture_link:"", background_picture_link:"", facebook_link:"", twitter_link:"", instgram_link:"", linkedin_link:"", github_link:"", website_link:"" },
         "heroarea" : [],
         "intro" : { introduction:"", "introExpertieList": [] },
         "education":[],
         "skill": [],
         "experience": [],
         "project": [],
-        "contactme":{ mobileNumber:"", address:"", emailId:"", feedback_link:"" }
+        "contactme":{ mobileNumber:"", address:"", emailId:"", feedback_link:"" },
+        "refreshcomponent":false,
       },
       prflImgSrc:'/images/default-profile.jpg',
       bkglImgSrc: '/images/bg.png',
+      portfolioUIEnable : true,
     };
   }
 
@@ -188,9 +190,9 @@ class GenPortfolioConfig extends Component {
                         <br></br>
                         <div  className="sym-feature sym-feature-sm animate-box" data-animate-effect="fadeInLeft" style={{height:"235px",backgroundImage:`url(${this.state.allData['sidebar'].background_picture_link||this.state.bkglImgSrc})`,backgroundSize:"cover"}}>
                           <div className="author-img" style={{backgroundImage:`url(${this.state.allData['sidebar'].profile_picture_link||this.state.prflImgSrc})`,width:'150px',height:'150px',margin:'10px auto',marginBottom:'30px',borderRadius:'50%'}}>
-                            <input type="text" name="sidebar|profile_picture_link" value={this.state.allData['sidebar'].profile_picture_link||this.state.prflImgSrc} onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}} placeholder={this.state.bkglImgSrc} required/>
+                            <input type="text" name="sidebar|profile_picture_link" value={this.state.allData['sidebar'].profile_picture_link||''} onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}} placeholder={this.state.bkglImgSrc} required/>
                           </div>
-                          <input type="text" name="sidebar|background_picture_link" value={this.state.allData['sidebar'].background_picture_link||this.state.bkglImgSrc} onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}} placeholder={this.state.prflImgSrc} required/>
+                          <input type="text" name="sidebar|background_picture_link" value={this.state.allData['sidebar'].background_picture_link||''} onChange={this.changeHandler} className="form-control" style={{position:"absolute", bottom:"0px"}} placeholder={this.state.prflImgSrc} required/>
                         </div>
                         <div className="form-group">
                           <input type="text"  name="sidebar|name" value={this.state.allData['sidebar'].name||''} onChange={this.changeHandler} className="form-control" placeholder="NameOnProfile" required/>
@@ -336,12 +338,12 @@ z
           <div  className="col-md-5">
             <div className="form-group">
               <div className="row">
-                <div className="col-md-1">
-                  <div className="iconMgn">
+                <div className="col-md-2">
+                  <div className="iconMgn" style={{float: 'right'}}>
                     <i className={this.state.allData['intro']['introExpertieList'][i].icon||''}></i>
                   </div>
                 </div>
-                <div className="col-md-11">
+                <div className="col-md-10">
                   <select className="form-control" name={"intro|introExpertieList|"+i+"|icon"} value={this.state.allData['intro']['introExpertieList'][i].icon||''} onChange={this.changeHandler}>
                     <option>Select Icon</option>
                     <option value="icon-download4">Download Icon</option>
@@ -724,23 +726,53 @@ z
     );
   }
 
+  loadRefreshcomponent = (flag) => {
+    let allData = this.state.allData;
+    //console.log(allData);
+    allData.refreshcomponent = flag;
+    //console.log(allData);
+    this.setState({ allData });
+    //console.log(this.state.allData);
+  }
+
+  handleOpen = () => {
+
+    this.loadRefreshcomponent(true);
+
+    // console.log("before handleOpen <handleOpen> " + this.state.portfolioUIEnable);
+    // this.setState({portfolioUIEnable:true});
+    // console.log("after handleOpen </handleOpen> " + this.state.portfolioUIEnable);
+  }
+
+  handleClose = () => {
+
+    this.loadRefreshcomponent(false);
+
+    // console.log("before handlerClose <handleOpen> " + this.state.portfolioUIEnable);
+    // this.setState({portfolioUIEnable:false});
+    // console.log("after handlerClose </handleOpen> " + this.state.portfolioUIEnable);
+  }
+
   LivePreviewModal = () => {
     return (
       <>
-        <button id="loadLivePreview" className="form-control" data-toggle="modal" data-target="#myModal">Live Preview</button>
+        <button id="loadLivePreview" className="form-control" data-toggle="modal" data-target="#myModal" onClick={this.handleOpen}>Live Preview</button>
 
-        <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
           <div id="md" className="modal-dialog" role="document">
             <div id="mc" className="modal-content">
               <div className="modal-header">
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.handleClose}><span className="iconMgn" aria-hidden="true" style={{borderColor: 'black', lineHeight: '43px'}}>&times;</span></button>
                 <div className="row">
                   <div className="col-md-3" style={{float:"left"}}>
                     <h4 className="modal-title" id="myModalLabel">Live Preview</h4>
                   </div>
-                  <div className="col-md-6"></div>
-                  <div className="col-md-3" style={{float:"right"}}>
+                  <div className="col-md-4"></div>
+                  <div className="col-md-2" style={{float:"right"}}>
                     <button id="clickNeedToCopyb" className="form-control">Click to copy</button>
+                  </div>
+                  <div className="col-md-3" style={{float:"right"}}>
+                    <button id="loadComponentPreview" className="form-control">Click here to Load All Component</button>
                   </div>
                   <div id="divNeedToCopyb" style={{display:"none"}}>
                     {this.getPortfolioJSON()}
@@ -748,7 +780,7 @@ z
                 </div>
               </div>
               <div className="modal-body">
-                <PortfolioUi data={this.state.allData}/>
+                {this.state.portfolioUIEnable && <PortfolioUi data={this.state.allData}/>}
               </div>
               <div className="modal-footer">
               </div>
@@ -767,13 +799,13 @@ z
           <div className="modal-dialog" role="document">
             <div className="modal-content" style={{overflow:"scroll"}}>
               <div className="modal-header">
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span className="iconMgn" aria-hidden="true" style={{borderColor: 'black', lineHeight: '43px'}}>&times;</span></button>
                 <div className="row">
                   <div className="col-md-3" style={{float:"left"}}>
                     <h4 className="modal-title" id="myModalLabel">Get JSON For PortfolioUi</h4>
                   </div>
-                  <div className="col-md-6"></div>
-                  <div className="col-md-3" style={{float:"right"}}>
+                  <div className="col-md-7"></div>
+                  <div className="col-md-2" style={{float:"right"}}>
                     <button id="clickNeedToCopy" className="form-control">Click to copy</button>
                   </div>
                 </div>
