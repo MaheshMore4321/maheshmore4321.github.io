@@ -1,9 +1,11 @@
 {
   "name": "@maheshmore4321/maheshmore4321.github.io",
+  "homepage": "https://maheshmore4321.github.io/",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
+    "gh-pages": "^3.1.0",
     "html-react-parser": "^1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -15,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "react-scripts build && gh-pages -d build"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
