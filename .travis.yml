@@ -13,8 +13,6 @@ branches:
     - master
 deploy:
   provider: npm
-  email: '$NPM_EMAIL'
-  api_key: '$NPM_TOKEN'
 script:
   - npm install
   - npm run build
