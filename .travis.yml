@@ -14,6 +14,10 @@ deploy:
     repo: MaheshMore4321/maheshmore4321.github.io
   skip_cleanup: 'true'
 script:
+- git config --global user.name $GITHUB_NAME
+- git config --global user.email $GITHUB_EMAIL
+- git config --global github.user $GITHUB_USERNAME
+- git config --global github.token $GITHUB_TOKEN
 - npm install
 - npm run build
 - npm run deploy
