@@ -1,17 +1,13 @@
 language: node_js
 node_js:
-  - "stable"
-cache:
-  directories:
-  - node_modules
-env:
-  global:
-    secure: "SaNP1qwy93dq3xUFzV+WhLu6L1kOQPHrkEzpDpwwZQFf0exgWdN0VTaB+8Y4c3aIMciH3/vJwLBZ2OcKjS38yYmgxMdww/C3CCiCaGgcYbw9vz6qAX1XsM/RRh2U+55aDinYHb+9d7S71C0pfpeJNNrtG7p2I7FxQnnKaxt8EOWeHYx2EJSpP3KD4dy9a/wmRugIxWxhqKsrMBxfovzjC09FbvasTin3EqGSr/3zu5IhkPW7lRfjdOEuvhCp3H49+vwIMeYl+4oas9JyNfqFM28ErNB3hXMJ9yfRb3/pRE/FuM192E4pCX6Hpmch6cg6ZVqq7ENp3AsHp3XB8owEzndOSENoYXp6tOFivRezXsadsTrfmwejCY3u6GF36axuV6yI8Onp9uWDZLAUOVZxMVFpbEXF6Yio2cF13BiVFdUTYVNYMpK/88M/FHZgqxgB7GMU7fJHRTLFwMf5QLf1Wlx+fJyGoTVVOqNGyEHIlDZ1tEH4G3v9CnExDKtBlpOXVdKGlbf862yH0colpKJ4o3wlSRFnaJ/wBSf1UBIxQa5mjp3RO3euUKkft1+2RBc05c9wpO/Q7WaBaQDspMTNDqg7+Z36KJeu25PAM3wFfXZP9/DmUEaM3yNGy9EGSHaYku1LYPxf/X14LarTbd5U8gcmdWMqrHd/ddqgblGZtrU="
-branches:
-  only:
-    - master
+  - "12.13"
+
 deploy:
   provider: npm
-script:
-  - npm install
-  - npm run build 
+  email: maheshmore4321@gmail.com
+  api_key:
+    secure: sdVJJf8LZHAWIntBw6D4J8RnrL6zlEu7qYSXpg8L+2K/JmBAsz6R+qFGw+c4Nb8XogGIiFBG+nm/rUDaNR25cAAi3YzZvqHfJzQTYBSqPN0mu9M0SIV5Qj6kSQsm4fvX7+4ijn/StFWP4fasdG2dIZUSqrJgePsOKqbTR0wM9HjJ5OhgJcb3mn0IFydRaUeXN6xP93M5kqx+dpFw1A3Y+E7I5t6oP082BjBPmaXEiGPoHbQC2qk1dmEvguGeHUvzlxbTrZSzcrpagR9WPaSXyeD/d9zfaVJEhEVEYWX5CfzWctJ+9nU9/h9s5pbUB+0lloED+mTSzAPvoYA/K4WanRtXN4HkU+MyWo7VHZMZ+PuQnzevFEo/HLS4TAvklJkzaqSXUH+mwa27EFCZjkPPbhRFwARquWw96dTsbeOznVA7BX7bEiForjU+ygOrLqho9NNFplWRj7ouhhG4GpmErHIsrH1mbxEnTbfPqM+b6XvzzYWk0TdnypXQyYUkRa93a5jY/QByOsySKLmhW56hLCdZEaBskfshnfTuOVn3D5uqN56op5P4aKW5vzDZ7BiH+MDv86re0AuDKhLVXNyV70LYFH0m7iEIQm2SP4h3WdTloEFxlnuglG08SCQpLTclYBMF7ltfXTtzwzdp2mwiotSUaXIzs/6QcYFwUN06vIQ=
+  on:
+    tags: true
+    repo: MaheshMore4321/maheshmore4321.github.io
+  skip_cleanup: 'true'
