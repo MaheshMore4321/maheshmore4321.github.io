@@ -11,7 +11,7 @@ deploy:
   api_key:
     secure: sdVJJf8LZHAWIntBw6D4J8RnrL6zlEu7qYSXpg8L+2K/JmBAsz6R+qFGw+c4Nb8XogGIiFBG+nm/rUDaNR25cAAi3YzZvqHfJzQTYBSqPN0mu9M0SIV5Qj6kSQsm4fvX7+4ijn/StFWP4fasdG2dIZUSqrJgePsOKqbTR0wM9HjJ5OhgJcb3mn0IFydRaUeXN6xP93M5kqx+dpFw1A3Y+E7I5t6oP082BjBPmaXEiGPoHbQC2qk1dmEvguGeHUvzlxbTrZSzcrpagR9WPaSXyeD/d9zfaVJEhEVEYWX5CfzWctJ+9nU9/h9s5pbUB+0lloED+mTSzAPvoYA/K4WanRtXN4HkU+MyWo7VHZMZ+PuQnzevFEo/HLS4TAvklJkzaqSXUH+mwa27EFCZjkPPbhRFwARquWw96dTsbeOznVA7BX7bEiForjU+ygOrLqho9NNFplWRj7ouhhG4GpmErHIsrH1mbxEnTbfPqM+b6XvzzYWk0TdnypXQyYUkRa93a5jY/QByOsySKLmhW56hLCdZEaBskfshnfTuOVn3D5uqN56op5P4aKW5vzDZ7BiH+MDv86re0AuDKhLVXNyV70LYFH0m7iEIQm2SP4h3WdTloEFxlnuglG08SCQpLTclYBMF7ltfXTtzwzdp2mwiotSUaXIzs/6QcYFwUN06vIQ=
   on:
-    tags: true
+    tags: next
     repo: MaheshMore4321/maheshmore4321.github.io
   skip_cleanup: 'true'
 script:
