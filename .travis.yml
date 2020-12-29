@@ -20,5 +20,4 @@ script:
 - git config --global github.token $GITHUB_TOKEN
 - npm install
 - npm run build
-- npm run deploy
 
