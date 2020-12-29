@@ -14,3 +14,6 @@ deploy:
     tags: true
     repo: MaheshMore4321/maheshmore4321.github.io
   skip_cleanup: 'true'
+script:
+  - npm install
+  - npm run build 
