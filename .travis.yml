@@ -4,17 +4,20 @@ node_js:
 cache:
   directories:
   - node_modules
+script:
+  - git config --global user.name $GITHUB_NAME
+  - git config --global user.email $GITHUB_EMAIL
+  - git config --global github.user $GITHUB_USERNAME
+  - git config --global github.token $GITHUB_TOKEN
+  - npm install
+  - npm run build
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
-  
-script:
-- git config --global user.name $GITHUB_NAME
-- git config --global user.email $GITHUB_EMAIL
-- git config --global github.user $GITHUB_USERNAME
-- git config --global github.token $GITHUB_TOKEN
-- npm install
-- npm run build
+  local_dir: build
+  on:
+    branch: master
+
 
