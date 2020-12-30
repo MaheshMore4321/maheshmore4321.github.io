@@ -4,20 +4,20 @@ node_js:
 cache:
   directories:
   - node_modules
-deploy:
-  provider: npm
-  email: maheshmore4321@gmail.com
-  api_key:
-    secure: r/9gTJcHO+d86QATuf++8N7XN+s75d6kkCoWcHQTxrJiPf18LqEJK3dJEKuEheI4nJzBVFwTC/a9UqLJFbpW7NhB/zR/Xq9SqSlJvf+L2LV5QaxDpHO95HGgp2xyMCfPtvpCYQ/Oi4ityLywKPEpjPrAZoR8p/B8vVfyLbhvJ+uq59LaovlnRB3bW0Xk9VMr57pM1yVTpE6qU0ZlOAGRFzWcurzIY9caHVlkUMfUgb27YSiFcQkBDdeRdvJXO7hjMa0EnkFpBLSlr9Uzg24V6iO1QfrPFDGDGkFOGVhlLBCKfw0cigEqp5XHfp6G61K4hn2fMf6kcl9MCrVRdubZHe0s9obk88hPPJ9i3xyGIRIMl4tC91XTaeojyyTc32cr32eCwt0wCI8I6p+cdn99mCTNglFZ2Psdsi3tvLOYhdsNaQlk5I2F9kNQXLGvfiK/hfRPk/q+l0XtrVcz4L9mMqYB8Q74CdCQ0xhkp2kTX5Ua3OWHe3VmlytHaL+gUoCDcwM5pn+UUZ6ER+vFyUD5CYrFc8bQy4D6I72NZtqsAvgbrfkj8eTy6zLYdDgiRDmSjsVizwq/bY8+Y0YqKFPyShiAfe5lRCCEsSs3Ky3W7KY0MLTEBk5IYjul9hoBWMD1n1UiIBV4j2AMdYE88yd4/jtCNONT2yoHLzabi8hsy10=
-  on:
-    tags: next
-    repo: MaheshMore4321/maheshmore4321.github.io
-  skip_cleanup: 'true'
 script:
-- git config --global user.name $GITHUB_NAME
-- git config --global user.email $GITHUB_EMAIL
-- git config --global github.user $GITHUB_USERNAME
-- git config --global github.token $GITHUB_TOKEN
-- npm install
-- npm run build
+  - git config --global user.name $GITHUB_NAME
+  - git config --global user.email $GITHUB_EMAIL
+  - git config --global github.user $GITHUB_USERNAME
+  - git config --global github.token $GITHUB_TOKEN
+  - npm install
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local_dir: build
+  on:
+    branch: master
+
 
