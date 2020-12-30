@@ -20,7 +20,7 @@ class HeroAreaSlid extends Component {
                     <div id={this.props.data && this.props.data.link !== undefined && this.props.data.link.includes("#") ? "navbar" : ''}>
                       <ul style={{paddingInlineStart:"inherit"}}>
                         <li style={{minHeight:"fit-content",listStyle:"none"}}>
-                          <a className="btn btn-primary btn-learn" href={this.props.data && this.props.data.link !== undefined ? this.props.data.link:''} rel="noopener noreferrer" data-nav-section={this.props.data && this.props.data.link !== undefined && this.props.data.link.includes("#") ? this.props.data.link.substring(1) : ''} >
+                          <a className="btn btn-primary btn-learn" href={this.props.data && this.props.data.link !== undefined ? this.props.data.link:''} target="_blank" rel="noopener noreferrer" data-nav-section={this.props.data && this.props.data.link !== undefined && this.props.data.link.includes("#") ? this.props.data.link.substring(1) : ''} >
                           {
                             this.props.data && this.props.data.text !== undefined && parse(this.props.data.text)
                           }
