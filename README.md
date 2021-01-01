@@ -7,13 +7,14 @@
 ![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)
 
 ⭐️ **This repository** 
- 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5b30479a-af71-4d57-a621-0788b41a34ec/deploy-status)](https://app.netlify.com/sites/maheshmore4321/deploys)
 [![Build Status](https://travis-ci.com/MaheshMore4321/maheshmore4321.github.io.svg?branch=master)](https://travis-ci.com/MaheshMore4321/maheshmore4321.github.io)
 [![contributors-shield]( https://img.shields.io/github/contributors/MaheshMore4321/maheshmore4321.github.io)](https://github.com/MaheshMore4321/maheshmore4321.github.io/graphs/contributors) 
 [![pull-shield](https://img.shields.io/github/issues-pr/MaheshMore4321/maheshmore4321.github.io?style=flat-square)](https://github.com/MaheshMore4321/maheshmore4321.github.io/pulls)
 [![forks-shield](https://img.shields.io/github/forks/MaheshMore4321/maheshmore4321.github.io?style=flat-square)](https://github.com/MaheshMore4321/maheshmore4321.github.io/fork)
 [![stars-shield](https://img.shields.io/github/stars/MaheshMore4321/maheshmore4321.github.io?style=flat-square)](https://github.com/MaheshMore4321/maheshmore4321.github.io/stargazers)
-[![issues-shield](https://img.shields.io/github/issues/MaheshMore4321/maheshmore4321.github.io?style=flat-square)](https://github.com/MaheshMore4321/maheshmore4321.github.io/issues) 
+[![issues-shield](https://img.shields.io/github/issues/MaheshMore4321/maheshmore4321.github.io?style=flat-square)](https://github.com/MaheshMore4321/maheshmore4321.github.io/issues)
 
 ## 🚀[Demo](https://maheshmore4321.github.io)
 [Github Pages](http://maheshmore4321.github.io)&nbsp;&nbsp;<img src="https://img.shields.io/website?url=https://maheshmore4321.github.io&logo=github&style=flat-square"/>
