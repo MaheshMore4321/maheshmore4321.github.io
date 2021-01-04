@@ -11,6 +11,7 @@ script:
   - git config --global github.token $GITHUB_TOKEN
   - npm install
   - npm run build
+  - cp -rf README.md build/
 deploy:
   provider: pages
   skip_cleanup: true
