@@ -1,332 +1,456 @@
 {
-  "refreshcomponent": true,
-  "sidebar": {
-    "name": "Mahesh More",
-    "job_title": "Technology-Consultant @Virtusa",
-    "profile_picture_link": "/images/maheshmore_pic.jpg",
-    "background_picture_link": "/images/bg.png",
-    "facebook_link": "https://www.facebook.com/Maheshmore4321",
-    "twitter_link": "https://twitter.com/maheshmore4321",
-    "instgram_link": "https://www.instagram.com/maheshmore4321",
-    "linkedin_link": "https://www.linkedin.com/in/maheshmore4321",
-    "github_link": "https://www.github.com/MaheshMore4321",
-    "website_link": "https://www.coderstea.com"
-  },
-  "heroarea": [
-    {
-      "backgroundImg": "/images/img_bg_1.jpg",
-      "headerLine": "Hi! <br/>I'm Mahesh",
-      "link": "https://drive.google.com/file/d/17W29lqPSA_DpssNE9CfNgh9WUCfdJcUZ/view",
-      "text": "Download CV&nbsp;",
-      "icon": "icon-download4"
-    },
-    {
-      "backgroundImg": "/images/img_bg_2.jpg",
-      "headerLine": "I love building<br/>THINGS!!",
-      "link": "https://coderstea.com",
-      "text": "View&nbsp;My&nbsp;BlogSite&nbsp;",
-      "icon": "icon-book"
-    },
-    {
-      "backgroundImg": "/images/img_bg_3.jpg",
-      "headerLine": "Let's have a<br/>Talk!!",
-      "link": "#contactme",
-      "text": "Contact&nbsp;me&nbsp;",
-      "icon": "icon-briefcase3"
-    }
-  ],
-  "intro": {
-    "introduction": "<strong>Hi I'm Mahesh More</strong>, Working as Senior Software Developer &amp; I have more than 5 years of experience in the IT industry. Currently working for Citi bank project @Virtusa as Senior Software Developer, Where provides the software solution for CRM &amp; various applications</p><p>I have Working on BFSI domain projects involved in the development &amp; support of and new/existing application where I use technologies like Java Core, Advanced (J2EE), Spring and Databases like MySQL, MsSQL, Oracle and Web Applications.</p><p>Hands-on experience of testing at all the levels to build an enterprise application &amp; I'm Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues. Willing to take initiative and responsibility for core components and development.",
-    "introExpertieList": [
-      {
-        "icon": "icon-bulb",
-        "desc": "Innovative Ideas"
-      },
-      {
-        "icon": "icon-data",
-        "desc": "Software"
-      },
-      {
-        "icon": "icon-phone3",
-        "desc": "Application"
-      }
-    ]
-  },
-  "education": [
-    {
-      "institute": "Shree L.R.Tiwari College of Engineering",
-      "std_branch": "Bachelor of Enginnering</b>&nbsp;-&nbsp;<b>Electronics Engineering",
-      "university": "Mumbai University",
-      "year": "2010 - 2015",
-      "desc": "Graduate with Distinction<br/>participate in a various event like Aakash Tab dev &amps; E-yantra which organize by Bombay-IIT, also coordinate college fest- Ustav2k15 &amp; finally graduate bachelor of engineer with distinction"
-    },
-    {
-      "institute": "Patkar College",
-      "std_branch": "12th</b>&nbsp;-&nbsp;<b>HSC</b>&nbsp;-&nbsp;<b>Science",
-      "university": "Maharashtra State Board ",
-      "year": "2010",
-      "desc": null
-    },
-    {
-      "institute": "Indian Education Society",
-      "std_branch": "10th</b>&nbsp;-&nbsp;<b>SSC",
-      "university": "Maharashtra State Board ",
-      "year": "2008",
-      "desc": null
-    }
-  ],
-  "skill": [
-    {
-      "skillHeader": "Programming Languages",
-      "skillList": [
-        "Core & Advanced Java"
-      ]
-    },
-    {
-      "skillHeader": "Framework /Technology",
-      "skillList": [
-        "Spring (Core, MVC & Boot)",
-        "Hibernate & JPA",
-        "SLF4J - Log4J",
-        "Junit",
-        "Maven",
-        "ReflectionAPI",
-        "Web-Services",
-        "Collection",
-        "Multithreading",
-        "JDBC"
-      ]
-    },
-    {
-      "skillHeader": "Java Workflow Engine",
-      "skillList": [
-        "jBPM"
-      ]
-    },
-    {
-      "skillHeader": "Other Frameworks",
-      "skillList": [
-        "E-core Framework",
-        "Hugo"
-      ]
-    },
-    {
-      "skillHeader": "IDE",
-      "skillList": [
-        "Eclipse",
-        "IntelliJ IDEA",
-        "STS",
-        "Vscode"
-      ]
-    },
-    {
-      "skillHeader": "Operating Systems",
-      "skillList": [
-        "Windows",
-        "Linux (GUI & CLI)",
-        "Cent OS"
-      ]
-    },
-    {
-      "skillHeader": "Software",
-      "skillList": [
-        "SSMS",
-        "Cyber-Duck",
-        "FileZilla",
-        "Red-Point Interaction",
-        "Database Studio",
-        "Arcon PMS"
-      ]
-    },
-    {
-      "skillHeader": "Databases",
-      "skillList": [
-        "MySQL",
-        "MariaDB",
-        "MsSQL",
-        "Oracle SQL Server",
-        "IBM Netezza Server"
-      ]
-    },
-    {
-      "skillHeader": "Web Technology",
-      "skillList": [
-        "Servlet",
-        "JSP",
-        "JavaScript",
-        "JQuery",
-        "Ajax",
-        "Json",
-        "Html"
-      ]
-    },
-    {
-      "skillHeader": "Web Application",
-      "skillList": [
-        "Apache Tomcat"
-      ]
-    },
-    {
-      "skillHeader": "Version Control System",
-      "skillList": [
-        "Git",
-        "TortoiseGit",
-        "EclipseGit"
-      ]
-    }
-  ],
-  "experience": [
-    {
-      "job_compy_desig": "Consultant-Technical @Virtusa, Thane, India",
-      "job_duration": "23rd August`2019 - present",
-      "job_desc": [
-        "Virtusa working on BFSI domain project &amp; they are involved in the development &amp; support for application",
-        "Virtusa assigned for Citi bank project i.e. Citi-Bank Commercial (CRM-ICRM) application",
-        "Citi Bank working on proprietary framework i.e. E-core framework with integration on Spring, Hibernate, etc",
-        "Working with existing/legacy system/code to find &amp; fix the bug as well as migrate system to alternative technology",
-        "Working with migrating team to migrate TIBCO I-Process to Red-Hat JBPM workflow management system",
-        "Coordinate with DBA &amp; Deployment teams to Research, design, develop &amp; deploy an application",
-        "Research &amp; design the system as per the new requirements &amp; technologies",
-        "Document the code &amp; feature for independent operation"
-      ]
-    },
-    {
-      "job_compy_desig": "Software Developer @Trutech Webs Pvt Ltd (FluidAI), Mumbai, India",
-      "job_duration": "10th February`2017 - 21st August`2019",
-      "job_desc": [
-        "Working with existing/legacy system/code to find &amp; fix the bug as well as automate the existing manual process",
-        "Majorly working on AI-ML projects involved in the automation of sectors like banking &amp; government",
-        "Coordinate with Data Scientist &amp; DBA teams to Research, design &amp; develop an application",
-        "Research &amp; design the system as per the new requirements &amp; technologies",
-        "Document the code &amp; feature for independent operation"
-      ]
-    },
-    {
-      "job_compy_desig": "Technical Support Engineer @Impact-Wipro InfoTech, Mumbai, India",
-      "job_duration": "30th September`2015 - 9th February`2017",
-      "job_desc": [
-        "Monitor &amp; maintain the entire Pan India HDFC bank ATM network job",
-        "Working on database &amp; Linux system, to monitoring &amp; scheduled job",
-        "Coordinate with bank DBA &amp; network team"
-      ]
-    }
-  ],
-  "project": [
-    {
-      "prj_nm": "CitiBank Commercial (CRM-ICRM)",
-      "prj_org": "Virtusa",
-      "prj_clnt": "Citibank",
-      "prj_dur": "August`2019 - present",
-      "prj_tec": "Core &amp; advanced Java, E-core Framework, Spring Framework, jBPM, Oracle Databases",
-      "prj_typ": "Development, Migration",
-      "prj_env": "Windows, Linux, Workflow Engine (i.e. jBPM)",
-      "prj_role": "Senior Software Developer",
-      "prj_tmsz": "12",
-      "prj_desc": "For Citibank, we developing &amp; maintaining (providing support) to CRM application we called as Citibank Commercial. Based on client requirement we designing application which helps the bank to handle their BFSI business in this part we focus on main on Citibank mortgage business for their client like SME/MME Also in Citibank Commercial in part of migrating team which migrate application TIBCO I-Process Workflow system to the Red-Hat JBPM Workflow management system",
-      "prj_rl_desc": [
-        "Working on Citibank proprietary E-core Framework &amp; their utility for application",
-        "Working with migration application TIBCO I-Process to the Red-Hat JBPM Workflow management system",
-        "Also working E-core Framework utility for application &amp; Job i.e. Cache loading, Operating console &amp; Job",
-        "Involved in periodical meetings with the Project Management Team, Key Users",
-        "Working with existing/legacy system/code to find &amp; fix the bug as well as migrate system to alternative technology",
-        "Working with migrating team to migrate TIBCO I-Process to Red-Hat JBPM workflow management system",
-        "Coordinate with DBA &amp; Deployment teams to Research, design, develop &amp; deploy an application",
-        "Research &amp; design the system as per the new requirements &amp; technologies",
-        "Document the code &amp; feature for independent operation",
-        "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
-        "Report higher officials for project challenges, progress &amp; periodical meetings updates",
-        "Documentation for code &amp; projects feature updates"
-      ]
-    },
-    {
-      "prj_nm": "JNCB - Analytical Operations",
-      "prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
-      "prj_clnt": "National Commercial Bank Jamaica Limited (Kingston – Jamaica)",
-      "prj_dur": "January’2018 – August’2019",
-      "prj_tec": "Core &amps; advanced Java, JSP, Servlet, Spring Framework, MySql-Oracle-MsSql Databases",
-      "prj_typ": "Development",
-      "prj_env": "Linux, Multi-Database, Third Party API (SMS), Red-Point Interaction, Dynamics CRM",
-      "prj_role": "Developer",
-      "prj_tmsz": "9",
-      "prj_desc": "For NCB handling their all Analytical Operation, Using AI/ML concept analyze customer historical behaviors and gives prediction for best next best product (i.e. Credit Card, Loan, Insurance) which customer can buy, also manage their offers sending using application red-point interaction &amp; as per customer's response create leads for that product",
-      "prj_rl_desc": [
-        "Involved in periodical meetings with the Project Management Team, Key Users",
-        "Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
-        "Same data feed in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
-        "Configuration and Customize the Application, also Developed Plugins, Reports and UI",
-        "Tackle and automate the banking system for leads end product",
-        "Coordinate with Team Members for several Service, API, Test operations &amp; Software for streamline operations",
-        "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
-        "Report higher officials for project challenges, progress &amp; periodical meetings updates",
-        "Documentation for code &amp; projects feature updates"
-      ]
-    },
-    {
-      "prj_nm": "Axis bank - Credit Card Loan",
-      "prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
-      "prj_clnt": "Axis Bank Mumbai, India",
-      "prj_dur": "July’2017 – December’2017",
-      "prj_tec": "Core &amps; advanced Java, MySql-Oracle Databases",
-      "prj_typ": "Development",
-      "prj_env": "Linux, Multi-Database",
-      "prj_role": "Developer",
-      "prj_tmsz": "9",
-      "prj_desc": "Predict customer which we can pitch for credit card loan, analyze existing customer historical transaction and according to, it predicts customers for credit card loan then bank contact customers with various medium (SMS, Call &amp; Mail). for the same predict which medium is best for that customer",
-      "prj_rl_desc": [
-        "Involved in periodical meetings with the Project Management Team, Key Users",
-        "Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
-        "Data feed-in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
-        "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
-        "Report higher officials for project challenges, progress &amp; periodical meetings updates",
-        "Documentation for code &amp; projects feature updates"
-      ]
-    },
-    {
-      "prj_nm": "Motilal Oswal - Cross Sell Up Sell",
-      "prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
-      "prj_clnt": "Motilal Oswal Financial Services Ltd (Mumbai, India)",
-      "prj_dur": "February’2017 – June’2017",
-      "prj_tec": "Core &amp; advanced Java, MySql-MsSql Databases",
-      "prj_typ": "Development",
-      "prj_env": "Windows, Multi-Database, SSMS, SSIS &amp; ETL Tools",
-      "prj_role": "Developer",
-      "prj_tmsz": "4",
-      "prj_desc": "Predict next best product for customers (existing &amp; new) can take, on analysis &amp; learn on existing customer behaviors/data (i.e. demographics, transaction &amp; product acquired) then our AI algorithm in terms of up-sell or cross-sell the product, predict next best product for customer",
-      "prj_rl_desc": [
-        "Involved in periodical meetings with the Project Management Team, Key Users",
-        "Developed jobs using SSIS BI-Tools for ETL operations",
-        "Tackle and automate the banking system for SSIS based ETL operations for same make a java-based solution",
-        "Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
-        "Data feed-in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
-        "Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
-        "Documentation for code &amp; projects feature updates"
-      ]
-    },
-    {
-      "prj_nm": "HDFC Bank - Wipro ATM Support",
-      "prj_org": "Impact-Wipro Infotech",
-      "prj_clnt": "HDFC Bank (Mumbai, India)",
-      "prj_dur": "October’2015 – February’2017",
-      "prj_tec": "Databases, Network Testing Tools, IBM Lotus",
-      "prj_typ": "Technical Support",
-      "prj_env": "Windows, Linux, Netezza-Database, BI Report &amp; CRM Tools",
-      "prj_role": "Technical Support Engineer",
-      "prj_tmsz": "10",
-      "prj_desc": "Project is the main focus on providing support for HDFC bank ATM in terms of Link(Network), Battery &amp; UPS (Power), was actively working in Link team which works in 24x7 work environment. where coordinate with HDFC bank database (Netezza database) &amp; network team, also working for power department",
-      "prj_rl_desc": [
-        "24x7 Supports in PAN INDIA",
-        "Log ticket for customer’s queries in CRM &amp; For same take start to end follows to resolve queries",
-        "Provide technical support over telephone &amp; email",
-        "Use remote support to troubleshoot and analyses issues faced by customers",
-        "Ensure a quick response to all incoming customer queries",
-        "To serve as a link between the bank and customers"
-      ]
-    }
-  ],
-  "contactme": {
-    "mobileNumber": "+91 7977688793",
-    "address": "Mumbai, India",
-    "emailId": "MaheshMore4321@gmail.com",
-    "feedback_link": "https://getform.io/f/917f85c3-1a6a-4f41-ac86-47bcb9572230"
-  }
+	"refreshcomponent": true,
+	"sidebar": {
+		"name": "Mahesh More",
+		"job_title": "Senior Software Engineer at HERE Technologies",
+		"profile_picture_link": "/images/maheshmore_pic.jpg",
+		"background_picture_link": "/images/bg.png",
+		"facebook_link": "https://www.facebook.com/Maheshmore4321",
+		"twitter_link": "https://twitter.com/maheshmore4321",
+		"instgram_link": "https://www.instagram.com/maheshmore4321",
+		"linkedin_link": "https://www.linkedin.com/in/maheshmore4321",
+		"github_link": "https://www.github.com/MaheshMore4321",
+		"gitlab_link": "https://www.gitlab.com/MaheshMore4321",
+		"website_link": "https://coderstea.in"
+	},
+	"heroarea": [{
+			"backgroundImg": "/images/img_bg_1.jpg",
+			"headerLine": "Hi! <br/>I'm Mahesh",
+			"link": "https://drive.google.com/file/d/1f4rYenLkyB9PcA_8UpNrN6A8NWcwc2sj/view?usp=share_link",
+			"text": "Download CV&nbsp;",
+			"icon": "icon-download4"
+		},
+		{
+			"backgroundImg": "/images/img_bg_2.jpg",
+			"headerLine": "I love building<br/>THINGS!!",
+			"link": "https://coderstea.in",
+			"text": "View&nbsp;My&nbsp;BlogSite&nbsp;",
+			"icon": "icon-book"
+		},
+		{
+			"backgroundImg": "/images/img_bg_3.jpg",
+			"headerLine": "Let's have a<br/>Talk!!",
+			"link": "#contactme",
+			"text": "Contact&nbsp;me&nbsp;",
+			"icon": "icon-briefcase3"
+		}
+	],
+	"intro": {
+		"introduction": "<strong>Hi I'm Mahesh More</strong>, Working as Senior Software Engineer with more than 7 years of experience in Software Development.</p><p> Currently, working as a Senior Software Engineer at Here Technologies. As part of the Platform Foundation Engineering Team, Works on Data Creation & Unification Operations.</p><p> In this build, deploy and scale location solutions. Create custom maps, visualize location datasets & gather insights and buy and sell location assets.</p><p> Primarily Worked on BFSI domain projects involved in the development & support of and new/existing application. I use technologies like Java Core, Advanced (J2EE), Spring, and Databases like MySQL, MsSQL, Oracle, and Web Applications.</p><p> Hands-on experience in testing at all levels to build an enterprise application.</p><p> Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues.</p><p> Willingness to take leadership, responsibility & initiative for building blocks and development.</p><p></br> Check out my Online Portfolio @</p><p> https://github.com/maheshmore4321</p><p> https://gitlab.com/maheshmore4321</p><p> https://maheshmore4321.github.io</p><p> https://maheshmore4321.com</p><p> https://coderstea.in</p><p>",
+		"introExpertieList": [{
+				"icon": "icon-bulb",
+				"desc": "Innovative Ideas"
+			},
+			{
+				"icon": "icon-data",
+				"desc": "Software"
+			},
+			{
+				"icon": "icon-phone3",
+				"desc": "Application"
+			}
+		]
+	},
+	"education": [{
+			"institute": "Shree L.R.Tiwari College of Engineering",
+			"std_branch": "Bachelor of Enginnering</b>&nbsp;-&nbsp;<b>Electronics Engineering",
+			"university": "Mumbai University",
+			"year": "2010 - 2015",
+			"desc": "Graduate with Distinction<br/>participate in a various event like Aakash Tab dev &amps; E-yantra which organize by Bombay-IIT, also coordinate college fest- Ustav2k15 &amp; finally graduate bachelor of engineer with Distinction"
+		},
+		{
+			"institute": "Patkar College",
+			"std_branch": "12th</b>&nbsp;-&nbsp;<b>HSC</b>&nbsp;-&nbsp;<b>Science",
+			"university": "Maharashtra State Board ",
+			"year": "2010",
+			"desc": null
+		},
+		{
+			"institute": "Indian Education Society",
+			"std_branch": "10th</b>&nbsp;-&nbsp;<b>SSC",
+			"university": "Maharashtra State Board ",
+			"year": "2008",
+			"desc": null
+		}
+	],
+	"skill": [{
+			"skillHeader": "Artificial Intelligence (AI)",
+			"skillList": [
+				"Machine Learning"
+			]
+		},
+		{
+			"skillHeader": "Programming Languages",
+			"skillList": [
+				"Java",
+				"Core Java",
+				"Advanced Java",
+				"J2EE",
+				"Scala",
+				"Python",
+				"React.JS",
+				"Next.JS",
+				"HTML",
+				"JavaScript",
+				"JQuery",
+				"CSS"
+			]
+		},
+		{
+			"skillHeader": "Framework /Technology",
+			"skillList": [
+				"Spring (Core, MVC & Boot)",
+				"Hibernate",
+				"JPA",
+				"SLF4J - Log4J",
+				"Junit",
+				"Maven",
+				"ReflectionAPI",
+				"Web-Services",
+				"Collection",
+				"Multithreading",
+				"JDBC",
+				"Apache Spark",
+				"SonarQube",
+				"TestCases"
+			]
+		},
+		{
+			"skillHeader": "Java Workflow Engine",
+			"skillList": [
+				"Amazon Web Services - AWS",
+				"Oracle Cloud Infrastructure - OCI"
+			]
+		},
+		{
+			"skillHeader": "Cloud Computing",
+			"skillList": [
+				"jBPM"
+			]
+		},
+		{
+			"skillHeader": "Other Frameworks",
+			"skillList": [
+				"E-core Framework",
+				"Hugo"
+			]
+		},
+		{
+			"skillHeader": "IDE",
+			"skillList": [
+				"Eclipse",
+				"IntelliJ IDEA",
+				"STS",
+				"Vscode"
+			]
+		},
+		{
+			"skillHeader": "Operating Systems",
+			"skillList": [
+				"Windows",
+				"Linux (GUI & CLI)",
+				"Cent OS",
+				"Mac"
+			]
+		},
+		{
+			"skillHeader": "Software",
+			"skillList": [
+				"SQL Server Management Studio (SSMS)",
+				"SQL Server Integration Services (SSIS)",
+				"SQL Server Reporting Services (SSRS)",
+				"Cyber-Duck",
+				"FileZilla",
+				"Red-Point Interaction",
+				"Database Studio",
+				"Arcon PMS"
+			]
+		},
+		{
+			"skillHeader": "Databases",
+			"skillList": [
+				"MySQL",
+				"MariaDB",
+				"MsSQL",
+				"Oracle SQL Server",
+				"PostgresDB",
+				"IBM Netezza Server"
+			]
+		},
+		{
+			"skillHeader": "Web Technology",
+			"skillList": [
+				"Servlet",
+				"JSP",
+				"JavaScript",
+				"JQuery",
+				"Ajax",
+				"Json",
+				"Html",
+				"React.JS",
+				"Next.JS"
+			]
+		},
+		{
+			"skillHeader": "Web Application",
+			"skillList": [
+				"Apache Tomcat"
+			]
+		},
+		{
+			"skillHeader": "DevOps",
+			"skillList": [
+				"Gitlab Pipeline",
+				"Gitlab CI-CD",
+				"Kubernetes",
+				"Docker"
+			]
+		},
+		{
+			"skillHeader": "Version Control System",
+			"skillList": [
+				"Git",
+				"TortoiseGit",
+				"EclipseGit",
+				"Gitlab",
+				"GitHub",
+				"Bitbucket"
+			]
+		},
+		{
+			"skillHeader": "Other Skills",
+			"skillList": [
+				"Problem Solving",
+				"Communication",
+				"Teamwork",
+				"Programming",
+				"Technical Suppor",
+				"Software Development",
+				"Documentation",
+				"Team Leadership"
+			]
+		}
+	],
+	"experience": [{
+			"job_compy_desig": "Senior Software Engineer @HERE Technologies, Mumbai, India",
+			"job_duration": "26th September`2022 - present",
+			"job_desc": [
+				"As part of the Platform Foundation Engineering Team, Works on Data Creation & Unification Operations.",
+				"In this build, deploy and scale location solutions. Create custom maps, visualize location datasets & gather insights and buy and sell location assets."
+			]
+		},
+		{
+			"job_compy_desig": "Software Engineer @JPMorgan Chase & Co., Mumbai, India",
+			"job_duration": "3rd November`2021 - 22nd September`2022",
+			"job_desc": [
+				"Working Capital, Investment Banking (CIB) project.",
+				"Involved in the development & support of the application.",
+				"Responsible for Core Operations of the TPS applications.",
+				"TPS is an online application for the transfer of funds for business corporates.",
+				"Streamline existing application operations & Complete Brazil Loan & Vietnam Letter of Credit (LOC) Update for 2022.",
+				"Work on the creation and maintenance of the Autosys Jil job."
+			]
+		},
+		{
+			"job_compy_desig": "Consultant-Technical @Virtusa, Thane, India",
+			"job_duration": "23rd August`2019 - 2nd November`2021",
+			"job_desc": [
+				"Working on Citi Commercial Bank (CCB) project.",
+				"Responsible for application development and maintenance for Core Module of ICG & CCB Mortgage Application.",
+				"Streamline existing TIBCO I-Process workflow management system & migrated to Red-Hat JBPM System.",
+				"Successfully migrated Existing Legacy CCB Monolithic application to Spring Cloud Microservice Architecture application.",
+				"Led, designed, & developed Workflow & Approval Microservices using Spring Core, Spring Boot, Spring Cloud & Oracle Database."
+			]
+		},
+		{
+			"job_compy_desig": "Software Developer @Trutech Webs Pvt Ltd (FluidAI), Mumbai, India",
+			"job_duration": "10th February`2017 - 21st August`2019",
+			"job_desc": [
+				"AI-Engine's performance Increased by 63% by restructuring code in Java & Maven.",
+				"Led, designed, and implemented multiple AI Projects such as AI ChatBot Agent, Collection Platform, Claim Management, and DMS.",
+				"Promoted to lead a team of nine people in just one year. Communicate with clients for requirements, integrations, and suggestions."
+			]
+		},
+		{
+			"job_compy_desig": "Technical Support Engineer @Impact-Wipro InfoTech, Mumbai, India",
+			"job_duration": "30th September`2015 - 9th February`2017",
+			"job_desc": [
+				"Operate in the 24x7 Work Stream.",
+				"Coordinate with Bank Database, Network & Vendor Teams to Monitor & Maintain the Pan India HDFC Bank ATM Network.",
+				"Maintain ATM's Uptime to 95% by Restructuring Java Network Monitoring & Linux Shell Script jobs Appreciated for quick resolution of critical & urgent issues.",
+				"Operate in the 24 x7 Work Stream.Coordinate with Bank Database, Network & Vendor Teams to Monitor & Maintain the Pan India HDFC Bank ATM Network.",
+				"Maintain ATM's Uptime to 95% by Restructuring Java Network Monitoring & Linux Shell Script jobs Appreciated for quick resolution of critical & urgent issues."
+			]
+		}
+	],
+	"project": [{
+			"prj_nm": "UniMap/OneMap Data Creation & Unification - Platform Foundation Engineering",
+			"prj_org": "Here Technologies",
+			"prj_clnt": "Here Technologies",
+			"prj_dur": "September`2022 - present",
+			"prj_tec": "Java, Scala, Python, Spring, PostgresDB, Kubernetes, AWS, HerePlatfrom, Shift, Gitlab CI-CD, Sonar, Docker",
+			"prj_typ": "Development",
+			"prj_env": "Windows, Linux, Mac, Gitlab CI-CD, Kubernetes, Docker, Here Platform, Map Layer & Insight",
+			"prj_role": "Senior Software Developer",
+			"prj_tmsz": "10",
+			"prj_desc": "For Here Technolories, we developing &amp; maintaining (providing support) to Map various layer (i.e. Traffic, Road, Lanes & Direction Sign etc.) Data Creation & Unification for Platform Foundation Engineering Team. Where working out of the box technologies as Kubernetes, Docker with help of Continous Integration & Continous Deployments on Here platform",
+			"prj_rl_desc": [
+				"As part of the Platform Foundation Engineering Team, Works on Data Creation & Unification Operations.",
+				"In this build, deploy and scale location solutions. Create custom maps, visualize location datasets & gather insights and buy and sell location assets.",
+				"Also working Continous Integration & Continous Deployments application &amp; Job i.e. Cache loading, Operating console &amp; Job",
+				"Involved in periodical meetings with the Project Management Team, Key Users",
+				"Working with existing/legacy system/code to find &amp; fix the bug as well as production system to alternative technology",
+				"Working with Here Platform with help of Kubernetes & Docker",
+				"Coordinate with DBA &amp; Deployment teams to Research, design, develop &amp; deploy an application",
+				"Research &amp; design the system as per the new requirements &amp; technologies",
+				"Document the code &amp; feature for independent operation",
+				"Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+				"Report higher officials for project challenges, progress &amp; periodical meetings updates",
+				"Documentation for code &amp; projects feature updates"
+			]
+		},
+		{
+			"prj_nm": "Trade Processing System (TPS)",
+			"prj_org": "JPMorgan Chase & Co.",
+			"prj_clnt": "JPMorgan Chase & Co.",
+			"prj_dur": "November`2021 - September`2022",
+			"prj_tec": "Java, Spring, Oracle DB, Spring Framework, jBPM, Oracle Databases, GWT(Google Web Toolkit), Mule Server",
+			"prj_typ": "Development, Migration",
+			"prj_env": "Windows, Linux, GWT(Google Web Toolkit), Mule Server",
+			"prj_role": "Senior Software Developer",
+			"prj_tmsz": "12",
+			"prj_desc": "For JPMorgan Chase & Co., we developing &amp; maintaining (providing support) to CRM application we called as Trade Processing System (TPS). Based on requirement we designing application which helps the bank to handle their BFSI business in this part we focus on main on Trade Operation & business for their client like SME/MME, Working on Mule Server for backend & for frontend use GWT(Google Web Toolkit) where we write code in java which transalte to UI technology &b make UI",
+			"prj_rl_desc": [
+				"Working on JPMorgan Chase & Co. proprietary GWT(Google Web Toolkit) Framework &amp; their utility for application",
+				"Working with Mule Server for backend technology, aslo work with Autosys Job where we can schedule job for operation",
+				"Also working Mule Server utility for application &amp; Job i.e. Cache loading, Operating console &amp; Job",
+				"Involved in periodical meetings with the Project Management Team, Key Users",
+				"Working with existing/legacy system/code to find &amp; fix the bug as well as migrate system to alternative technology",
+				"Working with migrating team to migrate existing GWT & Mule code to UI technology as ReactJs & Spring Cloud for backend",
+				"Spring Cloud use microsevice architecture to developer small services which can act as indepent part of system",
+				"Coordinate with DBA &amp; Deployment teams to Research, design, develop &amp; deploy an application",
+				"Research &amp; design the system as per the new requirements &amp; technologies",
+				"Document the code &amp; feature for independent operation",
+				"Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+				"Report higher officials for project challenges, progress &amp; periodical meetings updates",
+				"Documentation for code &amp; projects feature updates"
+			]
+		},
+		{
+			"prj_nm": "CitiBank Commercial (CRM-ICRM)",
+			"prj_org": "Virtusa",
+			"prj_clnt": "Citibank",
+			"prj_dur": "August`2019 - November`2021",
+			"prj_tec": "Core &amp; advanced Java, E-core Framework, Spring Framework, jBPM, Oracle Databases",
+			"prj_typ": "Development, Migration",
+			"prj_env": "Windows, Linux, Workflow Engine (i.e. jBPM)",
+			"prj_role": "Senior Software Developer",
+			"prj_tmsz": "12",
+			"prj_desc": "For Citibank, we developing &amp; maintaining (providing support) to CRM application we called as Citibank Commercial. Based on client requirement we designing application which helps the bank to handle their BFSI business in this part we focus on main on Citibank mortgage business for their client like SME/MME Also in Citibank Commercial in part of migrating team which migrate application TIBCO I-Process Workflow system to the Red-Hat JBPM Workflow management system",
+			"prj_rl_desc": [
+				"Working on Citibank proprietary E-core Framework &amp; their utility for application",
+				"Working with migration application TIBCO I-Process to the Red-Hat JBPM Workflow management system",
+				"Also working E-core Framework utility for application &amp; Job i.e. Cache loading, Operating console &amp; Job",
+				"Involved in periodical meetings with the Project Management Team, Key Users",
+				"Working with existing/legacy system/code to find &amp; fix the bug as well as migrate system to alternative technology",
+				"Working with migrating team to migrate TIBCO I-Process to Red-Hat JBPM workflow management system",
+				"Coordinate with DBA &amp; Deployment teams to Research, design, develop &amp; deploy an application",
+				"Research &amp; design the system as per the new requirements &amp; technologies",
+				"Document the code &amp; feature for independent operation",
+				"Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+				"Report higher officials for project challenges, progress &amp; periodical meetings updates",
+				"Documentation for code &amp; projects feature updates"
+			]
+		},
+		{
+			"prj_nm": "JNCB - Analytical Operations",
+			"prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
+			"prj_clnt": "National Commercial Bank Jamaica Limited (Kingston – Jamaica)",
+			"prj_dur": "January’2018 – August’2019",
+			"prj_tec": "Core &amps; advanced Java, JSP, Servlet, Spring Framework, MySql-Oracle-MsSql Databases",
+			"prj_typ": "Development",
+			"prj_env": "Linux, Multi-Database, Third Party API (SMS), Red-Point Interaction, Dynamics CRM",
+			"prj_role": "Developer",
+			"prj_tmsz": "9",
+			"prj_desc": "For NCB handling their all Analytical Operation, Using AI/ML concept analyze customer historical behaviors and gives prediction for best next best product (i.e. Credit Card, Loan, Insurance) which customer can buy, also manage their offers sending using application red-point interaction &amp; as per customer's response create leads for that product",
+			"prj_rl_desc": [
+				"Involved in periodical meetings with the Project Management Team, Key Users",
+				"Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
+				"Same data feed in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
+				"Configuration and Customize the Application, also Developed Plugins, Reports and UI",
+				"Tackle and automate the banking system for leads end product",
+				"Coordinate with Team Members for several Service, API, Test operations &amp; Software for streamline operations",
+				"Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+				"Report higher officials for project challenges, progress &amp; periodical meetings updates",
+				"Documentation for code &amp; projects feature updates"
+			]
+		},
+		{
+			"prj_nm": "Axis bank - Credit Card Loan",
+			"prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
+			"prj_clnt": "Axis Bank Mumbai, India",
+			"prj_dur": "July’2017 – December’2017",
+			"prj_tec": "Core &amps; advanced Java, MySql-Oracle Databases",
+			"prj_typ": "Development",
+			"prj_env": "Linux, Multi-Database",
+			"prj_role": "Developer",
+			"prj_tmsz": "9",
+			"prj_desc": "Predict customer which we can pitch for credit card loan, analyze existing customer historical transaction and according to, it predicts customers for credit card loan then bank contact customers with various medium (SMS, Call &amp; Mail). for the same predict which medium is best for that customer",
+			"prj_rl_desc": [
+				"Involved in periodical meetings with the Project Management Team, Key Users",
+				"Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
+				"Data feed-in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
+				"Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+				"Report higher officials for project challenges, progress &amp; periodical meetings updates",
+				"Documentation for code &amp; projects feature updates"
+			]
+		},
+		{
+			"prj_nm": "Motilal Oswal - Cross Sell Up Sell",
+			"prj_org": "Trutech Webs Pvt Ltd (FluidAI)",
+			"prj_clnt": "Motilal Oswal Financial Services Ltd (Mumbai, India)",
+			"prj_dur": "February’2017 – June’2017",
+			"prj_tec": "Core &amp; advanced Java, MySql-MsSql Databases",
+			"prj_typ": "Development",
+			"prj_env": "Windows, Multi-Database, SSMS, SSIS &amp; ETL Tools",
+			"prj_role": "Developer",
+			"prj_tmsz": "4",
+			"prj_desc": "Predict next best product for customers (existing &amp; new) can take, on analysis &amp; learn on existing customer behaviors/data (i.e. demographics, transaction &amp; product acquired) then our AI algorithm in terms of up-sell or cross-sell the product, predict next best product for customer",
+			"prj_rl_desc": [
+				"Involved in periodical meetings with the Project Management Team, Key Users",
+				"Developed jobs using SSIS BI-Tools for ETL operations",
+				"Tackle and automate the banking system for SSIS based ETL operations for same make a java-based solution",
+				"Coordinate with Our &amp; Client DBA &amp; Data Scientists team for databases data understanding",
+				"Data feed-in AI-ML Application for Learning &amp; Training operation to get desirable models for prediction leads",
+				"Develop, Maintain &amp; Trigger Application Service as per the client functionality &amp; requirement",
+				"Documentation for code &amp; projects feature updates"
+			]
+		},
+		{
+			"prj_nm": "HDFC Bank - Wipro ATM Support",
+			"prj_org": "Impact-Wipro Infotech",
+			"prj_clnt": "HDFC Bank (Mumbai, India)",
+			"prj_dur": "October’2015 – February’2017",
+			"prj_tec": "Databases, Network Testing Tools, IBM Lotus",
+			"prj_typ": "Technical Support",
+			"prj_env": "Windows, Linux, Netezza-Database, BI Report &amp; CRM Tools",
+			"prj_role": "Technical Support Engineer",
+			"prj_tmsz": "10",
+			"prj_desc": "Project is the main focus on providing support for HDFC bank ATM in terms of Link(Network), Battery &amp; UPS (Power), was actively working in Link team which works in 24x7 work environment. where coordinate with HDFC bank database (Netezza database) &amp; network team, also working for power department",
+			"prj_rl_desc": [
+				"24x7 Supports in PAN INDIA",
+				"Log ticket for customer’s queries in CRM &amp; For same take start to end follows to resolve queries",
+				"Provide technical support over telephone &amp; email",
+				"Use remote support to troubleshoot and analyses issues faced by customers",
+				"Ensure a quick response to all incoming customer queries",
+				"To serve as a link between the bank and customers"
+			]
+		}
+	],
+	"contactme": {
+		"mobileNumber": "+91 7977688793",
+		"address": "Mumbai, India",
+		"emailId": "MaheshMore4321@gmail.com",
+		"feedback_link": "https://getform.io/f/917f85c3-1a6a-4f41-ac86-47bcb9572230"
+	}
 }
