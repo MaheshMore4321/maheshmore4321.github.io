@@ -11,7 +11,7 @@
 		"linkedin_link": "https://www.linkedin.com/in/maheshmore4321",
 		"github_link": "https://www.github.com/MaheshMore4321",
 		"gitlab_link": "https://www.gitlab.com/MaheshMore4321",
-		"website_link": "https://coderstea.in"
+		"website_link": "https://maheshmore4321.com"
 	},
 	"heroarea": [{
 			"backgroundImg": "/images/img_bg_1.jpg",
@@ -19,13 +19,6 @@
 			"link": "https://drive.google.com/file/d/1HkzDmzlpozHQv4LQGB8cFyQ27waZZHiu/view?usp=sharing",
 			"text": "Download CV&nbsp;",
 			"icon": "icon-download4"
-		},
-		{
-			"backgroundImg": "/images/img_bg_2.jpg",
-			"headerLine": "I love building<br/>THINGS!!",
-			"link": "https://coderstea.in",
-			"text": "View&nbsp;My&nbsp;BlogSite&nbsp;",
-			"icon": "icon-book"
 		},
 		{
 			"backgroundImg": "/images/img_bg_3.jpg",
@@ -36,7 +29,7 @@
 		}
 	],
 	"intro": {
-		"introduction": "<strong>Hi I'm Mahesh More</strong>, Working as Senior Software Engineer with more than 7 years of experience in Software Development.</br>Currently, working as a Senior Software Engineer at Here Technologies. As part of the Platform Foundation Engineering Team, Works on Data Creation & Unification Operations.</br>In this build, deploy and scale location solutions. Create custom maps, visualize location datasets & gather insights and buy and sell location assets.</br>Primarily Worked on BFSI domain projects involved in the development & support of and new/existing application. I use technologies like Java Core, Advanced (J2EE), Spring, and Databases like MySQL, MsSQL, Oracle, and Web Applications.</br>Hands-on experience in testing at all levels to build an enterprise application.</br>Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues.</br>Willingness to take leadership, responsibility & initiative for building blocks and development.</br></br>Check out my Online Portfolio @</br> https://github.com/maheshmore4321</br>https://gitlab.com/maheshmore4321</br>https://maheshmore4321.github.io</br> https://maheshmore4321.com</br>https://coderstea.in</br>",
+		"introduction": "<strong>Hi I'm Mahesh More</strong>, Working as Senior Software Engineer with more than 7 years of experience in Software Development.</br>Currently, working as a Senior Software Engineer at Here Technologies. As part of the Platform Foundation Engineering Team, Works on Data Creation & Unification Operations.</br>In this build, deploy and scale location solutions. Create custom maps, visualize location datasets & gather insights and buy and sell location assets.</br>Primarily Worked on BFSI domain projects involved in the development & support of and new/existing application. I use technologies like Java Core, Advanced (J2EE), Spring, and Databases like MySQL, MsSQL, Oracle, and Web Applications.</br>Hands-on experience in testing at all levels to build an enterprise application.</br>Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues.</br>Willingness to take leadership, responsibility & initiative for building blocks and development.</br></br>Check out my Online Portfolio @</br> https://github.com/maheshmore4321</br>https://gitlab.com/maheshmore4321</br>https://maheshmore4321.github.io</br>",
 		"introExpertieList": [{
 				"icon": "icon-bulb",
 				"desc": "Innovative Ideas"
